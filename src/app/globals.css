@@ -1,0 +1,302 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Alpha E-Commerce — strict four-colour system
+  ─────────────────────────────────────────────
+  Navy Blue   #111144  → headings, dark sections, body text
+  Aster Blue  #9BACD8  → hovers, focus, soft accents
+  Luster White#DAD1C8  → section backgrounds
+  Habanero    #F98513  → buttons / primary accents
+  (white is the neutral base/card colour)
+*/
+
+:root {
+  --radius: 0.85rem;
+
+  /* Navy scale */
+  --navy: #111144;
+  --navy-900: #0b0b2e;
+  --navy-800: #15153f;
+  --navy-700: #1d1d5e;
+  --navy-600: #2a2a78;
+
+  /* Habanero scale */
+  --habanero: #f98513;
+  --habanero-600: #e5740a;
+  --habanero-700: #c66109;
+  --habanero-100: #ffe6cc;
+  --habanero-50: #fff4e8;
+
+  /* Aster scale */
+  --aster: #9bacd8;
+  --aster-300: #b4c1e2;
+  --aster-200: #cdd7ec;
+  --aster-100: #e7ecf6;
+  --aster-50: #f2f5fb;
+
+  /* Luster scale */
+  --luster: #dad1c8;
+  --luster-100: #e8e1d9;
+  --luster-50: #f5f1ec;
+
+  /* shadcn semantic tokens mapped to the strict palette */
+  --background: #ffffff;
+  --foreground: #15153f;
+
+  --card: #ffffff;
+  --card-foreground: #15153f;
+
+  --popover: #ffffff;
+  --popover-foreground: #15153f;
+
+  --primary: #f98513;
+  --primary-foreground: #ffffff;
+
+  --secondary: #9bacd8;
+  --secondary-foreground: #111144;
+
+  --muted: #f5f1ec;
+  --muted-foreground: #5a5a78;
+
+  --accent: #e7ecf6;
+  --accent-foreground: #111144;
+
+  --destructive: #d8472b;
+  --destructive-foreground: #ffffff;
+
+  --border: #e7e1d8;
+  --input: #ddd6cc;
+  --ring: #9bacd8;
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+
+  /* shadcn semantic colours */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Brand colours as first-class utilities */
+  --color-navy: var(--navy);
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-navy-600: var(--navy-600);
+  --color-habanero: var(--habanero);
+  --color-habanero-600: var(--habanero-600);
+  --color-habanero-700: var(--habanero-700);
+  --color-habanero-100: var(--habanero-100);
+  --color-habanero-50: var(--habanero-50);
+  --color-aster: var(--aster);
+  --color-aster-300: var(--aster-300);
+  --color-aster-200: var(--aster-200);
+  --color-aster-100: var(--aster-100);
+  --color-aster-50: var(--aster-50);
+  --color-luster: var(--luster);
+  --color-luster-100: var(--luster-100);
+  --color-luster-50: var(--luster-50);
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) - 5px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 10px);
+  --radius-3xl: calc(var(--radius) + 18px);
+
+  /* Animation tokens */
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-marquee-rev: marquee-rev 32s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-spin-slow: spin 22s linear infinite;
+  --animate-shimmer: shimmer 2.5s linear infinite;
+  --animate-gradient: gradient-pan 8s ease infinite;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+}
+
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-rev {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes gradient-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(249, 133, 19, 0.45); }
+  70% { box-shadow: 0 0 0 18px rgba(249, 133, 19, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(249, 133, 19, 0); }
+}
+@keyframes caret-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+/* ─── Base ──────────────────────────────────────────────── */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight text-navy;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background-color: var(--habanero);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--aster);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ─── Component helpers ─────────────────────────────────── */
+@layer components {
+  .text-gradient {
+    background: linear-gradient(96deg, var(--habanero) 0%, #ffb15c 50%, var(--habanero) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-pan 6s ease infinite;
+  }
+
+  /* Blinking caret used after the rotating hero word */
+  .caret {
+    display: inline-block;
+    width: 0.06em;
+    align-self: stretch;
+    background: var(--habanero);
+    border-radius: 2px;
+    animation: caret-blink 1.05s steps(1) infinite;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-habanero;
+  }
+
+  .bg-dots {
+    background-image: radial-gradient(rgba(17, 17, 68, 0.08) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  .bg-dots-light {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.10) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(17, 17, 68, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(17, 17, 68, 0.05) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 1px 2px rgba(17, 17, 68, 0.04), 0 14px 38px -14px rgba(17, 17, 68, 0.16);
+  }
+  .shadow-card {
+    box-shadow: 0 2px 6px rgba(17, 17, 68, 0.05), 0 22px 50px -20px rgba(17, 17, 68, 0.22);
+  }
+  .shadow-glow {
+    box-shadow: 0 16px 40px -14px rgba(249, 133, 19, 0.5);
+  }
+
+  /* Animated underline for nav links */
+  .link-underline {
+    position: relative;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    background: var(--aster);
+    transition: transform 0.3s ease;
+  }
+  .link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  }
+}
+
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+  @media (width >= 640px) { padding-inline: 1.5rem; }
+  @media (width >= 1024px) { padding-inline: 2rem; }
+}

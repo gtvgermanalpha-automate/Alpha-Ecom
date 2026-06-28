@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(npm ping *)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const p=require\\('./node_modules/next/package.json'\\);const t=require\\('./node_modules/tailwindcss/package.json'\\);const r=require\\('./node_modules/react/package.json'\\);const f=require\\('./node_modules/framer-motion/package.json'\\);console.log\\('next',p.version\\);console.log\\('react',r.version\\);console.log\\('tailwindcss',t.version\\);console.log\\('framer-motion',f.version\\);\")",
+      "Bash(node scripts/generate-assets.mjs)",
+      "Bash(NODE_TLS_REJECT_UNAUTHORIZED=0 npm run build)",
+      "Bash(curl -s -w \"\\\\n[HTTP %{http_code} in %{time_total}s]\\\\n\" http://localhost:3000/ --max-time 30)",
+      "Bash(curl -s -o /dev/null -w \"services: HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/services --max-time 60)",
+      "Bash(curl -s -o /dev/null -w \"contact: HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/contact --max-time 60)",
+      "Bash(cd \"C:/Users/ahmed/Downloads/Alpha E-Commerce\" && echo \"=== Inter latin block ===\" && grep -A6 \"/\\\\* latin \\\\*/\" /tmp/inter.css | grep -E \"font-weight|woff2\" && echo \"=== Montserrat latin block ===\" && grep -A6 \"/\\\\* latin \\\\*/\" /tmp/montser.css | grep -E \"font-weight|woff2\")",
+      "Bash(rm -rf .next)",
+      "Bash(npm run *)",
+      "Bash(grep -v \"^\\\\.next$\")",
+      "Bash(node -e *)",
+      "Bash(npx tsc *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -s -o /dev/null -w \"home: HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/ --max-time 200)",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}
