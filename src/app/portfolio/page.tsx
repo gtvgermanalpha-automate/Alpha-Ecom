@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { PageHero } from "@/components/sections/page-hero";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
-import { Stats } from "@/components/sections/stats";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
 
@@ -23,7 +22,6 @@ export default function PortfolioPage() {
         breadcrumbs={[{ label: "Case Studies" }]}
       />
       <PortfolioGrid showFilters heading />
-      <Stats />
       <Testimonials />
       <CTA title="Want to see your store here?" />
     </>

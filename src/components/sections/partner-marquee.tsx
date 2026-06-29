@@ -14,9 +14,9 @@ export function PartnerMarquee() {
         <p className="mb-8 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
           We create &amp; manage stores on the world&apos;s biggest marketplaces
         </p>
-        <Marquee>
+        <Marquee itemClassName="gap-16">
           {marketplaces.map((m) => (
-            <MarketplaceTile key={m.name} src={m.logo} name={m.name} size="lg" />
+            <MarketplaceTile key={m.name} src={m.logo} name={m.name} size="xl" />
           ))}
         </Marquee>
       </Container>

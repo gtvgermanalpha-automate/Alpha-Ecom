@@ -24,7 +24,7 @@ export function Footer() {
     <footer className="bg-navy text-white">
       {/* Consultation strip */}
       <div className="relative overflow-hidden border-b border-white/10">
-        <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-habanero/25 blur-3xl" aria-hidden />
+        <div className="pointer-events-none absolute -right-16 -top-16 size-64 rounded-full bg-aster/25 blur-3xl" aria-hidden />
         <Container className="relative flex flex-col items-center justify-between gap-6 py-12 text-center lg:flex-row lg:text-left">
           <div>
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
@@ -95,7 +95,7 @@ export function Footer() {
         <div className="mt-14 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
           {offices.map((office) => (
             <div key={office.country} className="flex gap-3">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-habanero" />
+              <MapPin className="mt-0.5 size-5 shrink-0 text-aster-700" />
               <div>
                 <p className="text-sm font-semibold text-white">
                   {office.flag} {office.country} — {office.city}

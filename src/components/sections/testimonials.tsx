@@ -76,7 +76,7 @@ export function Testimonials() {
               >
                 <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-8 shadow-soft sm:p-12">
                   <Quote
-                    className="pointer-events-none absolute right-6 top-6 size-16 text-habanero/10 sm:size-20"
+                    className="pointer-events-none absolute right-6 top-6 size-16 text-aster/10 sm:size-20"
                     aria-hidden="true"
                   />
 
@@ -98,7 +98,7 @@ export function Testimonials() {
                   </blockquote>
 
                   <figcaption className="mt-8 flex items-center gap-4">
-                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-habanero font-bold text-white">
+                    <span className="grid size-12 shrink-0 place-items-center rounded-full bg-navy font-bold text-white">
                       {t.initials}
                     </span>
                     <span className="flex flex-col">
@@ -120,7 +120,7 @@ export function Testimonials() {
             type="button"
             onClick={prev}
             aria-label="Previous testimonial"
-            className="grid size-11 place-items-center rounded-full border border-border bg-white text-navy transition-colors duration-200 hover:border-aster hover:text-habanero"
+            className="grid size-11 place-items-center rounded-full border border-border bg-white text-navy transition-colors duration-200 hover:border-aster hover:text-aster-700"
           >
             <ChevronLeft className="size-5" aria-hidden="true" />
           </button>
@@ -135,7 +135,7 @@ export function Testimonials() {
                 aria-current={i === index}
                 className={cn(
                   "h-2.5 rounded-full transition-all duration-300",
-                  i === index ? "w-7 bg-habanero" : "w-2.5 bg-navy/20 hover:bg-navy/40"
+                  i === index ? "w-7 bg-aster" : "w-2.5 bg-navy/20 hover:bg-navy/40"
                 )}
               />
             ))}
@@ -145,7 +145,7 @@ export function Testimonials() {
             type="button"
             onClick={next}
             aria-label="Next testimonial"
-            className="grid size-11 place-items-center rounded-full border border-border bg-white text-navy transition-colors duration-200 hover:border-aster hover:text-habanero"
+            className="grid size-11 place-items-center rounded-full border border-border bg-white text-navy transition-colors duration-200 hover:border-aster hover:text-aster-700"
           >
             <ChevronRight className="size-5" aria-hidden="true" />
           </button>

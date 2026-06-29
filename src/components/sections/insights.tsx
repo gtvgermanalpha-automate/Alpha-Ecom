@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
 
@@ -21,18 +22,27 @@ export function Insights() {
         {insights.map((post) => (
           <RevealItem key={post.title}>
             <article className="group h-full overflow-hidden rounded-2xl border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card">
-              <div className="h-1.5 bg-habanero" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+                <Badge variant="secondary" className="absolute left-4 top-4">
+                  {post.category}
+                </Badge>
+              </div>
 
               <div className="p-6">
-                <div className="flex items-center justify-between gap-3">
-                  <Badge variant="secondary">{post.category}</Badge>
-                  <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <Clock className="size-3.5" />
-                    {post.readingTime}
-                  </span>
-                </div>
+                <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <Clock className="size-3.5" />
+                  {post.readingTime}
+                </span>
 
-                <h3 className="mt-3 text-lg font-bold text-navy transition-colors group-hover:text-habanero">
+                <h3 className="mt-2 text-lg font-bold text-navy transition-colors group-hover:text-aster-700">
                   {post.title}
                 </h3>
                 <p className="mt-2 text-sm text-muted-foreground">{post.excerpt}</p>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 
 import { PageHero } from "@/components/sections/page-hero";
 import { AboutSection } from "@/components/sections/about-section";
-import { Stats } from "@/components/sections/stats";
 import { WhyUs } from "@/components/sections/why-us";
 import { Timeline } from "@/components/sections/timeline";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -25,7 +24,6 @@ export default function AboutPage() {
         breadcrumbs={[{ label: "About" }]}
       />
       <AboutSection />
-      <Stats />
       <WhyUs />
       <Timeline />
       <Testimonials />

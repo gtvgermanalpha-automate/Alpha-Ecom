@@ -22,7 +22,7 @@ export function CTA({
             {/* Decorative layers */}
             <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-60" aria-hidden />
             <div
-              className="pointer-events-none absolute -left-24 -top-24 size-[26rem] rounded-full bg-habanero/30 blur-3xl"
+              className="pointer-events-none absolute -left-24 -top-24 size-[26rem] rounded-full bg-aster/30 blur-3xl"
               aria-hidden
             />
             <div

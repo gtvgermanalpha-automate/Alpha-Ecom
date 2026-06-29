@@ -6,7 +6,7 @@ import { Container } from "@/components/shared/container";
 
 export default function NotFound() {
   return (
-    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-luster-50">
+    <section className="relative flex min-h-[70vh] items-center overflow-hidden bg-aster-50">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" aria-hidden />
       <Container className="relative text-center">
         <p className="font-display text-[8rem] font-extrabold leading-none text-gradient sm:text-[12rem]">

@@ -34,7 +34,8 @@ const floats = [
 
 export function Hero() {
   const [idx, setIdx] = React.useState(0);
-  const words = hero.titleRotators;
+  // Rotate the marketplace name in the headline, each in its own brand colour.
+  const rotators = marketplaces.map((m) => ({ label: m.name, color: m.accent }));
   const reduce = useReducedMotion();
 
   const sectionRef = React.useRef<HTMLElement>(null);
@@ -68,22 +69,22 @@ export function Hero() {
   }
 
   React.useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % words.length), 2200);
+    const t = setInterval(() => setIdx((i) => (i + 1) % rotators.length), 2200);
     return () => clearInterval(t);
-  }, [words.length]);
+  }, [rotators.length]);
 
   return (
     <section
       ref={sectionRef}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="relative overflow-hidden bg-luster-50"
+      className="relative overflow-hidden bg-aster-50"
     >
       {/* Decorative layers */}
       <div className="pointer-events-none absolute inset-0 bg-dots opacity-70" aria-hidden />
       <motion.div
         style={{ y: blobA }}
-        className="pointer-events-none absolute -left-32 -top-24 size-[28rem] rounded-full bg-habanero/20 blur-3xl"
+        className="pointer-events-none absolute -left-32 -top-24 size-[28rem] rounded-full bg-aster/20 blur-3xl"
         aria-hidden
       />
       <motion.div
@@ -121,17 +122,20 @@ export function Hero() {
             transition={{ duration: 0.6, ease: EASE, delay: 0.06 }}
           >
             {hero.titleLead}{" "}
-            <span className="relative inline-flex h-[1.15em] items-center justify-center overflow-hidden align-bottom">
+            <span
+              className="relative inline-flex h-[1.15em] items-center justify-center overflow-hidden align-bottom transition-colors duration-300"
+              style={{ color: rotators[idx].color }}
+            >
               <AnimatePresence mode="wait">
                 <motion.span
-                  key={words[idx]}
-                  className="text-gradient whitespace-nowrap"
+                  key={rotators[idx].label}
+                  className="whitespace-nowrap"
                   initial={{ y: "0.9em", opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   exit={{ y: "-0.9em", opacity: 0 }}
                   transition={{ duration: 0.4, ease: EASE }}
                 >
-                  {words[idx]}
+                  {rotators[idx].label}
                 </motion.span>
               </AnimatePresence>
               <span className="caret ml-1.5" aria-hidden />

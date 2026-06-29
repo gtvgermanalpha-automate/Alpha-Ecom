@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { ServicesGrid } from "@/components/sections/services";
 import { MarketplaceShowcase } from "@/components/sections/marketplace-showcase";
-import { PlatformTabs } from "@/components/sections/platform-tabs";
 import { Process } from "@/components/sections/process";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
@@ -26,7 +25,6 @@ export default function ServicesPage() {
       />
       <ServicesGrid heading tone="white" />
       <MarketplaceShowcase />
-      <PlatformTabs />
       <Process />
       <FAQ />
       <CTA title="Ready to launch on a new marketplace?" />

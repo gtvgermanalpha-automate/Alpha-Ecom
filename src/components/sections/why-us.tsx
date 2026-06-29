@@ -21,7 +21,7 @@ export function WhyUs() {
         {whyUs.map((f) => (
           <RevealItem key={f.title}>
             <article className="group flex h-full flex-col rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card">
-              <span className="grid size-14 place-items-center rounded-xl bg-habanero-50 text-habanero transition-transform duration-300 group-hover:-translate-y-0.5">
+              <span className="grid size-14 place-items-center rounded-xl bg-aster-100 text-aster-700 transition-transform duration-300 group-hover:-translate-y-0.5">
                 <Icon name={f.icon} className="size-7" />
               </span>
               <h3 className="mt-6 text-lg font-bold text-navy">{f.title}</h3>
@@ -32,7 +32,7 @@ export function WhyUs() {
 
         {/* 6th cell — habanero CTA card to fill the 3-col grid cleanly */}
         <RevealItem>
-          <div className="flex h-full flex-col justify-between rounded-2xl bg-habanero p-7 text-white shadow-glow">
+          <div className="flex h-full flex-col justify-between rounded-2xl bg-navy p-7 text-white shadow-soft">
             <div>
               <span className="grid size-14 place-items-center rounded-xl bg-white/15 text-white">
                 <Icon name="rocket" className="size-7" />

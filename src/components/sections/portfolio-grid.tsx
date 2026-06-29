@@ -63,7 +63,7 @@ export function PortfolioGrid({
   return (
     <section
       id="case-studies"
-      className={cn(tone === "luster" ? "bg-luster-50" : "bg-white", "py-20 lg:py-28")}
+      className={cn(tone === "luster" ? "bg-aster-50" : "bg-white", "py-20 lg:py-28")}
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {heading ? (
@@ -92,7 +92,7 @@ export function PortfolioGrid({
                     "rounded-full px-5 py-2 text-sm font-semibold transition-all duration-300",
                     isActive
                       ? "bg-habanero text-white shadow-glow"
-                      : "border border-border bg-white text-navy hover:border-aster hover:text-habanero"
+                      : "border border-border bg-white text-navy hover:border-aster hover:text-aster-700"
                   )}
                 >
                   {cat}
@@ -137,7 +137,7 @@ export function PortfolioGrid({
                       className="size-7 object-contain"
                     />
                   </span>
-                  <span className="absolute bottom-3 right-3 grid size-10 translate-y-2 place-items-center rounded-full bg-habanero text-white opacity-0 shadow-glow transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  <span className="absolute bottom-3 right-3 grid size-10 translate-y-2 place-items-center rounded-full bg-navy text-white opacity-0 shadow-soft transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     <Icon name="arrow-up-right" className="size-5" />
                   </span>
                 </div>
@@ -249,8 +249,8 @@ export function PortfolioGrid({
 
                   <div className="mt-6 grid grid-cols-2 gap-4">
                     {active.results.map((r) => (
-                      <div key={r.label} className="rounded-xl bg-luster-50 p-4">
-                        <p className="font-display text-2xl font-extrabold text-habanero">
+                      <div key={r.label} className="rounded-xl bg-aster-50 p-4">
+                        <p className="font-display text-2xl font-extrabold text-navy">
                           {r.value}
                         </p>
                         <p className="mt-1 text-xs font-medium text-muted-foreground">{r.label}</p>

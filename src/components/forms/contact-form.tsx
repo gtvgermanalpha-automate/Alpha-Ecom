@@ -90,7 +90,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="flex flex-col items-center rounded-3xl border border-border bg-white p-10 text-center shadow-soft">
-        <span className="grid size-16 place-items-center rounded-full bg-habanero-50 text-habanero">
+        <span className="grid size-16 place-items-center rounded-full bg-aster-100 text-aster-700">
           <CheckCircle2 className="size-8" />
         </span>
         <h3 className="mt-6 text-2xl font-bold text-navy">Thank you — message sent!</h3>
@@ -238,7 +238,7 @@ export function ContactForm() {
               fileError && "border-destructive"
             )}
           >
-            <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-habanero-50 text-habanero">
+            <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-aster-100 text-aster-700">
               <Paperclip className="size-4" />
             </span>
             {file ? (
@@ -258,7 +258,7 @@ export function ContactForm() {
               </span>
             ) : (
               <span className="text-muted-foreground">
-                Drop a file or <span className="font-semibold text-habanero">browse</span> — PDF, DOC,
+                Drop a file or <span className="font-semibold text-aster-700">browse</span> — PDF, DOC,
                 DOCX up to 10&nbsp;MB
               </span>
             )}
@@ -344,7 +344,7 @@ function Field({
     <div className={cn("flex flex-col gap-2", className)}>
       <Label htmlFor={htmlFor}>
         {label}
-        {required ? <span className="text-habanero">*</span> : null}
+        {required ? <span className="text-aster-700">*</span> : null}
       </Label>
       {children}
       {error ? (

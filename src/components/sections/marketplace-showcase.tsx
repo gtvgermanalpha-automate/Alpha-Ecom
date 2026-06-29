@@ -19,7 +19,7 @@ export function MarketplaceShowcase() {
           <section
             key={m.slug}
             id={m.slug}
-            className={cn("scroll-mt-28 py-16 lg:py-24", odd ? "bg-luster-50" : "bg-white")}
+            className={cn("scroll-mt-28 py-16 lg:py-24", odd ? "bg-aster-50" : "bg-white")}
           >
             <Container>
               <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -39,7 +39,7 @@ export function MarketplaceShowcase() {
                   <ul className="mt-8 grid gap-3 sm:grid-cols-2">
                     {m.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-2.5">
-                        <Check className="mt-0.5 size-4 shrink-0 text-habanero" strokeWidth={3} />
+                        <Check className="mt-0.5 size-4 shrink-0 text-aster-700" strokeWidth={3} />
                         <span className="text-sm font-medium text-navy">{feature}</span>
                       </li>
                     ))}
@@ -62,7 +62,7 @@ export function MarketplaceShowcase() {
                   {/* blurred glow behind the card */}
                   <div
                     aria-hidden
-                    className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-habanero/20 via-aster/10 to-transparent blur-2xl"
+                    className="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-br from-aster/20 via-aster/10 to-transparent blur-2xl"
                   />
 
                   <div className="relative grid aspect-[4/3] place-items-center overflow-hidden rounded-3xl border border-border bg-white shadow-card">
@@ -78,7 +78,7 @@ export function MarketplaceShowcase() {
 
                     {/* floating stat chip */}
                     <div className="absolute bottom-6 right-6 rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-border">
-                      <p className="font-display text-2xl font-extrabold text-habanero">{m.stat.value}</p>
+                      <p className="font-display text-2xl font-extrabold text-navy">{m.stat.value}</p>
                       <p className="text-xs text-muted-foreground">{m.stat.label}</p>
                     </div>
                   </div>

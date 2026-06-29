@@ -23,7 +23,7 @@ const buttonVariants = cva(
           "border border-white/40 bg-transparent text-white hover:border-aster hover:bg-aster hover:text-navy",
         soft: "bg-aster-100 text-navy hover:bg-aster hover:text-navy",
         ghost: "text-navy hover:bg-aster-100",
-        link: "text-navy underline-offset-4 hover:text-habanero hover:underline",
+        link: "text-navy underline-offset-4 hover:text-aster-700 hover:underline",
       },
       size: {
         sm: "h-9 px-4 text-sm",

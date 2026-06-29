@@ -22,7 +22,7 @@ export function Awards() {
                 key={a.title}
                 className="flex shrink-0 items-center gap-4 rounded-2xl border border-border bg-white px-6 py-4 shadow-soft transition-colors duration-300 hover:border-aster"
               >
-                <span className="grid size-12 place-items-center rounded-xl bg-habanero-50 text-habanero">
+                <span className="grid size-12 place-items-center rounded-xl bg-aster-100 text-aster-700">
                   <Icon name={a.icon} className="size-6" />
                 </span>
                 <span className="flex flex-col">

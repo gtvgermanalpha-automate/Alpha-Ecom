@@ -24,7 +24,7 @@ export function Process() {
         <RevealGroup className="contents" stagger={0.12}>
           {processSteps.map((step) => (
             <RevealItem key={step.number} className="flex flex-col items-center text-center">
-              <span className="relative z-10 grid size-16 place-items-center rounded-2xl border border-border bg-white text-habanero shadow-soft">
+              <span className="relative z-10 grid size-16 place-items-center rounded-2xl border border-border bg-white text-aster-700 shadow-soft">
                 <Icon name={step.icon} className="size-7" />
                 <span className="absolute -right-2 -top-2 grid size-7 place-items-center rounded-full bg-navy text-xs font-bold text-white">
                   {step.number}

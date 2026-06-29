@@ -42,7 +42,7 @@ export const marketplaces: Marketplace[] = [
   {
     slug: "ebay",
     name: "eBay",
-    logo: "/ebayjpg.jpg",
+    logo: "/Ebay.png",
     blurb: "Full eBay store setup, listing optimization and Promoted Listings.",
     description:
       "We build and manage high-performing eBay stores — bulk listing, SEO-rich titles, Promoted Listings campaigns and best-match optimization that keeps you top of search.",
@@ -90,7 +90,7 @@ export const marketplaces: Marketplace[] = [
   {
     slug: "tiktok-shop",
     name: "TikTok Shop",
-    logo: "/tiktokjpg.jpg",
+    logo: "/TikTok.png",
     blurb: "Set up TikTok Shop and turn short-form content into sales.",
     description:
       "We launch your TikTok Shop, connect product catalogs, set up affiliate and live-shopping, and pair it with creator partnerships that turn views into checkout.",
@@ -157,20 +157,20 @@ export const mainNav: NavItem[] = [
   },
   {
     label: "What we do",
-    href: "/services",
+    href: "/what-we-do",
     columns: [
       {
         items: [
-          { label: "Store Creation & Setup", href: "/services", description: "Launch on any marketplace, fast", icon: "store" },
-          { label: "Listing & SEO", href: "/services", description: "Rank higher, convert more", icon: "search" },
-          { label: "Advertising / PPC", href: "/services", description: "Profitable, managed ad spend", icon: "megaphone" },
+          { label: "Store Creation & Setup", href: "/what-we-do#setup", description: "Launch on any marketplace, fast", icon: "store" },
+          { label: "Listing & SEO", href: "/what-we-do#listing", description: "Rank higher, convert more", icon: "search" },
+          { label: "Advertising / PPC", href: "/what-we-do#ads", description: "Profitable, managed ad spend", icon: "megaphone" },
         ],
       },
       {
         items: [
-          { label: "Order & Inventory", href: "/services", description: "Stay in stock, ship on time", icon: "package" },
-          { label: "Account Health", href: "/services", description: "Stay compliant and protected", icon: "shield-check" },
-          { label: "Branding & Design", href: "/services", description: "Stores that look the part", icon: "palette" },
+          { label: "Order & Inventory", href: "/what-we-do#operations", description: "Stay in stock, ship on time", icon: "package" },
+          { label: "Account Health", href: "/what-we-do#health", description: "Stay compliant and protected", icon: "shield-check" },
+          { label: "Branding & Design", href: "/what-we-do#design", description: "Stores that look the part", icon: "palette" },
         ],
       },
     ],
@@ -355,7 +355,7 @@ export const projects: Project[] = [
     excerpt: "Scaled a homeware brand from launch to 7 figures on Amazon.",
     description:
       "We rebuilt this homeware brand's Seller Central from the ground up — new A+ content, a restructured catalog and a profit-focused PPC program that tripled revenue in nine months.",
-    image: "/portfolio/case-amazon.svg",
+    image: "/images/case-home.jpg",
     results: [
       { label: "Revenue", value: "+212%" },
       { label: "ACoS", value: "-34%" },
@@ -365,12 +365,12 @@ export const projects: Project[] = [
     slug: "vintage-loft",
     title: "Vintage Loft",
     category: "eBay",
-    marketplaceLogo: "/ebayjpg.jpg",
+    marketplaceLogo: "/Ebay.png",
     tags: ["Bulk Listing", "Promoted Listings"],
     excerpt: "Turned a hobby eBay store into a full-time business.",
     description:
       "Bulk-listing automation, SEO-rich titles and a tuned Promoted Listings strategy took this reseller from a few sales a week to consistent daily order volume.",
-    image: "/portfolio/case-ebay.svg",
+    image: "/images/case-vintage.jpg",
     results: [
       { label: "Monthly orders", value: "6x" },
       { label: "Search visibility", value: "+73%" },
@@ -385,7 +385,7 @@ export const projects: Project[] = [
     excerpt: "Helped a handmade brand hit Star Seller status.",
     description:
       "A full shop rebrand, listing-SEO overhaul and disciplined Etsy Ads management lifted conversion and earned this maker Star Seller status within two quarters.",
-    image: "/portfolio/case-etsy.svg",
+    image: "/images/case-handmade.jpg",
     results: [
       { label: "Conversion", value: "+41%" },
       { label: "Star Seller", value: "Achieved" },
@@ -400,7 +400,7 @@ export const projects: Project[] = [
     excerpt: "A custom Shopify store that doubled conversion rate.",
     description:
       "We designed and built a fast, branded Shopify storefront, wired in every marketplace, and ran a CRO program that doubled the store's conversion rate at launch.",
-    image: "/portfolio/case-shopify.svg",
+    image: "/images/case-tech.jpg",
     results: [
       { label: "Conversion", value: "2x" },
       { label: "Page speed", value: "-48%" },
@@ -410,12 +410,12 @@ export const projects: Project[] = [
     slug: "glow-collective",
     title: "Glow Collective",
     category: "TikTok Shop",
-    marketplaceLogo: "/tiktokjpg.jpg",
+    marketplaceLogo: "/TikTok.png",
     tags: ["TikTok Shop", "Creators"],
     excerpt: "Launched a beauty brand to viral TikTok sales.",
     description:
       "We set up TikTok Shop, recruited an affiliate creator network and ran LIVE shopping events that turned a new beauty brand into a repeatable, viral revenue channel.",
-    image: "/portfolio/case-tiktok.svg",
+    image: "/images/case-beauty.jpg",
     results: [
       { label: "Units / month", value: "18k+" },
       { label: "Creator ROAS", value: "4.6x" },
@@ -430,7 +430,7 @@ export const projects: Project[] = [
     excerpt: "Unified five channels under one managed program.",
     description:
       "We consolidated Amazon, eBay and Shopify into one managed, synced program — protecting margins, the brand and inventory while doubling total order volume.",
-    image: "/portfolio/case-multichannel.svg",
+    image: "/images/case-warehouse.jpg",
     results: [
       { label: "Total orders", value: "2.1x" },
       { label: "Channels", value: "5 unified" },
@@ -501,7 +501,7 @@ export const milestones: Milestone[] = [
 /* Insights / blog                                                     */
 /* ------------------------------------------------------------------ */
 
-export type Insight = { title: string; category: string; readingTime: string; excerpt: string };
+export type Insight = { title: string; category: string; readingTime: string; excerpt: string; image: string };
 
 export const insights: Insight[] = [
   {
@@ -509,18 +509,21 @@ export const insights: Insight[] = [
     category: "Amazon",
     readingTime: "6 min read",
     excerpt: "The pricing, fulfillment and account-health signals that decide who owns the Buy Box.",
+    image: "/images/insight-amazon.jpg",
   },
   {
     title: "TikTok Shop: a launch checklist for new brands",
     category: "TikTok Shop",
     readingTime: "5 min read",
     excerpt: "Everything you need to set up Shop, connect creators and run your first LIVE.",
+    image: "/images/insight-tiktok.jpg",
   },
   {
     title: "Etsy SEO: ranking your listings the right way",
     category: "Etsy",
     readingTime: "7 min read",
     excerpt: "How tags, titles and attributes work together inside the Etsy search algorithm.",
+    image: "/images/insight-etsy.jpg",
   },
 ];
 

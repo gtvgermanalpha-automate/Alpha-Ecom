@@ -40,8 +40,8 @@ export function AboutSection() {
           <ul className="mt-7 space-y-3">
             {checklist.map((item) => (
               <li key={item} className="flex items-center gap-3">
-                <span className="grid size-6 shrink-0 place-items-center rounded-full bg-habanero-50">
-                  <Check className="size-4 text-habanero" strokeWidth={3} />
+                <span className="grid size-6 shrink-0 place-items-center rounded-full bg-aster-100">
+                  <Check className="size-4 text-aster-700" strokeWidth={3} />
                 </span>
                 <span className="font-medium text-navy">{item}</span>
               </li>
@@ -62,14 +62,14 @@ export function AboutSection() {
           <div className="relative">
             {/* Blurred glow behind the frame */}
             <div
-              className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-habanero/15 to-aster/25 blur-2xl"
+              className="pointer-events-none absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-aster/15 to-aster/25 blur-2xl"
               aria-hidden
             />
 
             {/* Framed visual */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-card">
               <Image
-                src="/about.svg"
+                src="/images/about-team.jpg"
                 alt="Alpha E-Commerce specialists managing marketplace stores"
                 fill
                 sizes="(min-width: 1024px) 40rem, 100vw"
@@ -80,8 +80,8 @@ export function AboutSection() {
             {/* Floating stat card */}
             <div className="absolute -bottom-5 left-5 rounded-2xl bg-white p-4 shadow-card ring-1 ring-border">
               <div className="flex items-center gap-3">
-                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-habanero-50">
-                  <TrendingUp className="size-5 text-habanero" />
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-aster-100">
+                  <TrendingUp className="size-5 text-aster-700" />
                 </span>
                 <div>
                   <p className="font-display text-xl font-extrabold leading-none text-navy">

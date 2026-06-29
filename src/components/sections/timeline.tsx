@@ -30,7 +30,7 @@ export function Timeline() {
               >
                 {/* Dot */}
                 <span
-                  className="absolute left-4 top-1.5 z-10 size-3 -translate-x-1/2 rounded-full bg-habanero ring-4 ring-luster-50 sm:left-1/2"
+                  className="absolute left-4 top-1.5 z-10 size-3 -translate-x-1/2 rounded-full bg-aster ring-4 ring-aster-50 sm:left-1/2"
                   aria-hidden
                 />
 
@@ -40,7 +40,7 @@ export function Timeline() {
                     i % 2 === 0 ? "sm:pr-12 sm:text-right" : "sm:pl-12"
                   }`}
                 >
-                  <span className="inline-block font-display text-2xl font-extrabold text-habanero">
+                  <span className="inline-block font-display text-2xl font-extrabold text-navy">
                     {m.year}
                   </span>
                   <h3 className="mt-1 text-lg font-bold text-navy">{m.title}</h3>

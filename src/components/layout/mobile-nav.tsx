@@ -94,7 +94,7 @@ export function MobileNav({
                               <Image src={child.logo} alt="" width={32} height={32} className="size-full object-contain" />
                             </span>
                           ) : child.icon ? (
-                            <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-habanero-50 text-habanero">
+                            <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-aster-100 text-aster-700">
                               <Icon name={child.icon} className="size-4" />
                             </span>
                           ) : null}
@@ -111,7 +111,7 @@ export function MobileNav({
                   onClick={onClose}
                   className={cn(
                     "flex items-center border-b border-border px-2 py-5 text-base font-semibold transition-colors",
-                    pathname === item.href ? "text-habanero" : "text-navy hover:text-habanero"
+                    pathname === item.href ? "text-aster-700" : "text-navy hover:text-aster-700"
                   )}
                 >
                   {item.label}
@@ -128,11 +128,11 @@ export function MobileNav({
             </Link>
           </Button>
           <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-            <a href={`tel:${siteConfig.phoneHref}`} className="flex items-center gap-2 hover:text-habanero">
-              <Phone className="size-4 text-habanero" /> {siteConfig.phone}
+            <a href={`tel:${siteConfig.phoneHref}`} className="flex items-center gap-2 hover:text-aster-700">
+              <Phone className="size-4 text-aster-700" /> {siteConfig.phone}
             </a>
-            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-habanero">
-              <Mail className="size-4 text-habanero" /> {siteConfig.email}
+            <a href={`mailto:${siteConfig.email}`} className="flex items-center gap-2 hover:text-aster-700">
+              <Mail className="size-4 text-aster-700" /> {siteConfig.email}
             </a>
           </div>
         </div>

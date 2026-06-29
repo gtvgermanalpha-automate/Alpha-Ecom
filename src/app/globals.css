@@ -30,8 +30,10 @@
   --habanero-100: #ffe6cc;
   --habanero-50: #fff4e8;
 
-  /* Aster scale */
+  /* Aster scale (light tints for surfaces, deep shades for legible accents) */
   --aster: #9bacd8;
+  --aster-700: #3f5489;
+  --aster-600: #5b6fa6;
   --aster-300: #b4c1e2;
   --aster-200: #cdd7ec;
   --aster-100: #e7ecf6;
@@ -58,7 +60,7 @@
   --secondary: #9bacd8;
   --secondary-foreground: #111144;
 
-  --muted: #f5f1ec;
+  --muted: #f2f5fb;
   --muted-foreground: #5a5a78;
 
   --accent: #e7ecf6;
@@ -109,6 +111,8 @@
   --color-habanero-100: var(--habanero-100);
   --color-habanero-50: var(--habanero-50);
   --color-aster: var(--aster);
+  --color-aster-700: var(--aster-700);
+  --color-aster-600: var(--aster-600);
   --color-aster-300: var(--aster-300);
   --color-aster-200: var(--aster-200);
   --color-aster-100: var(--aster-100);
@@ -223,15 +227,15 @@
   /* Blinking caret used after the rotating hero word */
   .caret {
     display: inline-block;
-    width: 0.06em;
+    width: 0.07em;
     align-self: stretch;
-    background: var(--habanero);
+    background: currentColor;
     border-radius: 2px;
     animation: caret-blink 1.05s steps(1) infinite;
   }
 
   .eyebrow {
-    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-habanero;
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-aster-700;
   }
 
   .bg-dots {

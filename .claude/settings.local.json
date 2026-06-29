@@ -25,7 +25,32 @@
       "Bash(git commit -q -m ' *)",
       "Bash(git remote *)",
       "Bash(git push *)",
-      "Bash(echo \"=== push exit: $? ===\")"
+      "Bash(echo \"=== push exit: $? ===\")",
+      "WebFetch(domain:unsplash.com)",
+      "Bash(curl -k -s -L \"https://images.unsplash.com/photo-1572048572872-2394404cf1f3?auto=format&fit=crop&w=1200&h=800&q=72&fm=jpg\" -o \"public/images/case-home.jpg\")",
+      "Bash(curl -k -s -L \"https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?auto=format&fit=crop&w=1200&h=800&q=72&fm=jpg\" -o \"public/images/case-vintage.jpg\")",
+      "Bash(curl -k -s -L \"https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&h=800&q=72&fm=jpg\" -o \"public/images/case-tech.jpg\")",
+      "Bash(curl -k -s -L \"https://images.unsplash.com/photo-1748543668676-ea8241cb3886?auto=format&fit=crop&w=1200&h=800&q=72&fm=jpg\" -o \"public/images/case-beauty.jpg\")",
+      "Bash(curl -k -s -L \"https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1200&h=800&q=72&fm=jpg\" -o \"public/images/case-warehouse.jpg\")",
+      "Bash(node scripts/palette-swap.mjs)",
+      "Bash(sed -i 's|flex items-center gap-0.5 text-aster-700|flex items-center gap-0.5 text-habanero|g' src/components/layout/header.tsx)",
+      "Bash(sed -i 's|flex items-center gap-0.5 text-aster-700|flex items-center gap-0.5 text-habanero|g' src/components/sections/hero.tsx)",
+      "Bash(sed -i 's|size-3.5 fill-habanero text-aster-700|size-3.5 fill-habanero text-habanero|g' src/components/sections/hero.tsx)",
+      "Bash(sed -i 's|size-5 fill-habanero text-aster-700|size-5 fill-habanero text-habanero|g' src/components/sections/testimonials.tsx)",
+      "Bash(sed -i 's|group-hover:bg-habanero group-hover:text-white|group-hover:bg-aster group-hover:text-navy|g' src/components/layout/header.tsx)",
+      "Bash(sed -i 's|/portfolio/case-amazon.svg|/images/case-home.jpg|' src/lib/content.ts)",
+      "Bash(sed -i 's|/portfolio/case-ebay.svg|/images/case-vintage.jpg|' src/lib/content.ts)",
+      "Bash(sed -i 's|/portfolio/case-etsy.svg|/images/case-handmade.jpg|' src/lib/content.ts)",
+      "Bash(sed -i 's|/portfolio/case-shopify.svg|/images/case-tech.jpg|' src/lib/content.ts)",
+      "Bash(sed -i 's|/portfolio/case-tiktok.svg|/images/case-beauty.jpg|' src/lib/content.ts)",
+      "Bash(curl -s -o /dev/null -w \"what-we-do: HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/what-we-do --max-time 150)",
+      "Bash(curl -s -o /dev/null -w \"services: HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:3000/services --max-time 150)",
+      "Bash(curl -s -o /dev/null -w \"case-home optimized: HTTP %{http_code} type=%{content_type} size=%{size_download}\\\\n\" \"http://localhost:3000/_next/image?url=%2Fimages%2Fcase-home.jpg&w=828&q=75\" --max-time 60)",
+      "Bash(curl -s -o /dev/null -w \"about-team optimized: HTTP %{http_code} type=%{content_type} size=%{size_download}\\\\n\" \"http://localhost:3000/_next/image?url=%2Fimages%2Fabout-team.jpg&w=1080&q=75\" --max-time 60)",
+      "Bash(rm -f scripts/palette-swap.mjs scripts/generate-assets.mjs public/about.svg)",
+      "Bash(rm -f public/portfolio/case-amazon.svg public/portfolio/case-ebay.svg public/portfolio/case-etsy.svg public/portfolio/case-shopify.svg public/portfolio/case-tiktok.svg public/portfolio/case-multichannel.svg)",
+      "Bash(rmdir public/portfolio)",
+      "Bash(sed -i '/\"gen:assets\":/d' package.json)"
     ]
   }
 }

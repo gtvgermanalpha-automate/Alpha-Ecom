@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
 import { Awards } from "@/components/sections/awards";
 import { AboutSection } from "@/components/sections/about-section";
-import { Stats } from "@/components/sections/stats";
 import { ServicesGrid } from "@/components/sections/services";
 import { WhyUs } from "@/components/sections/why-us";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
@@ -27,7 +26,6 @@ export default function HomePage() {
       <Hero />
       <Awards />
       <AboutSection />
-      <Stats />
       <ServicesGrid />
       <WhyUs />
       <PlatformTabs />

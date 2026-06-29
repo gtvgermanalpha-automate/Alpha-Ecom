@@ -32,8 +32,8 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <span className={cn("eyebrow", inverted && "text-habanero")}>
-          <span className="h-px w-6 bg-habanero" aria-hidden />
+        <span className={cn("eyebrow", inverted && "text-aster-700")}>
+          <span className="h-px w-6 bg-aster" aria-hidden />
           {eyebrow}
         </span>
       ) : null}

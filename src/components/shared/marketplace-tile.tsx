@@ -14,13 +14,14 @@ export function MarketplaceTile({
 }: {
   src: string;
   name: string;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   className?: string;
 }) {
   const box = {
     sm: "size-12 p-2.5 rounded-xl",
     md: "size-16 p-3 rounded-2xl",
     lg: "size-20 p-4 rounded-2xl",
+    xl: "size-28 p-5 rounded-3xl",
   }[size];
 
   return (

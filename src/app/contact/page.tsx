@@ -58,7 +58,7 @@ export default function ContactPage() {
       />
 
       {/* Consultation + form */}
-      <section className="bg-luster-50 py-20 lg:py-28">
+      <section className="bg-aster-50 py-20 lg:py-28">
         <Container>
           <div className="grid gap-10 lg:grid-cols-5">
             {/* LEFT — consultation card + contact methods */}
@@ -66,12 +66,12 @@ export default function ContactPage() {
               <Reveal direction="left">
                 <div className="relative overflow-hidden rounded-3xl bg-navy p-8 text-white shadow-card">
                   <div
-                    className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-habanero/30 blur-3xl"
+                    className="pointer-events-none absolute -right-16 -top-16 size-56 rounded-full bg-aster/30 blur-3xl"
                     aria-hidden
                   />
                   <div className="relative">
-                    <span className="eyebrow text-habanero">
-                      <span className="h-px w-6 bg-habanero" aria-hidden />
+                    <span className="eyebrow text-aster-700">
+                      <span className="h-px w-6 bg-aster" aria-hidden />
                       Free consultation
                     </span>
                     <h2 className="mt-4 text-2xl font-extrabold leading-tight text-white sm:text-3xl">
@@ -102,7 +102,7 @@ export default function ContactPage() {
                   const MethodIcon = method.icon;
                   const inner = (
                     <div className="flex items-start gap-4 rounded-2xl border border-border bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card">
-                      <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-habanero-50 text-habanero">
+                      <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
                         <MethodIcon className="size-5" />
                       </span>
                       <div className="min-w-0">
@@ -156,12 +156,12 @@ export default function ContactPage() {
                     <span className="text-3xl leading-none" aria-hidden>
                       {office.flag}
                     </span>
-                    <span className="grid size-9 place-items-center rounded-lg bg-habanero-50 text-habanero">
+                    <span className="grid size-9 place-items-center rounded-lg bg-aster-100 text-aster-700">
                       <MapPin className="size-4" />
                     </span>
                   </div>
                   <h3 className="mt-5 text-lg font-bold text-navy">{office.city}</h3>
-                  <p className="text-sm font-semibold text-habanero">{office.country}</p>
+                  <p className="text-sm font-semibold text-aster-700">{office.country}</p>
                   <p className="mt-3 border-t border-border pt-3 text-sm leading-relaxed text-muted-foreground">
                     {office.address}
                   </p>

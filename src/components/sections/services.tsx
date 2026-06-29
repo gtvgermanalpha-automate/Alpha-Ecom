@@ -47,12 +47,12 @@ function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
       )}
     >
       {/* hover accent wash */}
-      <span className="pointer-events-none absolute inset-x-0 -top-px h-1 origin-left scale-x-0 bg-habanero transition-transform duration-300 group-hover:scale-x-100" />
+      <span className="pointer-events-none absolute inset-x-0 -top-px h-1 origin-left scale-x-0 bg-aster transition-transform duration-300 group-hover:scale-x-100" />
 
       <div className="flex items-start justify-between gap-4">
         <MarketplaceTile src={marketplace.logo} name={marketplace.name} size="md" />
         <div className="text-right">
-          <p className="font-display text-2xl font-extrabold text-habanero">{marketplace.stat.value}</p>
+          <p className="font-display text-2xl font-extrabold text-navy">{marketplace.stat.value}</p>
           <p className="text-xs font-medium text-muted-foreground">{marketplace.stat.label}</p>
         </div>
       </div>
@@ -63,13 +63,13 @@ function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
       <ul className="mt-5 space-y-2">
         {marketplace.features.slice(0, 3).map((f) => (
           <li key={f} className="flex items-start gap-2 text-sm text-navy/80">
-            <Check className="mt-0.5 size-4 shrink-0 text-habanero" strokeWidth={3} />
+            <Check className="mt-0.5 size-4 shrink-0 text-aster-700" strokeWidth={3} />
             {f}
           </li>
         ))}
       </ul>
 
-      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-habanero">
+      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-aster-700">
         Manage my {marketplace.name} store
         <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
       </span>

@@ -117,7 +117,7 @@ function NavLink({ href, active, children }: { href: string; active?: boolean; c
       href={href}
       className={cn(
         "link-underline relative rounded-full px-4 py-2 text-sm font-semibold transition-colors",
-        active ? "text-habanero" : "text-navy hover:text-navy"
+        active ? "text-aster-700" : "text-navy hover:text-navy"
       )}
     >
       {children}
@@ -155,11 +155,11 @@ function NavDropdown({ item, pathname }: { item: NavItem; pathname: string }) {
         aria-expanded={open}
         className={cn(
           "flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold transition-colors",
-          isActive(pathname, item.href) ? "text-habanero" : "text-navy hover:text-navy"
+          isActive(pathname, item.href) ? "text-aster-700" : "text-navy hover:text-navy"
         )}
       >
         {item.label}
-        <ChevronDown className={cn("size-4 transition-transform duration-200", open && "rotate-180 text-habanero")} />
+        <ChevronDown className={cn("size-4 transition-transform duration-200", open && "rotate-180 text-aster-700")} />
       </Link>
 
       <div
@@ -194,12 +194,12 @@ function NavDropdown({ item, pathname }: { item: NavItem; pathname: string }) {
                       <Image src={child.logo} alt="" width={40} height={40} className="size-full object-contain" />
                     </span>
                   ) : child.icon ? (
-                    <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-lg bg-habanero-50 text-habanero transition-colors group-hover:bg-habanero group-hover:text-white">
+                    <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-lg bg-aster-100 text-aster-700 transition-colors group-hover:bg-aster group-hover:text-navy">
                       <Icon name={child.icon} className="size-5" />
                     </span>
                   ) : null}
                   <span className="flex flex-col">
-                    <span className="text-sm font-semibold text-navy group-hover:text-habanero">{child.label}</span>
+                    <span className="text-sm font-semibold text-navy group-hover:text-aster-700">{child.label}</span>
                     {child.description ? (
                       <span className="text-xs leading-snug text-muted-foreground">{child.description}</span>
                     ) : null}
