@@ -24,7 +24,7 @@ export function PartnerMarquee() {
               alt={`${m.name} logo`}
               width={260}
               height={104}
-              className="h-20 w-auto max-w-[15rem] shrink-0 object-contain transition-transform duration-300 hover:scale-110"
+              className="h-16 w-auto max-w-[20rem] shrink-0 object-contain transition-transform duration-300 hover:scale-110"
             />
           ))}
         </Marquee>

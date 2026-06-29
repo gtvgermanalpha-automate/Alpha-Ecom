@@ -45,12 +45,17 @@ export function MarketplaceShowcase() {
                     ))}
                   </ul>
 
-                  <Button asChild className="mt-8">
-                    <Link href="/contact">
-                      Get started on {m.name}
-                      <ArrowRight className="size-4" />
-                    </Link>
-                  </Button>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <Button asChild>
+                      <Link href="/contact">
+                        Get started on {m.name}
+                        <ArrowRight className="size-4" />
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline">
+                      <Link href={`/services/${m.slug}`}>Explore Service</Link>
+                    </Button>
+                  </div>
                 </Reveal>
 
                 {/* VISUAL side */}

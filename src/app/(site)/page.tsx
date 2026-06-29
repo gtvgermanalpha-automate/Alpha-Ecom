@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { Hero } from "@/components/sections/hero";
-import { Awards } from "@/components/sections/awards";
 import { AboutSection } from "@/components/sections/about-section";
 import { ServicesGrid } from "@/components/sections/services";
 import { WhyUs } from "@/components/sections/why-us";
@@ -24,7 +23,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Awards />
+      <PartnerMarquee />
       <AboutSection />
       <ServicesGrid />
       <WhyUs />
@@ -33,7 +32,6 @@ export default function HomePage() {
       <PortfolioGrid limit={6} showFilters={false} heading />
       <Testimonials />
       <Timeline />
-      <PartnerMarquee />
       <Insights />
       <FAQ />
       <CTA />

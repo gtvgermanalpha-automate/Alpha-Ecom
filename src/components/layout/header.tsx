@@ -60,7 +60,9 @@ export function Header() {
       <div
         className={cn(
           "border-b transition-all duration-300",
-          scrolled ? "border-border bg-white/90 shadow-soft backdrop-blur-md" : "border-transparent bg-white"
+          scrolled
+            ? "border-border bg-white/80 shadow-soft backdrop-blur-md"
+            : "border-transparent bg-aster-50"
         )}
       >
         <Container

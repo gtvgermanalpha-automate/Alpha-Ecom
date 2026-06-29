@@ -22,6 +22,9 @@ import { Magnetic } from "@/components/shared/magnetic";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+// eBay logo letter colours (e, b, a, y) — used to render the hero word multi-coloured.
+const EBAY_LETTER_COLORS = ["#E53238", "#0064D2", "#F5AF02", "#86B817"];
+
 // Decorative float positions + parallax depth for the marketplace logo tiles.
 const floats = [
   { className: "left-[5%] top-[18%]", delay: 0, depth: 38 },
@@ -35,7 +38,7 @@ const floats = [
 export function Hero() {
   const [idx, setIdx] = React.useState(0);
   // Rotate the marketplace name in the headline, each in its own brand colour.
-  const rotators = marketplaces.map((m) => ({ label: m.name, color: m.accent }));
+  const rotators = marketplaces.map((m) => ({ label: m.name, color: m.accent, slug: m.slug }));
   const reduce = useReducedMotion();
 
   const sectionRef = React.useRef<HTMLElement>(null);
@@ -135,7 +138,15 @@ export function Hero() {
                   exit={{ y: "-0.9em", opacity: 0 }}
                   transition={{ duration: 0.4, ease: EASE }}
                 >
-                  {rotators[idx].label}
+                  {rotators[idx].slug === "ebay"
+                    ? rotators[idx].label
+                        .split("")
+                        .map((ch, i) => (
+                          <span key={i} style={{ color: EBAY_LETTER_COLORS[i] ?? "currentColor" }}>
+                            {ch}
+                          </span>
+                        ))
+                    : rotators[idx].label}
                 </motion.span>
               </AnimatePresence>
               <span className="caret ml-1.5" aria-hidden />
