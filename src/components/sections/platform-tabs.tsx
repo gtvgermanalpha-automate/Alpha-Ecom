@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import {
   AnimatePresence,
   motion,
@@ -17,6 +18,16 @@ import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+// A background photo for each capability panel — decorates every scroll-tab detail.
+const TAB_IMAGES = [
+  "/images/case-home.jpg",
+  "/images/insight-amazon.jpg",
+  "/images/insight-tiktok.jpg",
+  "/images/case-warehouse.jpg",
+  "/images/case-tech.jpg",
+  "/images/case-beauty.jpg",
+];
 
 export function PlatformTabs() {
   const reduce = useReducedMotion();
@@ -164,9 +175,9 @@ export function PlatformTabs() {
               })}
             </div>
 
-            {/* Content pane */}
+            {/* Content pane — each panel is a photo decorated with a dark overlay */}
             <div className="mt-4 lg:col-span-8 lg:mt-0">
-              <div className="min-h-[19rem] rounded-3xl bg-white p-8 shadow-card">
+              <div className="relative min-h-[19rem] overflow-hidden rounded-3xl shadow-card ring-1 ring-white/10">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active}
@@ -177,29 +188,48 @@ export function PlatformTabs() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
                     transition={{ duration: 0.32, ease: EASE }}
+                    className="relative"
                   >
-                    <span className="grid size-12 place-items-center rounded-xl bg-aster-100 text-aster-700">
-                      <Icon name={current.icon} className="size-6" />
-                    </span>
-                    <h3 className="mt-5 text-2xl font-bold text-navy">{current.heading}</h3>
-                    <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                      {current.description}
-                    </p>
+                    {/* background picture + dark overlay */}
+                    <Image
+                      src={TAB_IMAGES[active % TAB_IMAGES.length]}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 60vw, 100vw"
+                      className="object-cover"
+                      aria-hidden
+                    />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-br from-navy/95 via-navy/85 to-navy/70"
+                      aria-hidden
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-dots-light opacity-40" aria-hidden />
 
-                    <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                      {current.points.map((point) => (
-                        <div
-                          key={point}
-                          className="flex items-start gap-3 rounded-xl border border-border bg-aster-50 p-4"
-                        >
-                          <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-aster-100">
-                            <Check className="size-3.5 text-aster-700" strokeWidth={3} />
-                          </span>
-                          <span className="text-sm font-medium leading-snug text-navy/80">
-                            {point}
-                          </span>
-                        </div>
-                      ))}
+                    {/* content */}
+                    <div className="relative p-8">
+                      <span className="grid size-12 place-items-center rounded-xl bg-white/20 text-white ring-1 ring-white/30 backdrop-blur-sm">
+                        <Icon name={current.icon} className="size-6" />
+                      </span>
+                      <h3 className="mt-5 text-2xl font-bold text-white">{current.heading}</h3>
+                      <p className="mt-3 text-base leading-relaxed text-white/80">
+                        {current.description}
+                      </p>
+
+                      <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                        {current.points.map((point) => (
+                          <div
+                            key={point}
+                            className="flex items-start gap-3 rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm"
+                          >
+                            <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-aster text-navy">
+                              <Check className="size-3.5" strokeWidth={3} />
+                            </span>
+                            <span className="text-sm font-medium leading-snug text-white/90">
+                              {point}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </motion.div>
                 </AnimatePresence>

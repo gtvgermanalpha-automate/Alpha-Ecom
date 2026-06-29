@@ -30,7 +30,7 @@ export default function HomePage() {
       <WhyUs />
       <PlatformTabs />
       <Process />
-      <PortfolioGrid limit={6} showFilters={false} heading tone="luster" />
+      <PortfolioGrid limit={6} showFilters={false} heading />
       <Testimonials />
       <Timeline />
       <PartnerMarquee />

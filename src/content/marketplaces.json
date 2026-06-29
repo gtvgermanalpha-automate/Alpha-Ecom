@@ -26,13 +26,13 @@
       "Promoted Listings management",
       "Best Match SEO optimization"
     ],
-    "accent": "#E53238",
+    "accent": "#0064D2",
     "stat": { "value": "+58%", "label": "Search visibility" }
   },
   {
     "slug": "etsy",
     "name": "Etsy",
-    "logo": "/Etsy.png",
+    "logo": "/Etsy-circular.png",
     "blurb": "Etsy shop creation, SEO and ads for handmade & creative brands.",
     "description": "We help makers and creative brands stand out on Etsy with keyword-rich listings, branded shop design, Etsy Ads management and a strategy tuned to the Etsy algorithm.",
     "features": [
@@ -41,7 +41,7 @@
       "Etsy Ads management",
       "Review & order growth"
     ],
-    "accent": "#F45800",
+    "accent": "#F1641E",
     "stat": { "value": "+41%", "label": "Shop conversion" }
   },
   {
@@ -71,7 +71,7 @@
       "LIVE & video shopping",
       "Spark Ads management"
     ],
-    "accent": "#111111",
+    "accent": "#25F4EE",
     "stat": { "value": "7.5%", "label": "Live-stream CVR" }
   },
   {
@@ -86,7 +86,7 @@
       "CRO & speed optimization",
       "Multichannel integration"
     ],
-    "accent": "#5E8E3E",
+    "accent": "#95BF47",
     "stat": { "value": "+47%", "label": "Store conversion" }
   }
 ]

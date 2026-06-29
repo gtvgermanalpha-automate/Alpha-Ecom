@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 
 import {
+  checkConnection,
   discardDraft,
   draftStatus,
   getFileSha,
@@ -64,15 +65,23 @@ export type StatusInfo = {
   mode: CmsMode;
   pending: number;
   items: { file: string; label: string }[];
+  connection: { ok: boolean; reason?: string };
 };
 
 export async function statusInfo(): Promise<StatusInfo> {
-  if (!isGithubConfigured()) return { mode: "local", pending: 0, items: [] };
+  if (!isGithubConfigured()) return { mode: "local", pending: 0, items: [], connection: { ok: true } };
+
+  // Preflight first so a bad token/repo yields one clear banner instead of an
+  // error on every section.
+  const conn = await checkConnection();
+  if (!conn.ok) return { mode: "github", pending: 0, items: [], connection: conn };
+
   const { aheadBy, files } = await draftStatus();
   return {
     mode: "github",
     pending: aheadBy,
     items: files.map((f) => ({ file: f, label: collectionByFile(f)?.label ?? f })),
+    connection: { ok: true },
   };
 }
 

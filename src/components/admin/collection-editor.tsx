@@ -230,7 +230,7 @@ function SaveButton({ state, onClick }: { state: Save; onClick: () => void }) {
   );
 }
 
-function Notice({ kind, children, className }: { kind: "error"; children: React.ReactNode; className?: string }) {
+function Notice({ children, className }: { kind?: "error"; children: React.ReactNode; className?: string }) {
   return (
     <div className={`flex items-start gap-2 rounded-xl bg-destructive/10 px-4 py-3 text-sm text-destructive ${className ?? ""}`}>
       <AlertCircle className="mt-0.5 size-4 shrink-0" />

@@ -22,6 +22,7 @@ export default function ServicesPage() {
         title="Marketplace store creation & management"
         description="One partner to build, optimize and run your stores across Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify."
         breadcrumbs={[{ label: "Services" }]}
+        image="/images/case-tech.jpg"
       />
       <ServicesGrid heading tone="white" />
       <MarketplaceShowcase />

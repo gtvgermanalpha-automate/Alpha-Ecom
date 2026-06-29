@@ -62,6 +62,7 @@ export type StatusInfo = {
   mode: "github" | "local";
   pending: number;
   items: { file: string; label: string }[];
+  connection?: { ok: boolean; reason?: string };
 };
 export const getStatus = (): Promise<StatusInfo> =>
   fetch(`/api/admin/status`, { cache: "no-store" }).then(parse);

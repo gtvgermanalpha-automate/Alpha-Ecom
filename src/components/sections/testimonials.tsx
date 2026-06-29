@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
@@ -33,14 +34,25 @@ export function Testimonials() {
   }, [paused, count]);
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <section className="bg-aster-50 py-20 lg:py-28">
       <Container>
         <SectionHeading
           eyebrow="Client love"
           title="Sellers grow with Alpha"
           description="Founders and store owners on what it's like to work with us."
-          className="mb-14"
+          className="mb-8"
         />
+
+        {/* Google reviews badge */}
+        <Reveal direction="up" className="mb-12 flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+          <Image src="/google.png" alt="Google" width={92} height={30} className="h-7 w-auto object-contain" />
+          <div className="flex items-center gap-0.5" style={{ color: "#FBBC05" }}>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Star key={i} className="size-5 fill-current" aria-hidden="true" />
+            ))}
+          </div>
+          <span className="text-sm font-semibold text-navy">5.0 · Based on 120+ reviews</span>
+        </Reveal>
 
         <Reveal direction="up">
         <div
@@ -87,7 +99,8 @@ export function Testimonials() {
                     {Array.from({ length: t.rating }).map((_, s) => (
                       <Star
                         key={s}
-                        className="size-5 fill-habanero text-habanero"
+                        className="size-5 fill-current"
+                        style={{ color: "#FBBC05" }}
                         aria-hidden="true"
                       />
                     ))}

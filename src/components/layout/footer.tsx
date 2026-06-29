@@ -92,7 +92,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
           {offices.map((office) => (
             <div key={office.country} className="flex gap-3">
               <MapPin className="mt-0.5 size-5 shrink-0 text-aster-700" />

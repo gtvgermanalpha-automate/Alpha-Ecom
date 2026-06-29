@@ -1,12 +1,19 @@
-import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
-
-import { cn } from "@/lib/utils";
 import { marketplaces, type Marketplace } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
+import { RevealCard } from "@/components/shared/reveal-card";
 import { MarketplaceTile } from "@/components/shared/marketplace-tile";
+
+// Background photo per marketplace card (the case study run on that channel).
+const CARD_IMAGES: Record<string, string> = {
+  amazon: "/images/case-home.jpg",
+  ebay: "/images/case-vintage.jpg",
+  etsy: "/images/case-handmade.jpg",
+  onbuy: "/images/case-warehouse.jpg",
+  "tiktok-shop": "/images/case-beauty.jpg",
+  shopify: "/images/case-tech.jpg",
+};
 
 export function ServicesGrid({
   heading = true,
@@ -39,40 +46,22 @@ export function ServicesGrid({
 
 function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
   return (
-    <Link
+    <RevealCard
       href={`/services#${marketplace.slug}`}
-      className={cn(
-        "group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white p-7",
-        "transition-all duration-300 hover:-translate-y-2 hover:border-aster hover:shadow-card"
-      )}
-    >
-      {/* hover accent wash */}
-      <span className="pointer-events-none absolute inset-x-0 -top-px h-1 origin-left scale-x-0 bg-aster transition-transform duration-300 group-hover:scale-x-100" />
-
-      <div className="flex items-start justify-between gap-4">
-        <MarketplaceTile src={marketplace.logo} name={marketplace.name} size="md" />
+      minHeight="min-h-[24rem]"
+      image={CARD_IMAGES[marketplace.slug] ?? "/images/case-home.jpg"}
+      title={marketplace.name}
+      summary={marketplace.blurb}
+      description={marketplace.description}
+      media={<MarketplaceTile src={marketplace.logo} name={marketplace.name} size="md" />}
+      badge={
         <div className="text-right">
-          <p className="font-display text-2xl font-extrabold text-navy">{marketplace.stat.value}</p>
-          <p className="text-xs font-medium text-muted-foreground">{marketplace.stat.label}</p>
+          <p className="font-display text-2xl font-extrabold text-white">{marketplace.stat.value}</p>
+          <p className="text-xs font-medium text-white/70">{marketplace.stat.label}</p>
         </div>
-      </div>
-
-      <h3 className="mt-6 text-xl font-bold text-navy">{marketplace.name}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{marketplace.blurb}</p>
-
-      <ul className="mt-5 space-y-2">
-        {marketplace.features.slice(0, 3).map((f) => (
-          <li key={f} className="flex items-start gap-2 text-sm text-navy/80">
-            <Check className="mt-0.5 size-4 shrink-0 text-aster-700" strokeWidth={3} />
-            {f}
-          </li>
-        ))}
-      </ul>
-
-      <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy transition-colors group-hover:text-aster-700">
-        Manage my {marketplace.name} store
-        <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
-      </span>
-    </Link>
+      }
+      points={marketplace.features.slice(0, 3)}
+      cta={`Manage my ${marketplace.name} store`}
+    />
   );
 }

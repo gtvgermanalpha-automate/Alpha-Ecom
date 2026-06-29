@@ -15,7 +15,7 @@ export function CTA({
   description?: string;
 }) {
   return (
-    <section className="bg-white py-16 lg:py-20">
+    <section className="bg-aster-50 py-16 lg:py-20">
       <Container>
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-navy px-6 py-14 text-center sm:px-12 lg:py-20">

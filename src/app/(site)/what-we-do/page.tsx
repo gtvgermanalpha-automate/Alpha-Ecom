@@ -23,6 +23,7 @@ export default function WhatWeDoPage() {
         description="From first listing to account health, we run the day-to-day of your marketplace channels so you can focus on the product and the brand."
         breadcrumbs={[{ label: "What We Do" }]}
         variant="capabilities"
+        image="/images/case-warehouse.jpg"
       />
       <Capabilities />
       <PlatformTabs />

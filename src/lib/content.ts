@@ -117,7 +117,7 @@ export const hero = {
 /* Awards / certifications (carousel)                                  */
 /* ------------------------------------------------------------------ */
 
-export type Award = { slug?: string; title: string; subtitle: string; icon: IconKey };
+export type Award = { slug?: string; title: string; subtitle: string; icon: IconKey; logo?: string };
 
 export const awards = awardsData as Award[];
 

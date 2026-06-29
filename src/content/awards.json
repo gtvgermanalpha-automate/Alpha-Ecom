@@ -1,8 +1,8 @@
 [
-  { "slug": "amazon-spn", "title": "Amazon SPN", "subtitle": "Verified Service Provider", "icon": "shield-check" },
-  { "slug": "shopify-partner", "title": "Shopify Partner", "subtitle": "Certified Store Builder", "icon": "store" },
-  { "slug": "ebay-approved", "title": "eBay Approved", "subtitle": "Marketplace Partner", "icon": "badge-check" },
+  { "slug": "amazon-spn", "title": "Amazon SPN", "subtitle": "Verified Service Provider", "icon": "shield-check", "logo": "/amazon-logo-amazon-icon-transparent-free-png.webp" },
+  { "slug": "shopify-partner", "title": "Shopify Partner", "subtitle": "Certified Store Builder", "icon": "store", "logo": "/Shopify.png" },
+  { "slug": "ebay-approved", "title": "eBay Approved", "subtitle": "Marketplace Partner", "icon": "badge-check", "logo": "/Ebay.png" },
+  { "slug": "tiktok-partner", "title": "TikTok Shop Partner", "subtitle": "Certified Ads Partner", "icon": "megaphone", "logo": "/TikTok.png" },
   { "slug": "top-rated-2026", "title": "Top Rated 2026", "subtitle": "Marketplace Agency", "icon": "award" },
-  { "slug": "5-0-on-clutch", "title": "5.0 on Clutch", "subtitle": "120+ Reviews", "icon": "star" },
-  { "slug": "meta-tiktok", "title": "Meta & TikTok", "subtitle": "Ads Partner", "icon": "megaphone" }
+  { "slug": "5-0-on-clutch", "title": "5.0 on Clutch", "subtitle": "120+ Reviews", "icon": "star" }
 ]

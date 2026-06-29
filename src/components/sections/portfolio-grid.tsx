@@ -18,12 +18,10 @@ export function PortfolioGrid({
   limit,
   showFilters = true,
   heading = true,
-  tone = "white",
 }: {
   limit?: number;
   showFilters?: boolean;
   heading?: boolean;
-  tone?: "white" | "luster";
 }) {
   const [category, setCategory] = React.useState<PortfolioCategory>("All");
   const [activeIndex, setActiveIndex] = React.useState<number | null>(null);
@@ -63,7 +61,7 @@ export function PortfolioGrid({
   return (
     <section
       id="case-studies"
-      className={cn(tone === "luster" ? "bg-aster-50" : "bg-white", "py-20 lg:py-28")}
+      className="bg-aster-50 py-20 lg:py-28"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {heading ? (
@@ -125,18 +123,8 @@ export function PortfolioGrid({
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* navy gradient overlay on hover */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/75 via-navy/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                  {/* marketplace logo tile */}
-                  <span className="absolute left-3 top-3 grid place-items-center rounded-lg bg-white p-1.5 ring-1 ring-border">
-                    <Image
-                      src={project.marketplaceLogo}
-                      alt={`${project.category} logo`}
-                      width={28}
-                      height={28}
-                      className="size-7 object-contain"
-                    />
-                  </span>
+                  {/* aster gradient overlay on hover */}
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-aster-700/85 via-aster-700/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                   <span className="absolute bottom-3 right-3 grid size-10 translate-y-2 place-items-center rounded-full bg-navy text-white opacity-0 shadow-soft transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                     <Icon name="arrow-up-right" className="size-5" />
                   </span>

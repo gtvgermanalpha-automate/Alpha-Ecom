@@ -20,6 +20,7 @@ export default function PortfolioPage() {
         title="Stores we've grown"
         description="Real marketplace results across Amazon, eBay, Etsy, Shopify and TikTok Shop. Filter by channel and open any project."
         breadcrumbs={[{ label: "Case Studies" }]}
+        image="/images/case-home.jpg"
       />
       <PortfolioGrid showFilters heading />
       <Testimonials />

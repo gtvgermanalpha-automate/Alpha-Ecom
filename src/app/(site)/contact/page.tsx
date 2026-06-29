@@ -13,7 +13,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us — Start your project",
   description:
-    "Tell us about your products and goals and we'll reply within one business day with a clear plan. Book a free 60-minute strategy session. Offices in the USA, UK, UAE and India.",
+    "Tell us about your products and goals and we'll reply within one business day with a clear plan. Book a free 60-minute strategy session. Offices in the USA, UK and UAE.",
   alternates: { canonical: "/contact" },
 };
 
@@ -55,6 +55,7 @@ export default function ContactPage() {
         title="Let's grow your store"
         description="Tell us about your products and goals — we'll reply within one business day with a clear plan."
         breadcrumbs={[{ label: "Contact" }]}
+        image="/images/case-beauty.jpg"
       />
 
       {/* Consultation + form */}
@@ -140,15 +141,15 @@ export default function ContactPage() {
       </section>
 
       {/* Offices */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-aster-50 py-20 lg:py-28">
         <Container>
           <SectionHeading
             eyebrow="Our offices"
             title="Find us around the world"
-            description="Four hubs across four time zones — there's always a team awake and shipping for your store."
+            description="Three hubs across three time zones — there's always a team awake and shipping for your store."
             className="mb-14"
           />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {offices.map((office, i) => (
               <Reveal key={office.country} direction="up" delay={i + 1}>
                 <article className="h-full rounded-2xl border border-border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card">

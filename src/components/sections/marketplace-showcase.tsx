@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 
 export function MarketplaceShowcase() {
   return (
-    <div className="bg-white">
+    <div className="bg-aster-50">
       {marketplaces.map((m, i) => {
         const odd = i % 2 === 1;
 
@@ -19,7 +19,7 @@ export function MarketplaceShowcase() {
           <section
             key={m.slug}
             id={m.slug}
-            className={cn("scroll-mt-28 py-16 lg:py-24", odd ? "bg-aster-50" : "bg-white")}
+            className={cn("scroll-mt-28 py-16 lg:py-24", odd ? "bg-aster-100" : "bg-aster-50")}
           >
             <Container>
               <div className="grid items-center gap-12 lg:grid-cols-2">

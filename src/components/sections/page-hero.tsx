@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -29,18 +30,29 @@ export function PageHero({
   description,
   breadcrumbs = [],
   variant,
+  image,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   breadcrumbs?: Crumb[];
   variant?: string;
+  /** optional background photo, shown under a dark navy overlay. */
+  image?: string;
 }) {
   const seed = [...(variant ?? title)].reduce((a, c) => a + c.charCodeAt(0), 0);
   const p = presets[seed % presets.length];
 
   return (
     <section className="relative overflow-hidden bg-navy text-white">
+      {image ? (
+        <>
+          <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" aria-hidden />
+          {/* dark overlay keeps the white text legible; heavier on the left where the copy sits */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/60" aria-hidden />
+          <div className="absolute inset-0 bg-navy/40" aria-hidden />
+        </>
+      ) : null}
       <div className="pointer-events-none absolute inset-0 bg-grid-light opacity-70" aria-hidden />
 
       {/* Organic floating blobs */}

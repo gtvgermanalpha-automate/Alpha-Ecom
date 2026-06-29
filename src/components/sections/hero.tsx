@@ -192,12 +192,15 @@ export function Hero() {
                 ))}
               </div>
               <div className="text-left text-sm">
-                <div className="flex items-center gap-0.5 text-habanero">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="size-3.5 fill-current" />
-                  ))}
+                <div className="flex items-center gap-2">
+                  <Image src="/google.png" alt="Google reviews" width={64} height={22} className="h-5 w-auto object-contain" />
+                  <div className="flex items-center gap-0.5" style={{ color: "#FBBC05" }}>
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="size-3.5 fill-current" />
+                    ))}
+                  </div>
                 </div>
-                <p className="font-semibold text-navy">1,200+ stores launched</p>
+                <p className="mt-0.5 font-semibold text-navy">5.0 rating · 1,200+ stores launched</p>
               </div>
             </div>
           </motion.div>

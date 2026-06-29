@@ -3,7 +3,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ExternalLink, LogOut, Loader2, UploadCloud, Undo2, FileText, Database } from "lucide-react";
+import { ExternalLink, LogOut, Loader2, UploadCloud, Undo2, FileText, Database, AlertTriangle } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import {
@@ -61,6 +61,18 @@ export function AdminShell({ nav, children }: { nav: NavItem[]; children: React.
             <LogoutButton />
           </div>
         </header>
+
+        {status && status.connection && !status.connection.ok ? (
+          <div className="border-b border-destructive/30 bg-destructive/10 px-4 py-3 sm:px-6">
+            <div className="mx-auto flex max-w-7xl items-start gap-2 text-sm text-destructive">
+              <AlertTriangle className="mt-0.5 size-4 shrink-0" />
+              <div>
+                <p className="font-semibold">GitHub connection problem — edits can’t be saved or published yet.</p>
+                <p className="mt-0.5 text-destructive/90">{status.connection.reason}</p>
+              </div>
+            </div>
+          </div>
+        ) : null}
 
         <div className="mx-auto flex max-w-7xl gap-6 px-4 py-6 sm:px-6">
           <aside className="hidden w-56 shrink-0 lg:block">

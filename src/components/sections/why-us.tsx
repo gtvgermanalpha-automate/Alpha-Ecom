@@ -5,7 +5,17 @@ import { Icon } from "@/lib/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
+import { RevealCard } from "@/components/shared/reveal-card";
 import { Button } from "@/components/ui/button";
+
+// Background photo per why-us card.
+const WHY_IMAGES = [
+  "/images/about-team.jpg",
+  "/images/case-tech.jpg",
+  "/images/insight-amazon.jpg",
+  "/images/case-beauty.jpg",
+  "/images/case-vintage.jpg",
+];
 
 export function WhyUs() {
   return (
@@ -18,15 +28,19 @@ export function WhyUs() {
       />
 
       <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>
-        {whyUs.map((f) => (
+        {whyUs.map((f, i) => (
           <RevealItem key={f.title}>
-            <article className="group flex h-full flex-col rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card">
-              <span className="grid size-14 place-items-center rounded-xl bg-aster-100 text-aster-700 transition-transform duration-300 group-hover:-translate-y-0.5">
-                <Icon name={f.icon} className="size-7" />
-              </span>
-              <h3 className="mt-6 text-lg font-bold text-navy">{f.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{f.description}</p>
-            </article>
+            <RevealCard
+              minHeight="min-h-[16rem]"
+              image={WHY_IMAGES[i % WHY_IMAGES.length]}
+              title={f.title}
+              description={f.description}
+              media={
+                <span className="grid size-14 place-items-center rounded-xl bg-white/15 text-white ring-1 ring-white/25 backdrop-blur-sm">
+                  <Icon name={f.icon} className="size-7" />
+                </span>
+              }
+            />
           </RevealItem>
         ))}
 

@@ -1,10 +1,19 @@
-import { Check } from "lucide-react";
-
 import { capabilities } from "@/lib/content";
 import { Icon } from "@/lib/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
+import { RevealCard } from "@/components/shared/reveal-card";
+
+// Background photo per capability card.
+const CAP_IMAGES: Record<string, string> = {
+  setup: "/images/case-home.jpg",
+  listing: "/images/insight-amazon.jpg",
+  ads: "/images/insight-tiktok.jpg",
+  operations: "/images/case-warehouse.jpg",
+  health: "/images/case-tech.jpg",
+  design: "/images/insight-etsy.jpg",
+};
 
 export function Capabilities() {
   return (
@@ -19,24 +28,20 @@ export function Capabilities() {
       <RevealGroup className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" stagger={0.07}>
         {capabilities.map((c) => (
           <RevealItem key={c.key}>
-            <article
+            <RevealCard
               id={c.key}
-              className="group h-full scroll-mt-28 rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-aster hover:shadow-card"
-            >
-              <span className="grid size-14 place-items-center rounded-2xl bg-aster-100 text-aster-700 transition-colors group-hover:bg-aster group-hover:text-navy">
-                <Icon name={c.icon} className="size-7" />
-              </span>
-              <h3 className="mt-6 text-xl font-bold text-navy">{c.label}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{c.description}</p>
-              <ul className="mt-5 space-y-2.5">
-                {c.points.map((point) => (
-                  <li key={point} className="flex items-start gap-2.5 text-sm text-navy/80">
-                    <Check className="mt-0.5 size-4 shrink-0 text-aster-700" strokeWidth={3} />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </article>
+              className="scroll-mt-28"
+              minHeight="min-h-[22rem]"
+              image={CAP_IMAGES[c.key] ?? "/images/case-tech.jpg"}
+              title={c.label}
+              description={c.description}
+              points={c.points}
+              media={
+                <span className="grid size-14 place-items-center rounded-2xl bg-white/15 text-white ring-1 ring-white/25 backdrop-blur-sm">
+                  <Icon name={c.icon} className="size-7" />
+                </span>
+              }
+            />
           </RevealItem>
         ))}
       </RevealGroup>

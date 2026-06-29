@@ -6,7 +6,9 @@ import { Container } from "@/components/shared/container";
 type Tone = "white" | "luster" | "luster-strong" | "navy";
 
 const toneClass: Record<Tone, string> = {
-  white: "bg-white text-foreground",
+  // "white" now renders the light aster-blue surface — the site uses no plain-white
+  // section backgrounds; cards stay white to pop against it.
+  white: "bg-aster-50 text-foreground",
   luster: "bg-aster-50 text-foreground",
   "luster-strong": "bg-aster-100 text-navy",
   navy: "bg-navy text-white",

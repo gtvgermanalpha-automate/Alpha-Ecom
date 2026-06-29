@@ -31,6 +31,11 @@ export function Insights() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+                {/* aster overlay wash on hover */}
+                <div
+                  className="pointer-events-none absolute inset-0 bg-aster-700/0 transition-colors duration-300 group-hover:bg-aster-700/35"
+                  aria-hidden
+                />
                 <Badge variant="secondary" className="absolute left-4 top-4">
                   {post.category}
                 </Badge>

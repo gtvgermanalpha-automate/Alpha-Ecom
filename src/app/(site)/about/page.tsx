@@ -22,6 +22,7 @@ export default function AboutPage() {
         title="We build & run marketplace stores that grow"
         description="Since 2013 we've helped 1,200+ brands launch and scale on the world's biggest marketplaces."
         breadcrumbs={[{ label: "About" }]}
+        image="/images/about-team.jpg"
       />
       <AboutSection />
       <WhyUs />

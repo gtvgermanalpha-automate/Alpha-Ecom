@@ -6,18 +6,38 @@
  * (a merge commit that DOES build); draft commits carry `[skip ci]` as a backstop.
  *
  * Configured purely from env (server-only):
- *   GITHUB_TOKEN         fine-grained PAT, Contents: read/write, this repo only
+ *   GITHUB_TOKEN         a token that can read/write this repo. Classic PAT (scope: repo)
+ *                        from an account with push access, OR a fine-grained PAT whose
+ *                        resource owner OWNS this repo with Contents: read/write. A
+ *                        fine-grained PAT under any other account 404s on every call.
  *   GITHUB_REPO          "owner/name"
  *   GITHUB_BRANCH        published branch the host builds (default "main")
  *   GITHUB_DRAFT_BRANCH  draft branch, not built (default "cms-draft")
  */
 
-const TOKEN = process.env.GITHUB_TOKEN;
-const REPO = process.env.GITHUB_REPO;
-const BRANCH = process.env.GITHUB_BRANCH ?? "main";
-const DRAFT = process.env.GITHUB_DRAFT_BRANCH ?? "cms-draft";
+/** Trim env values — secrets pasted into a host dashboard often carry a trailing
+ * space or newline, which silently breaks the Authorization header or the repo path. */
+const clean = (v: string | undefined): string | undefined => {
+  const t = v?.trim();
+  return t ? t : undefined;
+};
+
+const TOKEN = clean(process.env.GITHUB_TOKEN);
+const REPO = clean(process.env.GITHUB_REPO);
+const BRANCH = clean(process.env.GITHUB_BRANCH) ?? "main";
+const DRAFT = clean(process.env.GITHUB_DRAFT_BRANCH) ?? "cms-draft";
 
 const API = "https://api.github.com";
+
+function authHeaders(extra: HeadersInit = {}): HeadersInit {
+  return {
+    Authorization: `Bearer ${TOKEN}`,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "Content-Type": "application/json",
+    ...extra,
+  };
+}
 
 export class GitHubConfigError extends Error {}
 export class GitHubConflictError extends Error {}
@@ -39,16 +59,21 @@ async function api(path: string, init: RequestInit = {}) {
   requireConfig();
   const res = await fetch(`${API}${path}`, {
     ...init,
-    headers: {
-      Authorization: `Bearer ${TOKEN}`,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      "Content-Type": "application/json",
-      ...(init.headers ?? {}),
-    },
+    headers: authHeaders(init.headers),
     cache: "no-store",
   });
 
+  if (res.status === 401) {
+    throw new GitHubConfigError(
+      "GitHub rejected the token (401). GITHUB_TOKEN is missing, malformed, or expired."
+    );
+  }
+  if (res.status === 403) {
+    const detail = await res.text().catch(() => "");
+    throw new GitHubConfigError(
+      `GitHub denied the request (403) — the token lacks permission or hit a rate limit. ${detail.slice(0, 200)}`
+    );
+  }
   if (res.status === 409) {
     throw new GitHubConflictError("Content changed since you loaded it. Reload and try again.");
   }
@@ -116,12 +141,72 @@ async function getBranchSha(branch: string): Promise<string | null> {
   return json.object.sha;
 }
 
+/**
+ * Preflight the GitHub connection with the configured token and return a precise,
+ * actionable reason when it can't be used. Surfaced by the admin status endpoint so
+ * editors see the true problem instead of a misleading per-section error.
+ */
+export async function checkConnection(): Promise<{ ok: true } | { ok: false; reason: string }> {
+  if (!isGithubConfigured()) {
+    return { ok: false, reason: "GITHUB_TOKEN and GITHUB_REPO are not both set." };
+  }
+  const owner = (REPO ?? "").split("/")[0] || REPO;
+
+  let repo: Response;
+  try {
+    repo = await fetch(`${API}/repos/${REPO}`, { headers: authHeaders(), cache: "no-store" });
+  } catch (e) {
+    return { ok: false, reason: `Network error reaching GitHub: ${e instanceof Error ? e.message : String(e)}` };
+  }
+
+  if (repo.status === 401) {
+    return { ok: false, reason: "GitHub rejected the token (401). GITHUB_TOKEN is invalid, malformed, or expired." };
+  }
+  if (repo.status === 404) {
+    return {
+      ok: false,
+      reason:
+        `Repository "${REPO}" is not visible to this token (404). A fine-grained PAT only reaches ` +
+        `repositories owned by its resource owner — set the resource owner to "${owner}" and grant this repo ` +
+        `Contents: Read and write, or use a classic PAT (scope: repo) from an account with push access. ` +
+        `Also double-check GITHUB_REPO for typos or trailing spaces.`,
+    };
+  }
+  if (!repo.ok) {
+    return { ok: false, reason: `GitHub returned ${repo.status} for /repos/${REPO}.` };
+  }
+
+  const branch = await fetch(`${API}/repos/${REPO}/git/ref/heads/${BRANCH}`, {
+    headers: authHeaders(),
+    cache: "no-store",
+  });
+  if (branch.status === 404) {
+    return {
+      ok: false,
+      reason: `The repository is reachable, but production branch "${BRANCH}" was not found. Set GITHUB_BRANCH to your live branch.`,
+    };
+  }
+  if (!branch.ok) {
+    return { ok: false, reason: `GitHub returned ${branch.status} reading branch "${BRANCH}".` };
+  }
+  return { ok: true };
+}
+
 /** Create the draft branch from production if it doesn't exist (idempotent). */
 export async function ensureDraftBranch() {
   const existing = await getBranchSha(DRAFT);
   if (existing) return;
   const baseSha = await getBranchSha(BRANCH);
-  if (!baseSha) throw new Error(`Production branch "${BRANCH}" not found.`);
+  if (!baseSha) {
+    // A 404 on the base ref is almost never a truly missing branch — it's the token
+    // being unable to see the repo. Probe and surface the real, actionable reason.
+    const probe = await checkConnection();
+    throw new GitHubConfigError(
+      probe.ok
+        ? `Production branch "${BRANCH}" not found in ${REPO}. Set GITHUB_BRANCH to your live branch.`
+        : probe.reason
+    );
+  }
   await api(`/repos/${REPO}/git/refs`, {
     method: "POST",
     body: JSON.stringify({ ref: `refs/heads/${DRAFT}`, sha: baseSha }),

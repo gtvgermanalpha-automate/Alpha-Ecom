@@ -255,6 +255,7 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "title", type: "string", required: true },
       { key: "subtitle", type: "string", required: true },
       { key: "icon", type: "string", required: true },
+      { key: "logo", type: "string" },
     ],
   },
 ];
