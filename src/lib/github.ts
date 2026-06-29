@@ -22,8 +22,24 @@ const clean = (v: string | undefined): string | undefined => {
   return t ? t : undefined;
 };
 
+/**
+ * Reduce a repo value to the "owner/name" the API expects, even if someone pastes
+ * the full clone URL (https://github.com/owner/name(.git)) or a git@ SSH URL. This
+ * is the single most common GITHUB_REPO misconfiguration.
+ */
+const normalizeRepo = (v: string | undefined): string | undefined => {
+  let t = clean(v);
+  if (!t) return undefined;
+  t = t
+    .replace(/^https?:\/\/(www\.)?github\.com\//i, "")
+    .replace(/^git@github\.com:/i, "")
+    .replace(/\.git$/i, "")
+    .replace(/^\/+|\/+$/g, "");
+  return t || undefined;
+};
+
 const TOKEN = clean(process.env.GITHUB_TOKEN);
-const REPO = clean(process.env.GITHUB_REPO);
+const REPO = normalizeRepo(process.env.GITHUB_REPO);
 const BRANCH = clean(process.env.GITHUB_BRANCH) ?? "main";
 const DRAFT = clean(process.env.GITHUB_DRAFT_BRANCH) ?? "cms-draft";
 
