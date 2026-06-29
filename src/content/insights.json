@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "how-to-win-the-amazon-buy-box-in-2026",
+    "title": "How to win the Amazon Buy Box in 2026",
+    "category": "Amazon",
+    "readingTime": "6 min read",
+    "excerpt": "The pricing, fulfillment and account-health signals that decide who owns the Buy Box.",
+    "image": "/images/insight-amazon.jpg"
+  },
+  {
+    "slug": "tiktok-shop-a-launch-checklist-for-new-brands",
+    "title": "TikTok Shop: a launch checklist for new brands",
+    "category": "TikTok Shop",
+    "readingTime": "5 min read",
+    "excerpt": "Everything you need to set up Shop, connect creators and run your first LIVE.",
+    "image": "/images/insight-tiktok.jpg"
+  },
+  {
+    "slug": "etsy-seo-ranking-your-listings-the-right-way",
+    "title": "Etsy SEO: ranking your listings the right way",
+    "category": "Etsy",
+    "readingTime": "7 min read",
+    "excerpt": "How tags, titles and attributes work together inside the Etsy search algorithm.",
+    "image": "/images/insight-etsy.jpg"
+  }
+]

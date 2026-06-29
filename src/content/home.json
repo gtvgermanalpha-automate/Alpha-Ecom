@@ -1,0 +1,26 @@
+{
+  "badge": "Marketplace growth, handled end-to-end",
+  "titleLead": "We Create & Manage Your",
+  "titleRotators": ["Amazon", "eBay", "Etsy", "OnBuy", "TikTok Shop", "Shopify"],
+  "titleTail": "Store",
+  "subtitle": "Alpha E-Commerce builds, optimizes and runs your online stores across the world's biggest marketplaces — so you sell more and manage less.",
+  "primaryCta": { "label": "Get a Free Quote", "href": "/contact" },
+  "secondaryCta": { "label": "View Case Studies", "href": "/portfolio" },
+  "interestOptions": [
+    "Amazon",
+    "eBay",
+    "Etsy",
+    "OnBuy",
+    "TikTok Shop",
+    "Shopify",
+    "Multiple marketplaces"
+  ],
+  "budgetOptions": [
+    "Under $1,000 / mo",
+    "$1,000 – $2,500 / mo",
+    "$2,500 – $5,000 / mo",
+    "$5,000 – $10,000 / mo",
+    "$10,000+ / mo"
+  ],
+  "sourceOptions": ["Google Search", "Social Media", "Referral", "Clutch / Reviews", "Other"]
+}

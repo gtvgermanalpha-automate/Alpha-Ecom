@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "sarah-mitchell",
+    "quote": "Alpha took our messy Amazon account and turned it into our single biggest revenue channel. They genuinely run it like it's their own business.",
+    "name": "Sarah Mitchell",
+    "role": "Founder",
+    "company": "Northwind Home",
+    "rating": 5,
+    "initials": "SM"
+  },
+  {
+    "slug": "david-okafor",
+    "quote": "We went from a side-hustle eBay store to full-time income in months. The listing and Promoted Listings work paid for itself almost immediately.",
+    "name": "David Okafor",
+    "role": "Owner",
+    "company": "Vintage Loft",
+    "rating": 5,
+    "initials": "DO"
+  },
+  {
+    "slug": "elena-rossi",
+    "quote": "Our Etsy shop finally looks and ranks the way it should. We hit Star Seller and haven't looked back. The team is responsive and truly cares.",
+    "name": "Elena Rossi",
+    "role": "Maker",
+    "company": "Maker & Moss",
+    "rating": 5,
+    "initials": "ER"
+  },
+  {
+    "slug": "james-carter",
+    "quote": "The TikTok Shop launch was a different league. Creators, LIVE selling, ads — all handled. We sold out our first drop in a weekend.",
+    "name": "James Carter",
+    "role": "Co-founder",
+    "company": "Glow Collective",
+    "rating": 5,
+    "initials": "JC"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "amazon",
+    "name": "Amazon",
+    "logo": "/amazon-logo-amazon-icon-transparent-free-png.webp",
+    "blurb": "Launch, optimize and scale your Amazon Seller Central or Vendor account.",
+    "description": "From a brand-new Seller Central account to a fully optimized catalog, we run your Amazon channel end to end — listings, A+ content, Brand Registry, PPC and account health.",
+    "features": [
+      "Seller Central & FBA setup",
+      "Listing & A+ content optimization",
+      "Sponsored Products & DSP ads",
+      "Brand Registry & account health"
+    ],
+    "accent": "#FF9900",
+    "stat": { "value": "3.2x", "label": "Avg. revenue lift" }
+  },
+  {
+    "slug": "ebay",
+    "name": "eBay",
+    "logo": "/Ebay.png",
+    "blurb": "Full eBay store setup, listing optimization and Promoted Listings.",
+    "description": "We build and manage high-performing eBay stores — bulk listing, SEO-rich titles, Promoted Listings campaigns and best-match optimization that keeps you top of search.",
+    "features": [
+      "Store design & setup",
+      "Bulk listing & templates",
+      "Promoted Listings management",
+      "Best Match SEO optimization"
+    ],
+    "accent": "#E53238",
+    "stat": { "value": "+58%", "label": "Search visibility" }
+  },
+  {
+    "slug": "etsy",
+    "name": "Etsy",
+    "logo": "/Etsy.png",
+    "blurb": "Etsy shop creation, SEO and ads for handmade & creative brands.",
+    "description": "We help makers and creative brands stand out on Etsy with keyword-rich listings, branded shop design, Etsy Ads management and a strategy tuned to the Etsy algorithm.",
+    "features": [
+      "Shop branding & setup",
+      "Listing SEO & tags",
+      "Etsy Ads management",
+      "Review & order growth"
+    ],
+    "accent": "#F45800",
+    "stat": { "value": "+41%", "label": "Shop conversion" }
+  },
+  {
+    "slug": "onbuy",
+    "name": "OnBuy",
+    "logo": "/OnBuy.png",
+    "blurb": "Get selling fast on the UK's fastest-growing marketplace.",
+    "description": "OnBuy is one of the fastest-growing marketplaces in the UK. We handle onboarding, catalog integration, pricing strategy and Boost ads so you capture demand early.",
+    "features": [
+      "Seller onboarding & setup",
+      "Catalog & feed integration",
+      "Competitive pricing strategy",
+      "OnBuy Boost campaigns"
+    ],
+    "accent": "#3E7BFA",
+    "stat": { "value": "5 days", "label": "Avg. time to live" }
+  },
+  {
+    "slug": "tiktok-shop",
+    "name": "TikTok Shop",
+    "logo": "/TikTok.png",
+    "blurb": "Set up TikTok Shop and turn short-form content into sales.",
+    "description": "We launch your TikTok Shop, connect product catalogs, set up affiliate and live-shopping, and pair it with creator partnerships that turn views into checkout.",
+    "features": [
+      "Shop setup & catalog sync",
+      "Affiliate & creator program",
+      "LIVE & video shopping",
+      "Spark Ads management"
+    ],
+    "accent": "#111111",
+    "stat": { "value": "7.5%", "label": "Live-stream CVR" }
+  },
+  {
+    "slug": "shopify",
+    "name": "Shopify",
+    "logo": "/Shopify.png",
+    "blurb": "Custom Shopify storefronts built to convert and easy to run.",
+    "description": "Your own branded home base — we design and build fast, conversion-focused Shopify stores, integrate apps and payments, and connect every marketplace back to one dashboard.",
+    "features": [
+      "Custom theme design & build",
+      "App, payment & shipping setup",
+      "CRO & speed optimization",
+      "Multichannel integration"
+    ],
+    "accent": "#5E8E3E",
+    "stat": { "value": "+47%", "label": "Store conversion" }
+  }
+]

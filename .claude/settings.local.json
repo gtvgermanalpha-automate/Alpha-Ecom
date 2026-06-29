@@ -51,7 +51,8 @@
       "Bash(rm -f public/portfolio/case-amazon.svg public/portfolio/case-ebay.svg public/portfolio/case-etsy.svg public/portfolio/case-shopify.svg public/portfolio/case-tiktok.svg public/portfolio/case-multichannel.svg)",
       "Bash(rmdir public/portfolio)",
       "Bash(sed -i '/\"gen:assets\":/d' package.json)",
-      "Bash(npm uninstall *)"
+      "Bash(npm uninstall *)",
+      "PowerShell(npx tsc --noEmit; \"EXIT=$LASTEXITCODE\")"
     ]
   }
 }

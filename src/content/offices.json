@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "usa",
+    "country": "USA",
+    "flag": "🇺🇸",
+    "city": "Austin",
+    "address": "600 Congress Ave, Suite 1400, Austin, TX 78701"
+  },
+  {
+    "slug": "uk",
+    "country": "UK",
+    "flag": "🇬🇧",
+    "city": "London",
+    "address": "1 Poultry, London EC2R 8EJ, United Kingdom"
+  },
+  {
+    "slug": "uae",
+    "country": "UAE",
+    "flag": "🇦🇪",
+    "city": "Dubai",
+    "address": "Business Bay, Bay Square, Dubai, United Arab Emirates"
+  },
+  {
+    "slug": "india",
+    "country": "India",
+    "flag": "🇮🇳",
+    "city": "Jaipur",
+    "address": "5th Floor, Crystal Mall, Jaipur, Rajasthan 302017"
+  }
+]

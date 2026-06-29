@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "01",
+    "number": "01",
+    "title": "Discovery & Audit",
+    "description": "We learn your goals and audit your products, channels and competitors.",
+    "icon": "search"
+  },
+  {
+    "slug": "02",
+    "number": "02",
+    "title": "Strategy & Setup",
+    "description": "We pick the right marketplaces and build your stores the right way.",
+    "icon": "pencil-ruler"
+  },
+  {
+    "slug": "03",
+    "number": "03",
+    "title": "Launch & Optimize",
+    "description": "Listings go live, ads switch on, and we tune for ranking and conversion.",
+    "icon": "rocket"
+  },
+  {
+    "slug": "04",
+    "number": "04",
+    "title": "Scale & Report",
+    "description": "We grow profitably and keep you informed with transparent weekly reports.",
+    "icon": "trending-up"
+  }
+]

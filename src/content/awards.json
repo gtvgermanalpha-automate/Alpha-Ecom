@@ -1,0 +1,8 @@
+[
+  { "slug": "amazon-spn", "title": "Amazon SPN", "subtitle": "Verified Service Provider", "icon": "shield-check" },
+  { "slug": "shopify-partner", "title": "Shopify Partner", "subtitle": "Certified Store Builder", "icon": "store" },
+  { "slug": "ebay-approved", "title": "eBay Approved", "subtitle": "Marketplace Partner", "icon": "badge-check" },
+  { "slug": "top-rated-2026", "title": "Top Rated 2026", "subtitle": "Marketplace Agency", "icon": "award" },
+  { "slug": "5-0-on-clutch", "title": "5.0 on Clutch", "subtitle": "120+ Reviews", "icon": "star" },
+  { "slug": "meta-tiktok", "title": "Meta & TikTok", "subtitle": "Ads Partner", "icon": "megaphone" }
+]

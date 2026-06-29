@@ -1,0 +1,86 @@
+[
+  {
+    "key": "setup",
+    "slug": "setup",
+    "label": "Store Creation",
+    "icon": "store",
+    "heading": "Launch on any marketplace, the right way",
+    "description": "We open and configure your store correctly from day one, so there's nothing to redo later.",
+    "points": [
+      "Account registration & verification",
+      "Catalog & category setup",
+      "Tax, shipping & payment config",
+      "Brand & storefront design"
+    ]
+  },
+  {
+    "key": "listing",
+    "slug": "listing",
+    "label": "Listing & SEO",
+    "icon": "search",
+    "heading": "Listings engineered to rank and convert",
+    "description": "Every listing is built around the keywords your buyers actually search.",
+    "points": [
+      "Keyword & competitor research",
+      "Title, bullet & description copy",
+      "Image & A+ / rich content",
+      "Variation & catalog structure"
+    ]
+  },
+  {
+    "key": "ads",
+    "slug": "ads",
+    "label": "Advertising",
+    "icon": "megaphone",
+    "heading": "Ad management focused on profit",
+    "description": "We manage spend toward your target ROAS — not vanity impressions.",
+    "points": [
+      "Sponsored Products & Brands",
+      "TikTok Spark & Promoted Listings",
+      "Bid & budget optimization",
+      "Weekly performance reporting"
+    ]
+  },
+  {
+    "key": "operations",
+    "slug": "operations",
+    "label": "Orders & Inventory",
+    "icon": "package",
+    "heading": "Operations that just run",
+    "description": "Stay in stock and ship on time across every channel, from one place.",
+    "points": [
+      "Inventory & restock planning",
+      "Order & returns handling",
+      "FBA / fulfillment coordination",
+      "Multichannel sync"
+    ]
+  },
+  {
+    "key": "health",
+    "slug": "health",
+    "label": "Account Health",
+    "icon": "shield-check",
+    "heading": "Compliant, protected, scalable",
+    "description": "We monitor metrics and policy so a single issue never derails your growth.",
+    "points": [
+      "Policy & compliance monitoring",
+      "Suspension prevention & appeals",
+      "Performance metric management",
+      "Buyer-message & feedback handling"
+    ]
+  },
+  {
+    "key": "design",
+    "slug": "design",
+    "label": "Branding & Design",
+    "icon": "palette",
+    "heading": "Stores that look the part",
+    "description": "Cohesive branding that builds trust and lifts conversion across channels.",
+    "points": [
+      "Storefront & banner design",
+      "Listing image & infographics",
+      "Brand guidelines & assets",
+      "Shopify theme customization"
+    ]
+  }
+]

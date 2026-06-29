@@ -1,0 +1,32 @@
+[
+  {
+    "slug": "truly-end-to-end",
+    "icon": "layers",
+    "title": "Truly end-to-end",
+    "description": "Setup, listings, ads, orders and support — one team handles your entire channel."
+  },
+  {
+    "slug": "listings-that-rank",
+    "icon": "search",
+    "title": "Listings that rank",
+    "description": "Keyword-driven titles, rich content and SEO tuned to each marketplace's algorithm."
+  },
+  {
+    "slug": "profitable-ad-spend",
+    "icon": "megaphone",
+    "title": "Profitable ad spend",
+    "description": "Data-led PPC management focused on ACoS, ROAS and real, sustainable margin."
+  },
+  {
+    "slug": "account-health-first",
+    "icon": "shield-check",
+    "title": "Account health first",
+    "description": "We keep you compliant, protected from suspensions and ready to scale safely."
+  },
+  {
+    "slug": "a-dedicated-manager",
+    "icon": "users-round",
+    "title": "A dedicated manager",
+    "description": "One expert who knows your business, with transparent weekly reporting."
+  }
+]
