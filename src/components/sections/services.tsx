@@ -1,9 +1,10 @@
+import Image from "next/image";
+
 import { marketplaces, type Marketplace } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { RevealCard } from "@/components/shared/reveal-card";
-import { MarketplaceTile } from "@/components/shared/marketplace-tile";
 
 // Background photo per marketplace card (the case study run on that channel).
 const CARD_IMAGES: Record<string, string> = {
@@ -53,7 +54,15 @@ function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
       title={marketplace.name}
       summary={marketplace.blurb}
       description={marketplace.description}
-      media={<MarketplaceTile src={marketplace.logo} name={marketplace.name} size="md" />}
+      media={
+        <Image
+          src={marketplace.logo}
+          alt={`${marketplace.name} logo`}
+          width={180}
+          height={88}
+          className="h-14 w-auto max-w-[10rem] object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+        />
+      }
       badge={
         <div className="text-right">
           <p className="font-display text-2xl font-extrabold text-white">{marketplace.stat.value}</p>

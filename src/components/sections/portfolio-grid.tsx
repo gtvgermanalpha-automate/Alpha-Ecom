@@ -131,11 +131,14 @@ export function PortfolioGrid({
                 </div>
 
                 <div className="flex flex-1 flex-col p-5">
-                  <Badge variant="secondary" className="w-fit">
-                    {project.category}
-                  </Badge>
-                  <h3 className="mt-3 text-lg font-bold text-navy">{project.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  <Image
+                    src={project.marketplaceLogo}
+                    alt={`${project.title} — ${project.category}`}
+                    width={150}
+                    height={44}
+                    className="h-8 w-auto max-w-[8.5rem] self-start object-contain"
+                  />
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {project.excerpt}
                   </p>
                 </div>
