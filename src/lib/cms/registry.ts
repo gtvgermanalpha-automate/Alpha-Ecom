@@ -168,8 +168,10 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "title", type: "string", required: true },
       { key: "category", type: "string", required: true },
       { key: "readingTime", type: "string", required: true },
+      { key: "date", type: "string" },
       { key: "excerpt", type: "text", required: true },
       { key: "image", type: "string", required: true },
+      { key: "body", type: "string[]" },
     ],
   },
   {

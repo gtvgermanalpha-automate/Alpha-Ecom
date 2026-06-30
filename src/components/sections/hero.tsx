@@ -81,7 +81,8 @@ export function Hero() {
       ref={sectionRef}
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
-      className="relative overflow-hidden bg-aster-50"
+      // pull up behind the (transparent) header so its background reads continuously
+      className="relative -mt-[72px] overflow-hidden bg-aster-50 lg:-mt-[112px]"
     >
       {/* Decorative layers */}
       <div className="pointer-events-none absolute inset-0 bg-dots opacity-70" aria-hidden />
@@ -106,7 +107,7 @@ export function Hero() {
       <Container className="relative">
         <motion.div
           style={{ y: contentY, opacity: contentOpacity }}
-          className="flex flex-col items-center py-20 text-center lg:py-28"
+          className="flex flex-col items-center pb-20 pt-28 text-center lg:pb-28 lg:pt-40"
         >
           <motion.span
             className="eyebrow rounded-full bg-white/70 px-4 py-1.5 shadow-soft ring-1 ring-border backdrop-blur"

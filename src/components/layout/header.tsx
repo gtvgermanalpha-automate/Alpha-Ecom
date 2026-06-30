@@ -19,6 +19,7 @@ export function Header() {
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -62,7 +63,9 @@ export function Header() {
           "border-b transition-all duration-300",
           scrolled
             ? "border-border bg-white/80 shadow-soft backdrop-blur-md"
-            : "border-transparent bg-aster-50"
+            : isHome
+              ? "border-transparent bg-transparent"
+              : "border-transparent bg-aster-50"
         )}
       >
         <Container

@@ -4,23 +4,74 @@
     "title": "How to win the Amazon Buy Box in 2026",
     "category": "Amazon",
     "readingTime": "6 min read",
+    "date": "14 January 2026",
     "excerpt": "The pricing, fulfillment and account-health signals that decide who owns the Buy Box.",
-    "image": "/images/insight-amazon.jpg"
+    "image": "/images/insight-amazon.jpg",
+    "body": [
+      "The Amazon Buy Box accounts for the vast majority of sales on any listing — if you don't own it, your offer is effectively invisible. Winning it consistently in 2026 comes down to a handful of signals Amazon weighs on every single page view.",
+      "## Price competitively, not desperately",
+      "Amazon rewards a fair landed price — item plus shipping — not simply the lowest number. Race-to-the-bottom pricing erodes your margin without guaranteeing the box. We set rule-based repricing with a floor that protects profit and still reacts to competitors in near real time.",
+      "## Fulfillment is your biggest lever",
+      "Prime-eligible offers through FBA or Seller-Fulfilled Prime win the Buy Box far more often than standard fulfillment. A fast, reliable delivery promise carries more weight with the algorithm than a few cents of price difference ever will.",
+      "## Protect your account health",
+      "A strong Order Defect Rate, low late-shipment and cancellation rates, and healthy inventory all feed Buy Box eligibility. A single account-health issue can quietly drop you out of the box across your entire catalog.",
+      "The signals we monitor daily:",
+      "- Landed price versus the competition",
+      "- Prime eligibility and delivery speed",
+      "- Seller metrics: ODR, late-shipment and cancellation rates",
+      "- Inventory depth and restock timing",
+      "## The takeaway",
+      "The Buy Box isn't won once — it's defended every day. We manage pricing, fulfillment and account health together so your listings stay in the box and keep converting."
+    ]
   },
   {
     "slug": "tiktok-shop-a-launch-checklist-for-new-brands",
     "title": "TikTok Shop: a launch checklist for new brands",
     "category": "TikTok Shop",
     "readingTime": "5 min read",
+    "date": "26 February 2026",
     "excerpt": "Everything you need to set up Shop, connect creators and run your first LIVE.",
-    "image": "/images/insight-tiktok.jpg"
+    "image": "/images/insight-tiktok.jpg",
+    "body": [
+      "TikTok Shop has become one of the fastest routes from discovery to checkout — but a rushed launch leaves sales on the table. Here's the checklist we run for every new brand we onboard.",
+      "## 1. Set up Shop correctly",
+      "Verify your business, connect your account, and configure shipping templates, returns and payments before you list a single product. Getting compliance right up front avoids holds and headaches later.",
+      "## 2. Get your catalog live and optimized",
+      "Sync your catalog, write short-form-friendly titles, and lead with video. Products that show well in a vertical 9:16 frame convert far better than flat, catalog-style photos.",
+      "## 3. Turn on creators and affiliates",
+      "TikTok Shop is a creator engine. Open your affiliate program, set commissions that are genuinely worth a creator's time, and seed product to a focused shortlist of creators in your niche.",
+      "## 4. Go LIVE",
+      "Schedule regular LIVE shopping sessions and pair them with Spark Ads to amplify what's already working. Early on, consistency beats production value every time.",
+      "Your first-week checklist:",
+      "- Business verification complete",
+      "- Catalog synced with video-first listings",
+      "- Affiliate program open with sensible commissions",
+      "- First LIVE scheduled and promoted",
+      "Do these four things well and you'll have a Shop that's ready to scale — not just switched on."
+    ]
   },
   {
     "slug": "etsy-seo-ranking-your-listings-the-right-way",
     "title": "Etsy SEO: ranking your listings the right way",
     "category": "Etsy",
     "readingTime": "7 min read",
+    "date": "9 April 2026",
     "excerpt": "How tags, titles and attributes work together inside the Etsy search algorithm.",
-    "image": "/images/insight-etsy.jpg"
+    "image": "/images/insight-etsy.jpg",
+    "body": [
+      "Etsy SEO rewards relevance and quality together. Stuffing keywords won't save a listing that buyers scroll past — but the right tags, titles and attributes put you in front of shoppers who are ready to buy.",
+      "## How Etsy search actually works",
+      "Etsy first matches a query to your listing using titles, tags, categories and attributes, then ranks the matches with a quality score built from clicks, favorites and conversions. Relevance gets you into the race; quality is what wins it.",
+      "## Titles, tags and attributes work together",
+      "Use all thirteen tags with multi-word phrases your buyers actually search, mirror those phrases in the first few words of your title, and complete every attribute — they double as hidden tags.",
+      "Where to focus first:",
+      "- Thirteen long-tail tags — never single words",
+      "- Front-load the title with your strongest phrase",
+      "- Complete every category and attribute",
+      "- Match your listing photos to the search intent",
+      "## Beyond keywords: quality signals",
+      "Great photography, competitive shipping (free-shipping thresholds help), strong reviews and a healthy conversion rate all lift your ranking over time. SEO opens the door; the listing experience keeps it open.",
+      "Treat Etsy SEO as ongoing maintenance rather than a one-time setup, and your best listings will compound visibility month after month."
+    ]
   }
 ]

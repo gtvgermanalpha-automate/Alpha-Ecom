@@ -96,6 +96,7 @@ export const mainNav: NavItem[] = [
     ],
   },
   { label: "Case Studies", href: "/portfolio" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ];
 
@@ -199,7 +200,17 @@ export const milestones = milestonesData as Milestone[];
 /* Insights / blog                                                     */
 /* ------------------------------------------------------------------ */
 
-export type Insight = { slug?: string; title: string; category: string; readingTime: string; excerpt: string; image: string };
+export type Insight = {
+  slug?: string;
+  title: string;
+  category: string;
+  readingTime: string;
+  excerpt: string;
+  image: string;
+  date?: string;
+  /** Article body as an ordered list of blocks: "## …" = heading, "- …" = bullet, else paragraph. */
+  body?: string[];
+};
 
 export const insights = insightsData as Insight[];
 
@@ -241,7 +252,7 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "About Us", href: "/about" },
       { label: "Case Studies", href: "/portfolio" },
-      { label: "Careers", href: "/contact" },
+      { label: "Blog", href: "/blog" },
       { label: "Contact Us", href: "/contact" },
     ],
   },
