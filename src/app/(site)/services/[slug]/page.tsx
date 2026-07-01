@@ -10,7 +10,6 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/sections/page-hero";
-import { Process } from "@/components/sections/process";
 import { CTA } from "@/components/sections/cta";
 
 // Per-service header photo.
@@ -121,8 +120,6 @@ export default async function ServiceDetailPage({
           ))}
         </div>
       </Section>
-
-      <Process />
 
       <CTA
         title={`Ready to grow on ${m.name}?`}

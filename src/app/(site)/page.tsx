@@ -5,7 +5,6 @@ import { AboutSection } from "@/components/sections/about-section";
 import { ServicesGrid } from "@/components/sections/services";
 import { WhyUs } from "@/components/sections/why-us";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
-import { Process } from "@/components/sections/process";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Timeline } from "@/components/sections/timeline";
@@ -28,7 +27,6 @@ export default function HomePage() {
       <ServicesGrid />
       <WhyUs />
       <PlatformTabs />
-      <Process />
       <PortfolioGrid limit={6} showFilters={false} heading />
       <Testimonials />
       <Timeline />

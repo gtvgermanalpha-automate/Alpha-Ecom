@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
-import { Process } from "@/components/sections/process";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
@@ -27,7 +26,6 @@ export default function WhatWeDoPage() {
       />
       <Capabilities />
       <PlatformTabs />
-      <Process />
       <FAQ />
       <CTA title="Not sure where to start?" description="Tell us your goals and we'll map the exact services your store needs to grow." />
     </>
