@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { siteConfig } from "@/lib/site";
+import { siteConfig, fullAddress } from "@/lib/site";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
@@ -70,6 +70,9 @@ export function LegalPage({
                   {siteConfig.phone}
                 </a>
                 .
+                <p className="mt-3">
+                  <span className="font-semibold text-navy">Head office:</span> {fullAddress}
+                </p>
               </div>
             </div>
           </aside>

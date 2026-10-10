@@ -9,6 +9,14 @@
   "phone": "+92 320-8147272",
   "phoneHref": "+923208147272",
   "foundedYear": 2021,
+  "address": {
+    "street": "1st Floor, Shop# 1, Eden Orchard, Sargodha Road",
+    "city": "Faisalabad",
+    "country": "Pakistan",
+    "countryCode": "PK"
+  },
+  "officeHours": "9am–6pm, Monday to Friday",
+  "timezone": "UK time (GMT/BST)",
   "ogImage": "/og.png",
   "social": {
     "facebook": "https://facebook.com",

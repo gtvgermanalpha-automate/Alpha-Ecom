@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { siteConfig } from "@/lib/site";
+import { siteConfig, fullAddress } from "@/lib/site";
 import { LegalPage, type LegalSection } from "@/components/shared/legal-page";
 
 export const metadata: Metadata = {
@@ -117,7 +117,7 @@ const sections: LegalSection[] = [
     id: "contact",
     title: "Contact us",
     body: [
-      `Questions about these Terms? Contact ${siteConfig.legalName} at ${siteConfig.email} or ${siteConfig.phone}.`,
+      `Questions about these Terms? Contact ${siteConfig.legalName} at ${siteConfig.email} or ${siteConfig.phone}, or write to our head office at ${fullAddress}.`,
     ],
   },
 ];

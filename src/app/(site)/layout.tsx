@@ -14,6 +14,12 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
     email: siteConfig.email,
     telephone: siteConfig.phone,
     foundingDate: String(siteConfig.foundedYear),
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: siteConfig.address.street,
+      addressLocality: siteConfig.address.city,
+      addressCountry: siteConfig.address.countryCode,
+    },
     sameAs: Object.values(siteConfig.social),
   };
 

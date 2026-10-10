@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mail, Phone, Clock, Check, MapPin } from "lucide-react";
 
 import { offices } from "@/lib/content";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -41,9 +41,17 @@ const contactMethods = [
   {
     icon: Clock,
     label: "Office hours",
-    value: "9am–6pm (your timezone)",
-    hint: "Monday to Friday",
+    value: siteConfig.officeHours,
+    hint: siteConfig.timezone,
     href: undefined,
+  },
+  {
+    icon: MapPin,
+    label: "Head office",
+    value: fullAddress,
+    hint: "Visits by appointment",
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(fullAddress)}`,
+    external: true,
   },
 ];
 
@@ -110,7 +118,7 @@ export default function ContactPage() {
                         <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                           {method.label}
                         </p>
-                        <p className="mt-1 truncate font-semibold text-navy">{method.value}</p>
+                        <p className="mt-1 break-words font-semibold text-navy">{method.value}</p>
                         <p className="mt-1 text-xs text-muted-foreground">{method.hint}</p>
                       </div>
                     </div>
@@ -118,7 +126,13 @@ export default function ContactPage() {
                   return (
                     <Reveal key={method.label} direction="up" delay={i + 1}>
                       {method.href ? (
-                        <a href={method.href} className="block">
+                        <a
+                          href={method.href}
+                          className="block"
+                          {...("external" in method && method.external
+                            ? { target: "_blank", rel: "noopener noreferrer" }
+                            : {})}
+                        >
                           {inner}
                         </a>
                       ) : (
@@ -146,7 +160,7 @@ export default function ContactPage() {
           <SectionHeading
             eyebrow="Where we work"
             title="Serving brands around the world"
-            description="We work with sellers across three regions and time zones — there's always a team awake and shipping for your store."
+            description="Our head office runs on UK hours, and we work with sellers across three regions — there's always a team awake and shipping for your store."
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

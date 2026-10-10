@@ -8,4 +8,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? settings.url,
 } as const;
 
+/** One-line head-office address for the footer, contact page and legal pages. */
+export const fullAddress = `${settings.address.street}, ${settings.address.city}, ${settings.address.country}`;
+
 export type SiteConfig = typeof siteConfig;

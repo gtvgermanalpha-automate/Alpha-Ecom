@@ -7,7 +7,6 @@ import { WhyUs } from "@/components/sections/why-us";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Timeline } from "@/components/sections/timeline";
 import { PartnerMarquee } from "@/components/sections/partner-marquee";
 import { Insights } from "@/components/sections/insights";
 import { FAQ } from "@/components/sections/faq";
@@ -29,7 +28,6 @@ export default function HomePage() {
       <PlatformTabs />
       <PortfolioGrid limit={6} showFilters={false} heading />
       <Testimonials />
-      <Timeline />
       <Insights />
       <FAQ />
       <CTA />

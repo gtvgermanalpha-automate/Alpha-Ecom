@@ -18,7 +18,6 @@ import faqsData from "@/content/faqs.json";
 import officesData from "@/content/offices.json";
 import whyUsData from "@/content/why-us.json";
 import processData from "@/content/process.json";
-import milestonesData from "@/content/milestones.json";
 import awardsData from "@/content/awards.json";
 import homeData from "@/content/home.json";
 
@@ -187,14 +186,6 @@ export const projects = caseStudiesData as Project[];
 export type Testimonial = { slug?: string; quote: string; name: string; role: string; company: string; rating: number; initials: string };
 
 export const testimonials = testimonialsData as Testimonial[];
-
-/* ------------------------------------------------------------------ */
-/* Timeline                                                            */
-/* ------------------------------------------------------------------ */
-
-export type Milestone = { slug?: string; year: string; title: string; description: string };
-
-export const milestones = milestonesData as Milestone[];
 
 /* ------------------------------------------------------------------ */
 /* Insights / blog                                                     */

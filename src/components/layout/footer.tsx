@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
 import { footerColumns, offices } from "@/lib/content";
-import { siteConfig } from "@/lib/site";
+import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Logo } from "@/components/layout/logo";
 import { NewsletterForm } from "@/components/layout/newsletter-form";
@@ -92,11 +92,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col items-start gap-4 border-t border-white/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="flex items-center gap-2 text-sm font-semibold text-white">
-            <MapPin className="size-5 shrink-0 text-aster-700" /> Serving brands in
-          </p>
-          <ul className="flex flex-wrap items-center gap-3">
+        <div className="mt-14 flex flex-col gap-6 border-t border-white/10 pt-10 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex gap-3">
+            <MapPin className="mt-0.5 size-5 shrink-0 text-aster-700" />
+            <div>
+              <p className="text-sm font-semibold text-white">Head office</p>
+              <p className="mt-1 text-xs leading-relaxed text-white/60">{fullAddress}</p>
+              <p className="mt-1 text-xs text-white/60">
+                {siteConfig.officeHours} · {siteConfig.timezone}
+              </p>
+            </div>
+          </div>
+          <ul className="flex flex-wrap items-center gap-3" aria-label="Serving brands in">
+            <li className="text-sm font-semibold text-white">Serving brands in</li>
             {offices.map((office) => (
               <li
                 key={office.country}
