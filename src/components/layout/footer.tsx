@@ -92,18 +92,23 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 lg:grid-cols-3">
-          {offices.map((office) => (
-            <div key={office.country} className="flex gap-3">
-              <MapPin className="mt-0.5 size-5 shrink-0 text-aster-700" />
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  {office.flag} {office.country} — {office.city}
-                </p>
-                <p className="mt-1 text-xs leading-relaxed text-white/60">{office.address}</p>
-              </div>
-            </div>
-          ))}
+        <div className="mt-14 flex flex-col items-start gap-4 border-t border-white/10 pt-10 sm:flex-row sm:items-center sm:justify-between">
+          <p className="flex items-center gap-2 text-sm font-semibold text-white">
+            <MapPin className="size-5 shrink-0 text-aster-700" /> Serving brands in
+          </p>
+          <ul className="flex flex-wrap items-center gap-3">
+            {offices.map((office) => (
+              <li
+                key={office.country}
+                className="flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm font-semibold text-white/80"
+              >
+                <span className="text-xl leading-none" aria-hidden>
+                  {office.flag}
+                </span>
+                {office.country}
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
 
@@ -121,9 +126,9 @@ export function Footer() {
             </a>
           </div>
           <div className="flex items-center gap-4 text-xs text-white/55">
-            <Link href="/" className="hover:text-aster">Privacy</Link>
-            <Link href="/" className="hover:text-aster">Terms</Link>
-            <Link href="/" className="hover:text-aster">Sitemap</Link>
+            <Link href="/privacy-policy" className="hover:text-aster">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-aster">Terms &amp; Conditions</Link>
+            <a href="/sitemap.xml" className="hover:text-aster">Sitemap</a>
           </div>
         </Container>
       </div>

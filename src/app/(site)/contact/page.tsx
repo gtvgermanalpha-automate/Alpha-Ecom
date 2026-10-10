@@ -13,7 +13,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 export const metadata: Metadata = {
   title: "Contact Us — Start your project",
   description:
-    "Tell us about your products and goals and we'll reply within one business day with a clear plan. Book a free 60-minute strategy session. Offices in the USA, UK and UAE.",
+    "Tell us about your products and goals and we'll reply within one business day with a clear plan. Book a free 60-minute strategy session. Serving brands in the USA, UK and UAE.",
   alternates: { canonical: "/contact" },
 };
 
@@ -144,9 +144,9 @@ export default function ContactPage() {
       <section className="bg-aster-50 py-20 lg:py-28">
         <Container>
           <SectionHeading
-            eyebrow="Our offices"
-            title="Find us around the world"
-            description="Three hubs across three time zones — there's always a team awake and shipping for your store."
+            eyebrow="Where we work"
+            title="Serving brands around the world"
+            description="We work with sellers across three regions and time zones — there's always a team awake and shipping for your store."
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -161,11 +161,8 @@ export default function ContactPage() {
                       <MapPin className="size-4" />
                     </span>
                   </div>
-                  <h3 className="mt-5 text-lg font-bold text-navy">{office.city}</h3>
-                  <p className="text-sm font-semibold text-aster-700">{office.country}</p>
-                  <p className="mt-3 border-t border-border pt-3 text-sm leading-relaxed text-muted-foreground">
-                    {office.address}
-                  </p>
+                  <h3 className="mt-5 text-lg font-bold text-navy">{office.country}</h3>
+                  <p className="text-sm font-semibold text-aster-700">Marketplace store creation &amp; management</p>
                 </article>
               </Reveal>
             ))}

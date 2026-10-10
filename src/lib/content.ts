@@ -218,7 +218,7 @@ export const insights = insightsData as Insight[];
 /* Offices                                                             */
 /* ------------------------------------------------------------------ */
 
-export type Office = { slug?: string; country: string; flag: string; city: string; address: string };
+export type Office = { slug?: string; country: string; flag: string };
 
 export const offices = officesData as Office[];
 
@@ -254,6 +254,8 @@ export const footerColumns: FooterColumn[] = [
       { label: "Case Studies", href: "/portfolio" },
       { label: "Blog", href: "/blog" },
       { label: "Contact Us", href: "/contact" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms-and-conditions" },
     ],
   },
   {

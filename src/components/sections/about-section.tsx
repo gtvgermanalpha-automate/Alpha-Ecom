@@ -20,7 +20,7 @@ export function AboutSection() {
         <Reveal direction="right">
           <span className="eyebrow">About Alpha</span>
           <h2 className="mt-4 text-3xl font-extrabold text-navy sm:text-4xl">
-            Your full-service marketplace partner since 2013
+            Your full-service marketplace partner since 2021
           </h2>
 
           <p className="mt-5 text-base leading-relaxed text-muted-foreground">

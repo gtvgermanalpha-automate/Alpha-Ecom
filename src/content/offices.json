@@ -1,23 +1,5 @@
 [
-  {
-    "slug": "usa",
-    "country": "USA",
-    "flag": "🇺🇸",
-    "city": "Austin",
-    "address": "600 Congress Ave, Suite 1400, Austin, TX 78701"
-  },
-  {
-    "slug": "uk",
-    "country": "UK",
-    "flag": "🇬🇧",
-    "city": "London",
-    "address": "1 Poultry, London EC2R 8EJ, United Kingdom"
-  },
-  {
-    "slug": "uae",
-    "country": "UAE",
-    "flag": "🇦🇪",
-    "city": "Dubai",
-    "address": "Business Bay, Bay Square, Dubai, United Arab Emirates"
-  }
+  { "slug": "usa", "country": "USA", "flag": "🇺🇸" },
+  { "slug": "uk", "country": "UK", "flag": "🇬🇧" },
+  { "slug": "uae", "country": "UAE", "flag": "🇦🇪" }
 ]

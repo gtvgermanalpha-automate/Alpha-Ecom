@@ -8,7 +8,7 @@ export function Timeline() {
     <Section tone="luster">
       <SectionHeading
         eyebrow="Our journey"
-        title="A decade of marketplace growth"
+        title="Our journey since 2021"
         description="The milestones that shaped Alpha."
         className="mb-16"
       />

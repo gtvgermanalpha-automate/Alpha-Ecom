@@ -10,7 +10,7 @@ import { CTA } from "@/components/sections/cta";
 export const metadata: Metadata = {
   title: "About Us — Marketplace growth experts",
   description:
-    "Since 2013, Alpha E-Commerce has helped 1,200+ brands launch and scale stores on Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify. Meet the team behind the growth.",
+    "Since 2021, Alpha E-Commerce has helped 1,200+ brands launch and scale stores on Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify. Meet the team behind the growth.",
   alternates: { canonical: "/about" },
 };
 
@@ -20,7 +20,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Alpha"
         title="We build & run marketplace stores that grow"
-        description="Since 2013 we've helped 1,200+ brands launch and scale on the world's biggest marketplaces."
+        description="Since 2021 we've helped 1,200+ brands launch and scale on the world's biggest marketplaces."
         breadcrumbs={[{ label: "About" }]}
         image="/images/about-team.jpg"
       />

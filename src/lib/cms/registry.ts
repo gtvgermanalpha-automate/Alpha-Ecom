@@ -190,7 +190,7 @@ const defs: Omit<Collection, "validate">[] = [
   {
     id: "offices",
     label: "Offices",
-    description: "Office locations in the footer and contact page.",
+    description: "Countries we operate in (flag + name) shown in the footer and contact page.",
     file: "src/content/offices.json",
     mode: "list",
     titleField: "country",
@@ -198,8 +198,6 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "slug", type: "string", format: "slug", required: true },
       { key: "country", type: "string", required: true },
       { key: "flag", type: "string", required: true },
-      { key: "city", type: "string", required: true },
-      { key: "address", type: "text", required: true },
     ],
   },
   {
