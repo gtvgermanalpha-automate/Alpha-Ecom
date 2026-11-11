@@ -111,7 +111,7 @@ export function LegalPage({ banner, doc }: { banner: LegalBanner; doc: LegalDoc 
             ))}
 
             <div className="mt-12 rounded-2xl bg-aster-50 p-6 text-sm text-muted-foreground">
-              This document is provided by {siteConfig.legalName}, trading as {siteConfig.name}. See also our{" "}
+              This document is provided by {siteConfig.legalName}. See also our{" "}
               <Link href="/privacy-policy" className="font-semibold text-navy hover:text-aster-700">
                 Privacy Policy
               </Link>{" "}

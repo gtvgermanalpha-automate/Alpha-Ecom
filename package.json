@@ -2,7 +2,7 @@
   "name": "alpha-ecommerce",
   "version": "1.0.0",
   "private": true,
-  "description": "Alpha E-Commerce — eCommerce, Web & Mobile development services website built with Next.js 15.",
+  "description": "Alpha Digital Solutions — eCommerce, Web & Mobile development services website built with Next.js 15.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

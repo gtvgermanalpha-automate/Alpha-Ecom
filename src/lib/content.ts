@@ -1,6 +1,6 @@
 /**
  * Single source of truth for site content.
- * Alpha E-Commerce is a marketplace store-creation & management agency.
+ * Alpha Digital Solutions is a marketplace store-creation & management agency.
  * The six services we offer: Amazon, eBay, Etsy, OnBuy, TikTok Shop, Shopify.
  * Icons are string keys resolved through `@/lib/icons`.
  *

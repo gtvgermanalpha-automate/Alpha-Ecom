@@ -116,7 +116,7 @@ export default async function BlogPostPage({
               <span className="grid size-6 place-items-center rounded-full bg-navy text-[0.6rem] font-bold text-white">
                 A
               </span>
-              By the Alpha E-Commerce team
+              By the Alpha Digital Solutions team
             </span>
           </div>
 

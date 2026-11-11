@@ -1,6 +1,6 @@
-# Alpha E-Commerce
+# Alpha Digital Solutions
 
-A production-ready, five-page marketing website for **Alpha E-Commerce** — a marketplace
+A production-ready, five-page marketing website for **Alpha Digital Solutions** — a marketplace
 **store-creation & management agency**. The site offers six services only:
 **Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify** store creation and handling.
 

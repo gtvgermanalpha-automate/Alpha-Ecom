@@ -54,7 +54,7 @@ export function GET() {
             A
           </div>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <span style={{ color: "white", fontSize: 34, fontWeight: 800 }}>Alpha E-Commerce</span>
+            <span style={{ color: "white", fontSize: 34, fontWeight: 800 }}>Alpha Digital Solutions</span>
             <span style={{ color: "#9BACD8", fontSize: 20, letterSpacing: 4 }}>MARKETPLACE EXPERTS</span>
           </div>
         </div>

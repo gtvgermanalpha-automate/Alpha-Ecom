@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
  *   RESEND_AUDIENCE_ID  optional — newsletter subscribers are added to this audience
  */
 const RESEND_API_KEY = process.env.RESEND_API_KEY?.trim();
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL?.trim() || "Alpha E-Commerce <onboarding@resend.dev>";
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL?.trim() || "Alpha Digital Solutions <onboarding@resend.dev>";
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL?.trim() || siteConfig.email;
 const AUDIENCE_ID = process.env.RESEND_AUDIENCE_ID?.trim();
 
