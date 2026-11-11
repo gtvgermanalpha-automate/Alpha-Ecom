@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 import { Icon } from "@/lib/icons";
-import { projects, portfolioCategories, type PortfolioCategory } from "@/lib/content";
+import { projects, portfolioCategories, type PortfolioCategory, sectionCopy } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -66,9 +66,9 @@ export function PortfolioGrid({
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         {heading ? (
           <SectionHeading
-            eyebrow="Case studies"
-            title="Real stores, real results"
-            description="A look at the marketplace stores we've launched, fixed and scaled."
+            eyebrow={sectionCopy.caseStudies.eyebrow}
+            title={sectionCopy.caseStudies.title}
+            description={sectionCopy.caseStudies.description}
             className="mb-12"
           />
         ) : null}

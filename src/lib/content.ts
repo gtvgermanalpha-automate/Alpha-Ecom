@@ -20,6 +20,8 @@ import whyUsData from "@/content/why-us.json";
 import processData from "@/content/process.json";
 import awardsData from "@/content/awards.json";
 import homeData from "@/content/home.json";
+import aboutData from "@/content/about.json";
+import sectionsData from "@/content/sections.json";
 
 export type IconKey = string;
 
@@ -263,3 +265,14 @@ export const footerColumns: FooterColumn[] = [
     ],
   },
 ];
+
+/* ------------------------------------------------------------------ */
+/* About section + section headings (CMS-editable copy)                */
+/* ------------------------------------------------------------------ */
+
+export type SectionCopy = { eyebrow: string; title: string; description: string };
+
+export const aboutContent = aboutData;
+
+/** Eyebrow / title / intro line for each section, edited under "Section headings" in the CMS. */
+export const sectionCopy = sectionsData;

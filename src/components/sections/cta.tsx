@@ -2,14 +2,15 @@ import Link from "next/link";
 import { ArrowRight, Phone } from "lucide-react";
 
 import { siteConfig } from "@/lib/site";
+import { sectionCopy } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
 import { Magnetic } from "@/components/shared/magnetic";
 
 export function CTA({
-  title = "Ready to grow on every marketplace?",
-  description = "Book a free 60-minute consultation. We'll review your products, pick the right channels and show you the fastest path to more sales.",
+  title = sectionCopy.cta.title,
+  description = sectionCopy.cta.description,
 }: {
   title?: string;
   description?: string;

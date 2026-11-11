@@ -1,0 +1,52 @@
+{
+  "marqueeLine": "We create & manage stores on the world's biggest marketplaces",
+  "services": {
+    "eyebrow": "What we offer",
+    "title": "Six marketplaces. One expert team.",
+    "description": "We create, optimize and fully manage your stores across the channels your customers already shop on — so you can focus on the product, not the platform."
+  },
+  "whyUs": {
+    "eyebrow": "Why Alpha",
+    "title": "Everything your store needs, handled by one team",
+    "description": "From setup to scale, every part of your marketplace channel is covered by specialists who treat your store like their own."
+  },
+  "platformTabs": {
+    "eyebrow": "What we handle",
+    "title": "Your whole channel, managed end-to-end",
+    "description": "Scroll through everything we take off your plate."
+  },
+  "caseStudies": {
+    "eyebrow": "Case studies",
+    "title": "Real stores, real results",
+    "description": "A look at the marketplace stores we've launched, fixed and scaled."
+  },
+  "testimonials": {
+    "eyebrow": "Client love",
+    "title": "Sellers grow with Alpha",
+    "description": "Founders and store owners on what it's like to work with us."
+  },
+  "insights": {
+    "eyebrow": "Insights",
+    "title": "Marketplace playbooks & guides",
+    "description": "Practical tips from the team that runs stores every day."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions, answered",
+    "description": "Everything you need to know before getting started."
+  },
+  "capabilities": {
+    "eyebrow": "What we do",
+    "title": "Everything it takes to run a marketplace store",
+    "description": "Pick one piece or hand us the whole operation — here's the full scope of what we manage for you."
+  },
+  "locations": {
+    "eyebrow": "Where we work",
+    "title": "Serving brands around the world",
+    "description": "Our head office runs on UK hours, and we work with sellers across three regions — there's always a team awake and shipping for your store."
+  },
+  "cta": {
+    "title": "Ready to grow on every marketplace?",
+    "description": "Book a free 60-minute consultation. We'll review your products, pick the right channels and show you the fastest path to more sales."
+  }
+}

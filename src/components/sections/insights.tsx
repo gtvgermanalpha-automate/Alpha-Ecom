@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
-import { insights } from "@/lib/content";
+import { insights, sectionCopy } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
@@ -12,9 +12,9 @@ export function Insights() {
   return (
     <Section tone="luster">
       <SectionHeading
-        eyebrow="Insights"
-        title="Marketplace playbooks & guides"
-        description="Practical tips from the team that runs stores every day."
+        eyebrow={sectionCopy.insights.eyebrow}
+        title={sectionCopy.insights.title}
+        description={sectionCopy.insights.description}
         className="mb-14"
       />
 

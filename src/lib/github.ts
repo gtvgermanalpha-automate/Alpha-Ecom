@@ -211,8 +211,22 @@ export async function checkConnection(): Promise<{ ok: true } | { ok: false; rea
 /** Create the draft branch from production if it doesn't exist (idempotent). */
 export async function ensureDraftBranch() {
   const existing = await getBranchSha(DRAFT);
-  if (existing) return;
   const baseSha = await getBranchSha(BRANCH);
+  if (existing) {
+    // Code pushes land on production only, so an idle draft branch falls behind and the
+    // dashboard would show stale content. With no unpublished edits there is nothing to
+    // lose, so move the draft up to production.
+    if (baseSha && baseSha !== existing) {
+      const cmp = await api(`/repos/${REPO}/compare/${BRANCH}...${DRAFT}`);
+      if (cmp.ok) {
+        const json = (await cmp.json()) as { ahead_by?: number; behind_by?: number };
+        if ((json.ahead_by ?? 0) === 0 && (json.behind_by ?? 0) > 0) {
+          await resetBranchTo(DRAFT, baseSha);
+        }
+      }
+    }
+    return;
+  }
   if (!baseSha) {
     // A 404 on the base ref is almost never a truly missing branch — it's the token
     // being unable to see the repo. Probe and surface the real, actionable reason.

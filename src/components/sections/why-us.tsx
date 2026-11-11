@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { whyUs } from "@/lib/content";
+import { whyUs, sectionCopy } from "@/lib/content";
 import { Icon } from "@/lib/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -21,9 +21,9 @@ export function WhyUs() {
   return (
     <Section tone="luster">
       <SectionHeading
-        eyebrow="Why Alpha"
-        title="Everything your store needs, handled by one team"
-        description="From setup to scale, every part of your marketplace channel is covered by specialists who treat your store like their own."
+        eyebrow={sectionCopy.whyUs.eyebrow}
+        title={sectionCopy.whyUs.title}
+        description={sectionCopy.whyUs.description}
         className="mb-14"
       />
 

@@ -1,4 +1,4 @@
-import { capabilities } from "@/lib/content";
+import { capabilities, sectionCopy } from "@/lib/content";
 import { Icon } from "@/lib/icons";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -19,9 +19,9 @@ export function Capabilities() {
   return (
     <Section tone="white">
       <SectionHeading
-        eyebrow="What we do"
-        title="Everything it takes to run a marketplace store"
-        description="Pick one piece or hand us the whole operation — here's the full scope of what we manage for you."
+        eyebrow={sectionCopy.capabilities.eyebrow}
+        title={sectionCopy.capabilities.title}
+        description={sectionCopy.capabilities.description}
         className="mb-14"
       />
 

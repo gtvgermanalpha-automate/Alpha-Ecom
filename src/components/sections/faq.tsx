@@ -1,4 +1,4 @@
-import { faqs } from "@/lib/content";
+import { faqs, sectionCopy } from "@/lib/content";
 import {
   Accordion,
   AccordionContent,
@@ -13,9 +13,9 @@ export function FAQ() {
   return (
     <Section tone="white">
       <SectionHeading
-        eyebrow="FAQ"
-        title="Questions, answered"
-        description="Everything you need to know before getting started."
+        eyebrow={sectionCopy.faq.eyebrow}
+        title={sectionCopy.faq.title}
+        description={sectionCopy.faq.description}
         className="mb-12"
       />
       <Reveal className="mx-auto max-w-3xl">

@@ -12,7 +12,7 @@ import {
 import { Check, ChevronRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { capabilities } from "@/lib/content";
+import { capabilities, sectionCopy } from "@/lib/content";
 import { Icon } from "@/lib/icons";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -108,9 +108,9 @@ export function PlatformTabs() {
         <Container className="relative w-full">
           <SectionHeading
             inverted
-            eyebrow="What we handle"
-            title="Your whole channel, managed end-to-end"
-            description="Scroll through everything we take off your plate."
+            eyebrow={sectionCopy.platformTabs.eyebrow}
+            title={sectionCopy.platformTabs.title}
+            description={sectionCopy.platformTabs.description}
             align="center"
             className="mb-10 mx-auto"
           />

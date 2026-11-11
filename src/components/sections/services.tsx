@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { marketplaces, type Marketplace } from "@/lib/content";
+import { marketplaces, type Marketplace, sectionCopy } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
@@ -27,9 +27,9 @@ export function ServicesGrid({
     <Section id="services" tone={tone}>
       {heading ? (
         <SectionHeading
-          eyebrow="What we offer"
-          title="Six marketplaces. One expert team."
-          description="We create, optimize and fully manage your stores across the channels your customers already shop on — so you can focus on the product, not the platform."
+          eyebrow={sectionCopy.services.eyebrow}
+          title={sectionCopy.services.title}
+          description={sectionCopy.services.description}
           className="mb-14"
         />
       ) : null}

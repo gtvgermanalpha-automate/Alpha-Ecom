@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { testimonials } from "@/lib/content";
+import { testimonials, sectionCopy } from "@/lib/content";
 import { Container } from "@/components/shared/container";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
@@ -37,9 +37,9 @@ export function Testimonials() {
     <section className="bg-aster-50 py-20 lg:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Client love"
-          title="Sellers grow with Alpha"
-          description="Founders and store owners on what it's like to work with us."
+          eyebrow={sectionCopy.testimonials.eyebrow}
+          title={sectionCopy.testimonials.title}
+          description={sectionCopy.testimonials.description}
           className="mb-8"
         />
 

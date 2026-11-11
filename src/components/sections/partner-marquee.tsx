@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Container } from "@/components/shared/container";
 import { Marquee } from "@/components/shared/marquee";
-import { marketplaces } from "@/lib/content";
+import { marketplaces, sectionCopy } from "@/lib/content";
 
 /**
  * Trust strip: an infinite marquee of the six marketplace logos we build &
@@ -14,7 +14,7 @@ export function PartnerMarquee() {
     <section className="border-y border-border bg-white py-14">
       <Container>
         <p className="mb-10 text-center text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-          We create &amp; manage stores on the world&apos;s biggest marketplaces
+          {sectionCopy.marqueeLine}
         </p>
         <Marquee itemClassName="gap-20">
           {marketplaces.map((m) => (

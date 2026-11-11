@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Clock, Check, MapPin } from "lucide-react";
 
-import { offices } from "@/lib/content";
+import { offices, sectionCopy } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
@@ -59,9 +59,9 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow="Contact Us"
-        title="Let's grow your store"
-        description="Tell us about your products and goals — we'll reply within one business day with a clear plan."
+        eyebrow={sectionCopy.locations.eyebrow}
+        title={sectionCopy.locations.title}
+        description={sectionCopy.locations.description}
         breadcrumbs={[{ label: "Contact" }]}
         image="/images/case-beauty.jpg"
       />

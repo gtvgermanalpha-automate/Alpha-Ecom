@@ -2,15 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Check, TrendingUp } from "lucide-react";
 
+import { aboutContent } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { Reveal } from "@/components/shared/reveal";
 import { Button } from "@/components/ui/button";
-
-const checklist = [
-  "One team for every marketplace",
-  "Senior, certified specialists",
-  "Transparent weekly reporting",
-];
 
 export function AboutSection() {
   return (
@@ -18,27 +13,20 @@ export function AboutSection() {
       <div className="grid items-center gap-12 lg:grid-cols-2">
         {/* Left: copy */}
         <Reveal direction="right">
-          <span className="eyebrow">About Alpha</span>
-          <h2 className="mt-4 text-3xl font-extrabold text-navy sm:text-4xl">
-            Your full-service marketplace partner since 2021
-          </h2>
+          <span className="eyebrow">{aboutContent.eyebrow}</span>
+          <h2 className="mt-4 text-3xl font-extrabold text-navy sm:text-4xl">{aboutContent.title}</h2>
 
-          <p className="mt-5 text-base leading-relaxed text-muted-foreground">
-            Alpha E-Commerce is a senior, hands-on team that builds and fully
-            manages stores across all six major marketplaces — Amazon, eBay,
-            Etsy, OnBuy, TikTok Shop and Shopify. We don&apos;t just launch and
-            leave; we run your channels end to end so you can focus on the
-            product, not the platform.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            With 1,200+ stores launched and nine-figure annual sales under
-            management, every client gets a dedicated account manager and
-            transparent weekly reporting — so you always know exactly where your
-            business stands.
-          </p>
+          {aboutContent.paragraphs.map((paragraph, i) => (
+            <p
+              key={paragraph}
+              className={`${i === 0 ? "mt-5" : "mt-4"} text-base leading-relaxed text-muted-foreground`}
+            >
+              {paragraph}
+            </p>
+          ))}
 
           <ul className="mt-7 space-y-3">
-            {checklist.map((item) => (
+            {aboutContent.checklist.map((item) => (
               <li key={item} className="flex items-center gap-3">
                 <span className="grid size-6 shrink-0 place-items-center rounded-full bg-aster-100">
                   <Check className="size-4 text-aster-700" strokeWidth={3} />
@@ -50,8 +38,8 @@ export function AboutSection() {
 
           <div className="mt-8">
             <Button asChild>
-              <Link href="/about">
-                More about Alpha <ArrowRight className="size-4" />
+              <Link href={aboutContent.cta.href}>
+                {aboutContent.cta.label} <ArrowRight className="size-4" />
               </Link>
             </Button>
           </div>
@@ -69,8 +57,8 @@ export function AboutSection() {
             {/* Framed visual */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-border shadow-card">
               <Image
-                src="/images/about-team.jpg"
-                alt="Alpha E-Commerce specialists managing marketplace stores"
+                src={aboutContent.image}
+                alt={aboutContent.imageAlt}
                 fill
                 sizes="(min-width: 1024px) 40rem, 100vw"
                 className="object-cover"
@@ -85,10 +73,10 @@ export function AboutSection() {
                 </span>
                 <div>
                   <p className="font-display text-xl font-extrabold leading-none text-navy">
-                    $9M+ / mo
+                    {aboutContent.statValue}
                   </p>
                   <p className="mt-1 text-xs font-medium text-muted-foreground">
-                    sales managed
+                    {aboutContent.statLabel}
                   </p>
                 </div>
               </div>

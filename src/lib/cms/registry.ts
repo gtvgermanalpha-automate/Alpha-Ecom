@@ -19,6 +19,12 @@ const ctaFields: FieldSpec[] = [
   { key: "href", type: "string", required: true },
 ];
 
+const headingFields: FieldSpec[] = [
+  { key: "eyebrow", label: "Small label", type: "string", required: true, max: 60 },
+  { key: "title", type: "string", required: true },
+  { key: "description", label: "Intro line", type: "text", max: 300 },
+];
+
 const socialFields: FieldSpec[] = [
   { key: "facebook", type: "string", format: "url" },
   { key: "linkedin", type: "string", format: "url" },
@@ -80,6 +86,53 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "interestOptions", type: "string[]", required: true },
       { key: "budgetOptions", type: "string[]", required: true },
       { key: "sourceOptions", type: "string[]", required: true },
+    ],
+  },
+  {
+    id: "about",
+    label: "About Alpha section",
+    description: 'The "About Alpha" block on the home and About pages.',
+    file: "src/content/about.json",
+    mode: "object",
+    fields: [
+      { key: "eyebrow", label: "Small label above the title", type: "string", required: true, max: 60 },
+      { key: "title", type: "string", required: true },
+      { key: "paragraphs", label: "Paragraphs", type: "string[]", required: true, max: 800 },
+      { key: "checklist", label: "Tick-list points", type: "string[]", required: true, max: 80 },
+      { key: "cta", label: "Button", type: "object", required: true, fields: ctaFields },
+      { key: "image", type: "string", required: true },
+      { key: "imageAlt", label: "Image description (alt text)", type: "string", required: true, max: 160 },
+      { key: "statValue", label: "Floating stat - number", type: "string", required: true, max: 24 },
+      { key: "statLabel", label: "Floating stat - caption", type: "string", required: true, max: 40 },
+    ],
+  },
+  {
+    id: "sections",
+    label: "Section headings",
+    description: "The small label, title and intro line above each section of the site.",
+    file: "src/content/sections.json",
+    mode: "object",
+    fields: [
+      { key: "marqueeLine", label: "Line above the marketplace logos", type: "string", required: true, max: 120 },
+      { key: "services", label: "Marketplaces grid (home)", type: "object", required: true, fields: headingFields },
+      { key: "whyUs", label: "Why Alpha", type: "object", required: true, fields: headingFields },
+      { key: "platformTabs", label: "What we handle (scrolling tabs)", type: "object", required: true, fields: headingFields },
+      { key: "caseStudies", label: "Case studies", type: "object", required: true, fields: headingFields },
+      { key: "testimonials", label: "Testimonials", type: "object", required: true, fields: headingFields },
+      { key: "insights", label: "Insights / blog", type: "object", required: true, fields: headingFields },
+      { key: "faq", label: "FAQ", type: "object", required: true, fields: headingFields },
+      { key: "capabilities", label: "Capabilities (What we do page)", type: "object", required: true, fields: headingFields },
+      { key: "locations", label: "Locations (Contact page)", type: "object", required: true, fields: headingFields },
+      {
+        key: "cta",
+        label: "Bottom call-to-action banner",
+        type: "object",
+        required: true,
+        fields: [
+          { key: "title", type: "string", required: true },
+          { key: "description", type: "text", required: true, max: 300 },
+        ],
+      },
     ],
   },
   {
