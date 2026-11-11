@@ -1,11 +1,24 @@
 {
-  "badge": "Marketplace growth, handled end-to-end",
+  "badge": "Online store management for marketplace sellers",
   "titleLead": "We Create & Manage Your",
-  "titleRotators": ["Amazon", "eBay", "Etsy", "OnBuy", "TikTok Shop", "Shopify"],
+  "titleRotators": [
+    "Amazon",
+    "eBay",
+    "Etsy",
+    "OnBuy",
+    "TikTok Shop",
+    "Shopify"
+  ],
   "titleTail": "Store",
-  "subtitle": "Alpha Digital Solutions builds, optimizes and runs your online stores across the world's biggest marketplaces — so you sell more and manage less.",
-  "primaryCta": { "label": "Get a Free Quote", "href": "/contact" },
-  "secondaryCta": { "label": "View Case Studies", "href": "/portfolio" },
+  "subtitle": "At Alpha Digital Solutions, we set up and run your online store across leading marketplaces, from product research and listings to orders and customer support, so you sell more and manage less.",
+  "primaryCta": {
+    "label": "Get a Free Quote",
+    "href": "/contact"
+  },
+  "secondaryCta": {
+    "label": "View Case Studies",
+    "href": "/portfolio"
+  },
   "interestOptions": [
     "Amazon",
     "eBay",
@@ -22,5 +35,11 @@
     "$5,000 – $10,000 / mo",
     "$10,000+ / mo"
   ],
-  "sourceOptions": ["Google Search", "Social Media", "Referral", "Clutch / Reviews", "Other"]
+  "sourceOptions": [
+    "Google Search",
+    "Social Media",
+    "Referral",
+    "Clutch / Reviews",
+    "Other"
+  ]
 }
