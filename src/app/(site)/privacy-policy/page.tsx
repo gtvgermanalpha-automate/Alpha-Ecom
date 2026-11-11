@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { LegalPage, type LegalSection } from "@/components/shared/legal-page";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: `How ${siteConfig.name} collects, uses, stores and protects your personal information when you use our website and services.`,
+  title: seo.privacy.title,
+  description: seo.privacy.description,
   alternates: { canonical: "/privacy-policy" },
 };
 

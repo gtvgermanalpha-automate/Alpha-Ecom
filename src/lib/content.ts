@@ -22,6 +22,7 @@ import awardsData from "@/content/awards.json";
 import homeData from "@/content/home.json";
 import aboutData from "@/content/about.json";
 import sectionsData from "@/content/sections.json";
+import seoData from "@/content/seo.json";
 
 export type IconKey = string;
 
@@ -38,6 +39,9 @@ export type Marketplace = {
   features: string[];
   accent: string; // brand-ish accent for subtle theming (kept within neutral usage)
   stat: { value: string; label: string };
+  /** Optional SEO overrides for the /services/[slug] page. */
+  seoTitle?: string;
+  seoDescription?: string;
 };
 
 export const marketplaces = marketplacesData as Marketplace[];
@@ -203,6 +207,9 @@ export type Insight = {
   date?: string;
   /** Article body as an ordered list of blocks: "## …" = heading, "- …" = bullet, else paragraph. */
   body?: string[];
+  /** Optional SEO overrides for the article page. */
+  seoTitle?: string;
+  seoDescription?: string;
 };
 
 export const insights = insightsData as Insight[];
@@ -276,3 +283,10 @@ export const aboutContent = aboutData;
 
 /** Eyebrow / title / intro line for each section, edited under "Section headings" in the CMS. */
 export const sectionCopy = sectionsData;
+
+/* ------------------------------------------------------------------ */
+/* SEO titles + meta descriptions (CMS-editable)                       */
+/* ------------------------------------------------------------------ */
+
+/** Per-page SEO title + meta description, edited under "SEO" in the CMS. */
+export const seo = seoData;

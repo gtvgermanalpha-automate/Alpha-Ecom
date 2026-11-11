@@ -25,6 +25,16 @@ const headingFields: FieldSpec[] = [
   { key: "description", label: "Intro line", type: "text", max: 300 },
 ];
 
+const seoFields: FieldSpec[] = [
+  { key: "title", label: "SEO title (aim for 50-60 characters)", type: "string", required: true, max: 90 },
+  { key: "description", label: "Meta description (aim for 140-160 characters)", type: "text", required: true, max: 220 },
+];
+
+const seoOverrideFields: FieldSpec[] = [
+  { key: "seoTitle", label: "SEO title (optional - leave empty to use the default)", type: "string", max: 90 },
+  { key: "seoDescription", label: "Meta description (optional - leave empty to use the default)", type: "text", max: 220 },
+];
+
 const socialFields: FieldSpec[] = [
   { key: "facebook", type: "string", format: "url" },
   { key: "linkedin", type: "string", format: "url" },
@@ -136,6 +146,26 @@ const defs: Omit<Collection, "validate">[] = [
     ],
   },
   {
+    id: "seo",
+    label: "SEO titles & descriptions",
+    description:
+      'Search-engine title and meta description for each page. " | Alpha E-Commerce" is added after every title automatically, except the home page. Service pages and blog articles have their own SEO fields inside each Marketplaces / Insights entry.',
+    file: "src/content/seo.json",
+    mode: "object",
+    fields: [
+      { key: "home", label: "Home page (full title, no suffix added)", type: "object", required: true, fields: seoFields },
+      { key: "services", label: "Services page", type: "object", required: true, fields: seoFields },
+      { key: "whatWeDo", label: "What We Do page", type: "object", required: true, fields: seoFields },
+      { key: "caseStudies", label: "Case Studies page", type: "object", required: true, fields: seoFields },
+      { key: "about", label: "About page", type: "object", required: true, fields: seoFields },
+      { key: "contact", label: "Contact page", type: "object", required: true, fields: seoFields },
+      { key: "blog", label: "Blog index page", type: "object", required: true, fields: seoFields },
+      { key: "privacy", label: "Privacy Policy page", type: "object", required: true, fields: seoFields },
+      { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: seoFields },
+      { key: "keywords", label: "Site keywords", type: "string[]", max: 60 },
+    ],
+  },
+  {
     id: "marketplaces",
     label: "Marketplaces",
     description: "The six marketplace services shown across the site.",
@@ -159,6 +189,7 @@ const defs: Omit<Collection, "validate">[] = [
           { key: "label", type: "string", required: true },
         ],
       },
+      ...seoOverrideFields,
     ],
   },
   {
@@ -237,6 +268,7 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "excerpt", type: "text", required: true },
       { key: "image", type: "string", required: true },
       { key: "body", type: "string[]" },
+      ...seoOverrideFields,
     ],
   },
   {

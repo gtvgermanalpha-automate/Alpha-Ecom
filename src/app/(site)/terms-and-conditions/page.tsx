@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { LegalPage, type LegalSection } from "@/components/shared/legal-page";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions",
-  description: `The terms that govern your use of the ${siteConfig.name} website and our marketplace store creation and management services.`,
+  title: seo.terms.title,
+  description: seo.terms.description,
   alternates: { canonical: "/terms-and-conditions" },
 };
 

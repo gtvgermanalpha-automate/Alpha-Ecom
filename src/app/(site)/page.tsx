@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { Hero } from "@/components/sections/hero";
 import { AboutSection } from "@/components/sections/about-section";
 import { ServicesGrid } from "@/components/sections/services";
@@ -13,8 +14,7 @@ import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-  description:
-    "Alpha E-Commerce creates and manages your online stores on Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify — setup, listings, ads, orders and account health, all handled by one expert team.",
+  description: seo.home.description,
 };
 
 export default function HomePage() {

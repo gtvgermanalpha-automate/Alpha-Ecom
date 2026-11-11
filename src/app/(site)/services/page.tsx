@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { ServicesGrid } from "@/components/sections/services";
 import { MarketplaceShowcase } from "@/components/sections/marketplace-showcase";
@@ -7,9 +8,8 @@ import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-  title: "Services — Marketplace store creation & management",
-  description:
-    "One partner to build, optimize and run your stores across Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify — from setup and listings to advertising, orders and account health.",
+  title: seo.services.title,
+  description: seo.services.description,
   alternates: { canonical: "/services" },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
@@ -7,9 +8,8 @@ import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-  title: "What We Do — End-to-end marketplace management",
-  description:
-    "Store creation, listing & SEO, advertising, orders & inventory, account health and branding & design — everything Alpha E-Commerce manages so you can focus on your products.",
+  title: seo.whatWeDo.title,
+  description: seo.whatWeDo.description,
   alternates: { canonical: "/what-we-do" },
 };
 

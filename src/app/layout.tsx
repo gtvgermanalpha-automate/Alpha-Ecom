@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { seo } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 // Self-hosted (latin) variable fonts — no build-time network dependency.
@@ -25,21 +26,12 @@ const montserrat = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Amazon, eBay, Etsy, Shopify & TikTok Shop Store Management`,
+    default: seo.home.title,
     template: `%s | ${siteConfig.name}`,
   },
-  description: siteConfig.description,
+  description: seo.home.description,
   applicationName: siteConfig.name,
-  keywords: [
-    "Amazon store management",
-    "eBay store management",
-    "Etsy shop setup",
-    "OnBuy seller",
-    "TikTok Shop setup",
-    "Shopify store creation",
-    "marketplace management agency",
-    "marketplace PPC management",
-  ],
+  keywords: seo.keywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   alternates: { canonical: "/" },

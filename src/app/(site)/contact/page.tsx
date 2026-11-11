@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Clock, Check, MapPin } from "lucide-react";
 
-import { offices, sectionCopy } from "@/lib/content";
+import { offices, sectionCopy, seo } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
@@ -11,9 +11,8 @@ import { FAQ } from "@/components/sections/faq";
 import { ContactForm } from "@/components/forms/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Start your project",
-  description:
-    "Tell us about your products and goals and we'll reply within one business day with a clear plan. Book a free 60-minute strategy session. Serving brands in the USA, UK and UAE.",
+  title: seo.contact.title,
+  description: seo.contact.description,
   alternates: { canonical: "/contact" },
 };
 

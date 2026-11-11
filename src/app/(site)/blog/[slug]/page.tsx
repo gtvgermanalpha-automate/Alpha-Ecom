@@ -27,8 +27,8 @@ export async function generateMetadata({
   const post = insights.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Alpha E-Commerce Blog`,
-    description: post.excerpt,
+    title: post.seoTitle?.trim() || post.title,
+    description: post.seoDescription?.trim() || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
   };
 }

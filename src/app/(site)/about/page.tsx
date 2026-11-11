@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { seo } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { AboutSection } from "@/components/sections/about-section";
 import { WhyUs } from "@/components/sections/why-us";
@@ -7,9 +8,8 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-  title: "About Us — Marketplace growth experts",
-  description:
-    "Since 2021, Alpha E-Commerce has helped 1,200+ brands launch and scale stores on Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify. Meet the team behind the growth.",
+  title: seo.about.title,
+  description: seo.about.description,
   alternates: { canonical: "/about" },
 };
 

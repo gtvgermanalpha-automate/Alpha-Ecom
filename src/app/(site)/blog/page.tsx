@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { insights } from "@/lib/content";
+import { insights, seo } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/shared/blog-card";
@@ -8,9 +8,8 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
-  title: "Blog — Marketplace insights & guides",
-  description:
-    "Practical marketplace playbooks and guides from the Alpha E-Commerce team — Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify.",
+  title: seo.blog.title,
+  description: seo.blog.description,
   alternates: { canonical: "/blog" },
 };
 

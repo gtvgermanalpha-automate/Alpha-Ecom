@@ -35,8 +35,8 @@ export async function generateMetadata({
   const m = marketplaces.find((x) => x.slug === slug);
   if (!m) return {};
   return {
-    title: `${m.name} Store Creation & Management`,
-    description: m.description,
+    title: m.seoTitle?.trim() || `${m.name} Store Creation & Management`,
+    description: m.seoDescription?.trim() || m.description,
     alternates: { canonical: `/services/${m.slug}` },
   };
 }
