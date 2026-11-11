@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: seo.whatWeDo.title,
   description: seo.whatWeDo.description,
   alternates: { canonical: "/what-we-do" },
+  openGraph: ogFor("/what-we-do"),
 };
 
 export default function WhatWeDoPage() {

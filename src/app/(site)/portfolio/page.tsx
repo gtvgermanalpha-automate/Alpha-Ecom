@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: seo.caseStudies.title,
   description: seo.caseStudies.description,
   alternates: { canonical: "/portfolio" },
+  openGraph: ogFor("/portfolio"),
 };
 
 export default function PortfolioPage() {

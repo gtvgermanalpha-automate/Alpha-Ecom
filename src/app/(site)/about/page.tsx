@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { AboutSection } from "@/components/sections/about-section";
 import { WhyUs } from "@/components/sections/why-us";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: seo.about.title,
   description: seo.about.description,
   alternates: { canonical: "/about" },
+  openGraph: ogFor("/about"),
 };
 
 export default function AboutPage() {

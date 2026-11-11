@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 import { insights, seo, pageCopy } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { Section } from "@/components/shared/section";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/shared/blog-card";
@@ -11,6 +12,7 @@ export const metadata: Metadata = {
   title: seo.blog.title,
   description: seo.blog.description,
   alternates: { canonical: "/blog" },
+  openGraph: ogFor("/blog"),
 };
 
 export default function BlogIndexPage() {

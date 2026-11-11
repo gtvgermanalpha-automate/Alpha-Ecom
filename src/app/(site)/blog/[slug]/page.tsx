@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock } from "lucide-react";
 
 import { insights } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { Container } from "@/components/shared/container";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -30,6 +31,7 @@ export async function generateMetadata({
     title: post.seoTitle?.trim() || post.title,
     description: post.seoDescription?.trim() || post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: ogFor(`/blog/${post.slug}`),
   };
 }
 

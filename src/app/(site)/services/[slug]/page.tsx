@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 
 import { marketplaces } from "@/lib/content";
+import { ogFor } from "@/lib/og";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
@@ -38,6 +39,7 @@ export async function generateMetadata({
     title: m.seoTitle?.trim() || `${m.name} Store Creation & Management`,
     description: m.seoDescription?.trim() || m.description,
     alternates: { canonical: `/services/${m.slug}` },
+    openGraph: ogFor(`/services/${m.slug}`),
   };
 }
 
