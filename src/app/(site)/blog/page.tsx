@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 
 import { insights, seo, pageCopy } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { Section } from "@/components/shared/section";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/shared/blog-card";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
 
+const title = seo.blog.title;
+const description = seo.blog.description;
+
 export const metadata: Metadata = {
-  title: seo.blog.title,
-  description: seo.blog.description,
+  title,
+  description,
   alternates: { canonical: "/blog" },
-  openGraph: ogFor("/blog"),
+  ...shareMeta("/blog", title, description),
 };
 
 export default function BlogIndexPage() {

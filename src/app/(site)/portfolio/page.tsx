@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
 
+const title = seo.caseStudies.title;
+const description = seo.caseStudies.description;
+
 export const metadata: Metadata = {
-  title: seo.caseStudies.title,
-  description: seo.caseStudies.description,
+  title,
+  description,
   alternates: { canonical: "/portfolio" },
-  openGraph: ogFor("/portfolio"),
+  ...shareMeta("/portfolio", title, description),
 };
 
 export default function PortfolioPage() {

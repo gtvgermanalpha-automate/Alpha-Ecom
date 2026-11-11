@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
 
 import { marketplaces } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { Reveal } from "@/components/shared/reveal";
@@ -35,11 +35,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const m = marketplaces.find((x) => x.slug === slug);
   if (!m) return {};
+  const title = m.seoTitle?.trim() || `${m.name} Store Creation & Management`;
+  const description = m.seoDescription?.trim() || m.description;
   return {
-    title: m.seoTitle?.trim() || `${m.name} Store Creation & Management`,
-    description: m.seoDescription?.trim() || m.description,
+    title,
+    description,
     alternates: { canonical: `/services/${m.slug}` },
-    openGraph: ogFor(`/services/${m.slug}`),
+    ...shareMeta(`/services/${m.slug}`, title, description),
   };
 }
 

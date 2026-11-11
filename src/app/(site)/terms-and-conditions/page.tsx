@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 
 import { legal, pageCopy, seo } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { LegalPage } from "@/components/shared/legal-page";
 
+const title = seo.terms.title;
+const description = seo.terms.description;
+
 export const metadata: Metadata = {
-  title: seo.terms.title,
-  description: seo.terms.description,
+  title,
+  description,
   alternates: { canonical: "/terms-and-conditions" },
-  openGraph: ogFor("/terms-and-conditions"),
+  ...shareMeta("/terms-and-conditions", title, description),
 };
 
 export default function TermsPage() {

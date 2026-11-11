@@ -3,7 +3,7 @@ import { Mail, Phone, Clock, Check, MapPin } from "lucide-react";
 
 import { offices, sectionCopy, seo, pageCopy } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -11,11 +11,14 @@ import { PageHero } from "@/components/sections/page-hero";
 import { FAQ } from "@/components/sections/faq";
 import { ContactForm } from "@/components/forms/contact-form";
 
+const title = seo.contact.title;
+const description = seo.contact.description;
+
 export const metadata: Metadata = {
-  title: seo.contact.title,
-  description: seo.contact.description,
+  title,
+  description,
   alternates: { canonical: "/contact" },
-  openGraph: ogFor("/contact"),
+  ...shareMeta("/contact", title, description),
 };
 
 const consultationPoints = [

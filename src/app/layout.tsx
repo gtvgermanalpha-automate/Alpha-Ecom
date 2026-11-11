@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { seo } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
-import { ogFor, socialImage } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 
 // Self-hosted (latin) variable fonts — no build-time network dependency.
 const inter = localFont({
@@ -36,13 +36,7 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   alternates: { canonical: "/" },
-  openGraph: ogFor("/"),
-  twitter: {
-    card: "summary_large_image",
-    title: seo.social.title,
-    description: seo.social.description,
-    images: [socialImage.url],
-  },
+  ...shareMeta("/"),
   robots: {
     index: true,
     follow: true,

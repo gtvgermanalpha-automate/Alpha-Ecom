@@ -12,18 +12,31 @@ export const socialImage = {
 };
 
 /**
- * Open Graph block for a page. Next.js replaces (does not merge) a parent's
- * `openGraph`, so every page passes its own path here to get an `og:url`
- * that points at itself while keeping the shared title, text and image.
+ * Social-share tags (Open Graph + X/Twitter) for a page. Next.js replaces
+ * (does not merge) a parent's `openGraph` / `twitter`, so every page calls this
+ * with its own path, title and description. The home page omits the last two
+ * and gets the "Social sharing preview" text from the CMS.
  */
-export function ogFor(path: string): NonNullable<Metadata["openGraph"]> {
+export function shareMeta(
+  path: string,
+  title: string = seo.social.title,
+  description: string = seo.social.description
+): Pick<Metadata, "openGraph" | "twitter"> {
   return {
-    type: "website",
-    locale: "en_US",
-    url: path,
-    siteName: siteConfig.name,
-    title: seo.social.title,
-    description: seo.social.description,
-    images: [socialImage],
+    openGraph: {
+      type: "website",
+      locale: "en_US",
+      url: path,
+      siteName: siteConfig.name,
+      title,
+      description,
+      images: [socialImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [socialImage.url],
+    },
   };
 }

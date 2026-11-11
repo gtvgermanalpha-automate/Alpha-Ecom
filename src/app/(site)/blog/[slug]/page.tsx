@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CalendarDays, Check, Clock } from "lucide-react";
 
 import { insights } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { Container } from "@/components/shared/container";
 import { Section } from "@/components/shared/section";
 import { SectionHeading } from "@/components/shared/section-heading";
@@ -27,11 +27,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = insights.find((p) => p.slug === slug);
   if (!post) return {};
+  const title = post.seoTitle?.trim() || post.title;
+  const description = post.seoDescription?.trim() || post.excerpt;
   return {
-    title: post.seoTitle?.trim() || post.title,
-    description: post.seoDescription?.trim() || post.excerpt,
+    title,
+    description,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: ogFor(`/blog/${post.slug}`),
+    ...shareMeta(`/blog/${post.slug}`, title, description),
   };
 }
 

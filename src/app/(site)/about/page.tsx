@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { AboutSection } from "@/components/sections/about-section";
 import { WhyUs } from "@/components/sections/why-us";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
 
+const title = seo.about.title;
+const description = seo.about.description;
+
 export const metadata: Metadata = {
-  title: seo.about.title,
-  description: seo.about.description,
+  title,
+  description,
   alternates: { canonical: "/about" },
-  openGraph: ogFor("/about"),
+  ...shareMeta("/about", title, description),
 };
 
 export default function AboutPage() {

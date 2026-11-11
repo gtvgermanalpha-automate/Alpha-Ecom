@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
+const title = seo.whatWeDo.title;
+const description = seo.whatWeDo.description;
+
 export const metadata: Metadata = {
-  title: seo.whatWeDo.title,
-  description: seo.whatWeDo.description,
+  title,
+  description,
   alternates: { canonical: "/what-we-do" },
-  openGraph: ogFor("/what-we-do"),
+  ...shareMeta("/what-we-do", title, description),
 };
 
 export default function WhatWeDoPage() {

@@ -196,7 +196,7 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: seoFields },
       {
         key: "social",
-        label: "Social sharing preview (WhatsApp, Facebook, LinkedIn, X)",
+        label: "Social sharing preview for the home page (WhatsApp, Facebook, LinkedIn, X). Other pages show their own SEO title and description; the image is used on every page",
         type: "object",
         required: true,
         fields: [

@@ -1,18 +1,21 @@
 import type { Metadata } from "next";
 
 import { seo, pageCopy } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { PageHero } from "@/components/sections/page-hero";
 import { ServicesGrid } from "@/components/sections/services";
 import { MarketplaceShowcase } from "@/components/sections/marketplace-showcase";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
 
+const title = seo.services.title;
+const description = seo.services.description;
+
 export const metadata: Metadata = {
-  title: seo.services.title,
-  description: seo.services.description,
+  title,
+  description,
   alternates: { canonical: "/services" },
-  openGraph: ogFor("/services"),
+  ...shareMeta("/services", title, description),
 };
 
 export default function ServicesPage() {

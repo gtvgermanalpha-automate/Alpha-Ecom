@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 
 import { legal, pageCopy, seo } from "@/lib/content";
-import { ogFor } from "@/lib/og";
+import { shareMeta } from "@/lib/og";
 import { LegalPage } from "@/components/shared/legal-page";
 
+const title = seo.privacy.title;
+const description = seo.privacy.description;
+
 export const metadata: Metadata = {
-  title: seo.privacy.title,
-  description: seo.privacy.description,
+  title,
+  description,
   alternates: { canonical: "/privacy-policy" },
-  openGraph: ogFor("/privacy-policy"),
+  ...shareMeta("/privacy-policy", title, description),
 };
 
 export default function PrivacyPolicyPage() {
