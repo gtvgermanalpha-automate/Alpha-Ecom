@@ -193,7 +193,13 @@ function ObjectArray({
   fields: FieldSpec[];
   onChange: (v: Record<string, unknown>[]) => void;
 }) {
-  const blank = () => Object.fromEntries(fields.map((f) => [f.key, f.type === "string[]" ? [] : ""]));
+  const blank = () =>
+    Object.fromEntries(
+      fields.map((f) => [
+        f.key,
+        f.type === "string[]" || f.type === "object[]" ? [] : f.type === "object" ? {} : "",
+      ])
+    );
   const setItem = (i: number, v: Record<string, unknown>) => onChange(items.map((x, j) => (j === i ? v : x)));
   return (
     <div className="space-y-3">

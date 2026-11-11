@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 
-import { footerColumns, offices } from "@/lib/content";
+import { footerColumns, offices, footerContent } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Logo } from "@/components/layout/logo";
@@ -28,10 +28,10 @@ export function Footer() {
         <Container className="relative flex flex-col items-center justify-between gap-6 py-12 text-center lg:flex-row lg:text-left">
           <div>
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
-              Ready to grow on every marketplace?
+              {footerContent.stripTitle}
             </h2>
             <p className="mt-2 text-white/70">
-              Book a free 60-minute consultation — no pressure, just a plan.
+              {footerContent.stripText}
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
@@ -44,8 +44,8 @@ export function Footer() {
               </span>
             ))}
             <Button asChild size="lg" className="ml-1">
-              <Link href="/contact">
-                Get a Free Quote <ArrowRight className="size-4" />
+              <Link href={footerContent.stripButton.href}>
+                {footerContent.stripButton.label} <ArrowRight className="size-4" />
               </Link>
             </Button>
           </div>

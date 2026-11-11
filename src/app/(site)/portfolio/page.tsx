@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { seo } from "@/lib/content";
+import { seo, pageCopy } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -16,15 +16,18 @@ export default function PortfolioPage() {
   return (
     <>
       <PageHero
-        eyebrow="Case Studies"
-        title="Stores we've grown"
-        description="Real marketplace results across Amazon, eBay, Etsy, Shopify and TikTok Shop. Filter by channel and open any project."
+        eyebrow={pageCopy.caseStudies.eyebrow}
+        title={pageCopy.caseStudies.title}
+        description={pageCopy.caseStudies.description}
         breadcrumbs={[{ label: "Case Studies" }]}
-        image="/images/case-home.jpg"
+        image={pageCopy.caseStudies.image}
       />
       <PortfolioGrid showFilters heading />
       <Testimonials />
-      <CTA title="Want to see your store here?" />
+      <CTA
+        title={pageCopy.caseStudies.ctaTitle || undefined}
+        description={pageCopy.caseStudies.ctaDescription || undefined}
+      />
     </>
   );
 }

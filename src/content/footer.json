@@ -1,0 +1,90 @@
+{
+  "stripTitle": "Ready to grow on every marketplace?",
+  "stripText": "Book a free 60-minute consultation — no pressure, just a plan.",
+  "stripButton": {
+    "label": "Get a Free Quote",
+    "href": "/contact"
+  },
+  "newsletterHeading": "Get growth insights monthly",
+  "columns": [
+    {
+      "heading": "Company",
+      "links": [
+        {
+          "label": "About Us",
+          "href": "/about"
+        },
+        {
+          "label": "Case Studies",
+          "href": "/portfolio"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/contact"
+        },
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy"
+        },
+        {
+          "label": "Terms & Conditions",
+          "href": "/terms-and-conditions"
+        }
+      ]
+    },
+    {
+      "heading": "Marketplaces",
+      "links": [
+        {
+          "label": "Amazon",
+          "href": "/services#amazon"
+        },
+        {
+          "label": "eBay",
+          "href": "/services#ebay"
+        },
+        {
+          "label": "Etsy",
+          "href": "/services#etsy"
+        },
+        {
+          "label": "OnBuy",
+          "href": "/services#onbuy"
+        },
+        {
+          "label": "TikTok Shop",
+          "href": "/services#tiktok-shop"
+        },
+        {
+          "label": "Shopify",
+          "href": "/services#shopify"
+        }
+      ]
+    },
+    {
+      "heading": "What we do",
+      "links": [
+        {
+          "label": "Store Creation",
+          "href": "/services"
+        },
+        {
+          "label": "Listing & SEO",
+          "href": "/services"
+        },
+        {
+          "label": "Advertising / PPC",
+          "href": "/services"
+        },
+        {
+          "label": "Account Management",
+          "href": "/services"
+        }
+      ]
+    }
+  ]
+}

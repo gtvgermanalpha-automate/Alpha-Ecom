@@ -1,5 +1,6 @@
 "use client";
 
+import { footerContent } from "@/lib/content";
 import * as React from "react";
 import { ArrowRight, Check, Loader2 } from "lucide-react";
 
@@ -34,7 +35,7 @@ export function NewsletterForm() {
   return (
     <form onSubmit={onSubmit} className="mt-4" noValidate>
       <label htmlFor="newsletter-email" className="text-sm font-semibold text-white">
-        Get growth insights monthly
+        {footerContent.newsletterHeading}
       </label>
       <div className="mt-2 flex gap-2">
         <input

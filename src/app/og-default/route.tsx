@@ -1,13 +1,11 @@
 import { ImageResponse } from "next/og";
 
-import { siteConfig } from "@/lib/site";
-
 export const runtime = "nodejs";
-export const alt = `${siteConfig.name} — eCommerce, Web & Mobile Development`;
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const dynamic = "force-static";
+const size = { width: 1200, height: 630 };
 
-export default function OpengraphImage() {
+/** Default social-share image, used when no custom image is set in the CMS. */
+export function GET() {
   return new ImageResponse(
     (
       <div

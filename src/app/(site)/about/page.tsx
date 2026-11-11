@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { seo } from "@/lib/content";
+import { seo, pageCopy } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { AboutSection } from "@/components/sections/about-section";
 import { WhyUs } from "@/components/sections/why-us";
@@ -17,16 +17,19 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Alpha"
-        title="We build & run marketplace stores that grow"
-        description="Since 2021 we've helped 1,200+ brands launch and scale on the world's biggest marketplaces."
+        eyebrow={pageCopy.about.eyebrow}
+        title={pageCopy.about.title}
+        description={pageCopy.about.description}
         breadcrumbs={[{ label: "About" }]}
-        image="/images/about-team.jpg"
+        image={pageCopy.about.image}
       />
       <AboutSection />
       <WhyUs />
       <Testimonials />
-      <CTA />
+      <CTA
+        title={pageCopy.about.ctaTitle || undefined}
+        description={pageCopy.about.ctaDescription || undefined}
+      />
     </>
   );
 }

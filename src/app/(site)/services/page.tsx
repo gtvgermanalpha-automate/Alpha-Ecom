@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { seo } from "@/lib/content";
+import { seo, pageCopy } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { ServicesGrid } from "@/components/sections/services";
 import { MarketplaceShowcase } from "@/components/sections/marketplace-showcase";
@@ -17,16 +17,19 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Our Services"
-        title="Marketplace store creation & management"
-        description="One partner to build, optimize and run your stores across Amazon, eBay, Etsy, OnBuy, TikTok Shop and Shopify."
+        eyebrow={pageCopy.services.eyebrow}
+        title={pageCopy.services.title}
+        description={pageCopy.services.description}
         breadcrumbs={[{ label: "Services" }]}
-        image="/images/case-tech.jpg"
+        image={pageCopy.services.image}
       />
       <ServicesGrid heading tone="white" />
       <MarketplaceShowcase />
       <FAQ />
-      <CTA title="Ready to launch on a new marketplace?" />
+      <CTA
+        title={pageCopy.services.ctaTitle || undefined}
+        description={pageCopy.services.ctaDescription || undefined}
+      />
     </>
   );
 }

@@ -35,6 +35,38 @@ const seoOverrideFields: FieldSpec[] = [
   { key: "seoDescription", label: "Meta description (optional - leave empty to use the default)", type: "text", max: 220 },
 ];
 
+const bannerFields: FieldSpec[] = [
+  { key: "eyebrow", label: "Small label", type: "string", required: true, max: 60 },
+  { key: "title", label: "Banner title", type: "string", required: true },
+  { key: "description", label: "Banner intro line", type: "text", required: true, max: 300 },
+  { key: "image", label: "Background image", type: "string", required: true },
+];
+
+const bannerWithCtaFields: FieldSpec[] = [
+  ...bannerFields,
+  { key: "ctaTitle", label: "Bottom banner title (optional - empty uses the default)", type: "string" },
+  { key: "ctaDescription", label: "Bottom banner text (optional - empty uses the default)", type: "text", max: 300 },
+];
+
+const linkFields: FieldSpec[] = [
+  { key: "label", type: "string", required: true },
+  { key: "href", label: "Link (e.g. /about)", type: "string", required: true },
+];
+
+const legalDocFields: FieldSpec[] = [
+  { key: "updated", label: "Last updated date", type: "string", required: true, max: 40 },
+  {
+    key: "sections",
+    label: "Sections",
+    type: "object[]",
+    required: true,
+    fields: [
+      { key: "title", label: "Section title", type: "string", required: true },
+      { key: "body", label: 'Paragraphs (start a line with "- " for a bullet point)', type: "string[]", required: true, max: 1500 },
+    ],
+  },
+];
+
 const socialFields: FieldSpec[] = [
   { key: "facebook", type: "string", format: "url" },
   { key: "linkedin", type: "string", format: "url" },
@@ -162,7 +194,69 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "blog", label: "Blog index page", type: "object", required: true, fields: seoFields },
       { key: "privacy", label: "Privacy Policy page", type: "object", required: true, fields: seoFields },
       { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: seoFields },
+      {
+        key: "social",
+        label: "Social sharing preview (WhatsApp, Facebook, LinkedIn, X)",
+        type: "object",
+        required: true,
+        fields: [
+          { key: "title", label: "Preview title", type: "string", required: true, max: 90 },
+          { key: "description", label: "Preview description", type: "text", required: true, max: 220 },
+          { key: "image", label: "Preview image (1200 x 630 px - empty uses the default card)", type: "string" },
+        ],
+      },
       { key: "keywords", label: "Site keywords", type: "string[]", max: 60 },
+    ],
+  },
+  {
+    id: "pages",
+    label: "Page banners",
+    description: "The banner at the top of each inner page (label, title, intro line, background image) and the call-to-action banner at the bottom.",
+    file: "src/content/pages.json",
+    mode: "object",
+    fields: [
+      { key: "services", label: "Services page", type: "object", required: true, fields: bannerWithCtaFields },
+      { key: "whatWeDo", label: "What We Do page", type: "object", required: true, fields: bannerWithCtaFields },
+      { key: "caseStudies", label: "Case Studies page", type: "object", required: true, fields: bannerWithCtaFields },
+      { key: "about", label: "About page", type: "object", required: true, fields: bannerWithCtaFields },
+      { key: "blog", label: "Blog page", type: "object", required: true, fields: bannerWithCtaFields },
+      { key: "contact", label: "Contact page", type: "object", required: true, fields: bannerFields },
+      { key: "privacy", label: "Privacy Policy page", type: "object", required: true, fields: bannerFields },
+      { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: bannerFields },
+    ],
+  },
+  {
+    id: "footer",
+    label: "Footer",
+    description: "The consultation strip, newsletter heading and link columns in the footer. Contact details and social links live in Site settings.",
+    file: "src/content/footer.json",
+    mode: "object",
+    fields: [
+      { key: "stripTitle", label: "Consultation strip - title", type: "string", required: true },
+      { key: "stripText", label: "Consultation strip - text", type: "string", required: true, max: 200 },
+      { key: "stripButton", label: "Consultation strip - button", type: "object", required: true, fields: linkFields },
+      { key: "newsletterHeading", label: "Newsletter heading", type: "string", required: true, max: 80 },
+      {
+        key: "columns",
+        label: "Link columns",
+        type: "object[]",
+        required: true,
+        fields: [
+          { key: "heading", label: "Column heading", type: "string", required: true, max: 40 },
+          { key: "links", label: "Links", type: "object[]", required: true, fields: linkFields },
+        ],
+      },
+    ],
+  },
+  {
+    id: "legal",
+    label: "Legal pages",
+    description: "The full text of the Privacy Policy and Terms & Conditions pages.",
+    file: "src/content/legal.json",
+    mode: "object",
+    fields: [
+      { key: "privacy", label: "Privacy Policy", type: "object", required: true, fields: legalDocFields },
+      { key: "terms", label: "Terms & Conditions", type: "object", required: true, fields: legalDocFields },
     ],
   },
   {

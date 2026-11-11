@@ -1,39 +1,60 @@
 import Link from "next/link";
 
 import { siteConfig, fullAddress } from "@/lib/site";
+import { slugify } from "@/lib/cms/limits";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
 
 export type LegalSection = {
-  id: string;
   title: string;
-  /** Paragraphs and bullet lists. A string renders as a paragraph; an array renders as a list. */
-  body: (string | string[])[];
+  /** Ordered blocks: a line starting with "- " is a bullet, anything else is a paragraph. */
+  body: string[];
 };
 
-/** Shared layout for the Privacy Policy and Terms & Conditions pages. */
-export function LegalPage({
-  eyebrow,
-  title,
-  description,
-  updated,
-  sections,
-}: {
-  eyebrow: string;
-  title: string;
-  description: string;
-  updated: string;
-  sections: LegalSection[];
-}) {
+export type LegalDoc = { updated: string; sections: LegalSection[] };
+export type LegalBanner = { eyebrow: string; title: string; description: string; image: string };
+
+/** Group consecutive "- " lines into bullet lists; everything else is a paragraph. */
+function LegalBody({ blocks }: { blocks: string[] }) {
+  const out: React.ReactNode[] = [];
+  for (let i = 0; i < blocks.length; ) {
+    if (blocks[i].startsWith("- ")) {
+      const items: string[] = [];
+      while (i < blocks.length && blocks[i].startsWith("- ")) items.push(blocks[i++].slice(2));
+      out.push(
+        <ul key={i} className="mt-4 space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
+          {items.map((item, j) => (
+            <li key={j} className="list-disc">
+              {item}
+            </li>
+          ))}
+        </ul>
+      );
+    } else {
+      out.push(
+        <p key={i} className="mt-4 text-base leading-relaxed text-muted-foreground">
+          {blocks[i]}
+        </p>
+      );
+      i++;
+    }
+  }
+  return <>{out}</>;
+}
+
+/** Shared layout for the Privacy Policy and Terms & Conditions pages (content comes from the CMS). */
+export function LegalPage({ banner, doc }: { banner: LegalBanner; doc: LegalDoc }) {
+  const sections = doc.sections.map((s, i) => ({ ...s, id: slugify(s.title) || `section-${i + 1}` }));
+
   return (
     <>
       <PageHero
-        eyebrow={eyebrow}
-        title={title}
-        description={description}
-        breadcrumbs={[{ label: title }]}
-        image="/images/about-team.jpg"
+        eyebrow={banner.eyebrow}
+        title={banner.title}
+        description={banner.description}
+        breadcrumbs={[{ label: banner.title }]}
+        image={banner.image}
       />
 
       <section className="bg-aster-50 py-16 lg:py-24">
@@ -44,7 +65,7 @@ export function LegalPage({
               <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                 Last updated
               </p>
-              <p className="mt-1 font-semibold text-navy">{updated}</p>
+              <p className="mt-1 font-semibold text-navy">{doc.updated}</p>
               <nav aria-label="On this page" className="mt-6">
                 <ol className="space-y-2 text-sm">
                   {sections.map((s, i) => (
@@ -85,21 +106,7 @@ export function LegalPage({
                   <span className="mr-2 text-aster-700">{i + 1}.</span>
                   {s.title}
                 </h2>
-                {s.body.map((block, j) =>
-                  Array.isArray(block) ? (
-                    <ul key={j} className="mt-4 space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
-                      {block.map((item) => (
-                        <li key={item} className="list-disc">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p key={j} className="mt-4 text-base leading-relaxed text-muted-foreground">
-                      {block}
-                    </p>
-                  )
-                )}
+                <LegalBody blocks={s.body} />
               </Reveal>
             ))}
 

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mail, Phone, Clock, Check, MapPin } from "lucide-react";
 
-import { offices, sectionCopy, seo } from "@/lib/content";
+import { offices, sectionCopy, seo, pageCopy } from "@/lib/content";
 import { siteConfig, fullAddress } from "@/lib/site";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
@@ -58,11 +58,11 @@ export default function ContactPage() {
   return (
     <>
       <PageHero
-        eyebrow={sectionCopy.locations.eyebrow}
-        title={sectionCopy.locations.title}
-        description={sectionCopy.locations.description}
+        eyebrow={pageCopy.contact.eyebrow}
+        title={pageCopy.contact.title}
+        description={pageCopy.contact.description}
         breadcrumbs={[{ label: "Contact" }]}
-        image="/images/case-beauty.jpg"
+        image={pageCopy.contact.image}
       />
 
       {/* Consultation + form */}
@@ -157,9 +157,9 @@ export default function ContactPage() {
       <section className="bg-aster-50 py-20 lg:py-28">
         <Container>
           <SectionHeading
-            eyebrow="Where we work"
-            title="Serving brands around the world"
-            description="Our head office runs on UK hours, and we work with sellers across three regions — there's always a team awake and shipping for your store."
+            eyebrow={sectionCopy.locations.eyebrow}
+            title={sectionCopy.locations.title}
+            description={sectionCopy.locations.description}
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

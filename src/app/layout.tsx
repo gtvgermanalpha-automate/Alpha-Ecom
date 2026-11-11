@@ -23,6 +23,14 @@ const montserrat = localFont({
   fallback: ["system-ui", "arial", "sans-serif"],
 });
 
+// Social-share preview: a custom image from the CMS, or the generated default card.
+const socialImage = {
+  url: seo.social.image || "/og-default",
+  width: 1200,
+  height: 630,
+  alt: seo.social.title,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
@@ -40,13 +48,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Marketplace Store Creation & Management`,
-    description: siteConfig.description,
+    title: seo.social.title,
+    description: seo.social.description,
+    images: [socialImage],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Marketplace Store Creation & Management`,
-    description: siteConfig.description,
+    title: seo.social.title,
+    description: seo.social.description,
+    images: [socialImage.url],
   },
   robots: {
     index: true,

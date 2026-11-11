@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { seo } from "@/lib/content";
+import { seo, pageCopy } from "@/lib/content";
 import { PageHero } from "@/components/sections/page-hero";
 import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
@@ -17,17 +17,20 @@ export default function WhatWeDoPage() {
   return (
     <>
       <PageHero
-        eyebrow="What We Do"
-        title="Everything your store needs, handled end-to-end"
-        description="From first listing to account health, we run the day-to-day of your marketplace channels so you can focus on the product and the brand."
+        eyebrow={pageCopy.whatWeDo.eyebrow}
+        title={pageCopy.whatWeDo.title}
+        description={pageCopy.whatWeDo.description}
         breadcrumbs={[{ label: "What We Do" }]}
         variant="capabilities"
-        image="/images/case-warehouse.jpg"
+        image={pageCopy.whatWeDo.image}
       />
       <Capabilities />
       <PlatformTabs />
       <FAQ />
-      <CTA title="Not sure where to start?" description="Tell us your goals and we'll map the exact services your store needs to grow." />
+      <CTA
+        title={pageCopy.whatWeDo.ctaTitle || undefined}
+        description={pageCopy.whatWeDo.ctaDescription || undefined}
+      />
     </>
   );
 }

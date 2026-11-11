@@ -23,6 +23,9 @@ import homeData from "@/content/home.json";
 import aboutData from "@/content/about.json";
 import sectionsData from "@/content/sections.json";
 import seoData from "@/content/seo.json";
+import pagesData from "@/content/pages.json";
+import footerData from "@/content/footer.json";
+import legalData from "@/content/legal.json";
 
 export type IconKey = string;
 
@@ -246,32 +249,10 @@ export const sourceOptions = homeData.sourceOptions;
 
 export type FooterColumn = { heading: string; links: { label: string; href: string }[] };
 
-export const footerColumns: FooterColumn[] = [
-  {
-    heading: "Company",
-    links: [
-      { label: "About Us", href: "/about" },
-      { label: "Case Studies", href: "/portfolio" },
-      { label: "Blog", href: "/blog" },
-      { label: "Contact Us", href: "/contact" },
-      { label: "Privacy Policy", href: "/privacy-policy" },
-      { label: "Terms & Conditions", href: "/terms-and-conditions" },
-    ],
-  },
-  {
-    heading: "Marketplaces",
-    links: marketplaces.map((m) => ({ label: m.name, href: `/services#${m.slug}` })),
-  },
-  {
-    heading: "What we do",
-    links: [
-      { label: "Store Creation", href: "/services" },
-      { label: "Listing & SEO", href: "/services" },
-      { label: "Advertising / PPC", href: "/services" },
-      { label: "Account Management", href: "/services" },
-    ],
-  },
-];
+/** Footer copy + link columns, edited under "Footer" in the CMS. */
+export const footerContent = footerData;
+
+export const footerColumns: FooterColumn[] = footerData.columns;
 
 /* ------------------------------------------------------------------ */
 /* About section + section headings (CMS-editable copy)                */
@@ -290,3 +271,13 @@ export const sectionCopy = sectionsData;
 
 /** Per-page SEO title + meta description, edited under "SEO" in the CMS. */
 export const seo = seoData;
+
+/* ------------------------------------------------------------------ */
+/* Page banners + legal pages (CMS-editable)                           */
+/* ------------------------------------------------------------------ */
+
+/** Top banner (and bottom call-to-action) copy for each inner page. */
+export const pageCopy = pagesData;
+
+/** Privacy Policy + Terms & Conditions text. */
+export const legal = legalData;

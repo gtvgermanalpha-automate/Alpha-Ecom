@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { insights, seo } from "@/lib/content";
+import { insights, seo, pageCopy } from "@/lib/content";
 import { Section } from "@/components/shared/section";
 import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/shared/blog-card";
@@ -17,11 +17,11 @@ export default function BlogIndexPage() {
   return (
     <>
       <PageHero
-        eyebrow="Blog"
-        title="Marketplace insights & guides"
-        description="Practical playbooks from the team that builds and runs marketplace stores every day."
+        eyebrow={pageCopy.blog.eyebrow}
+        title={pageCopy.blog.title}
+        description={pageCopy.blog.description}
         breadcrumbs={[{ label: "Blog" }]}
-        image="/images/insight-amazon.jpg"
+        image={pageCopy.blog.image}
       />
 
       <Section tone="white">
@@ -35,8 +35,8 @@ export default function BlogIndexPage() {
       </Section>
 
       <CTA
-        title="Want this handled for you?"
-        description="Tell us your products and goals and we'll map the fastest path to growth across your marketplaces."
+        title={pageCopy.blog.ctaTitle || undefined}
+        description={pageCopy.blog.ctaDescription || undefined}
       />
     </>
   );
