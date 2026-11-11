@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: seo.home.title,
-    template: `%s | ${siteConfig.name}`,
+    template: `%s | ${siteConfig.legalName}`,
   },
   description: seo.home.description,
   applicationName: siteConfig.name,

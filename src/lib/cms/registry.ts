@@ -181,7 +181,7 @@ const defs: Omit<Collection, "validate">[] = [
     id: "seo",
     label: "SEO titles & descriptions",
     description:
-      'Search-engine title and meta description for each page. " | Alpha E-Commerce" is added after every title automatically, except the home page. Service pages and blog articles have their own SEO fields inside each Marketplaces / Insights entry.',
+      'Search-engine title and meta description for each page. " | Alpha Digital Solutions" is added after every title automatically, except the home page. Service pages and blog articles have their own SEO fields inside each Marketplaces / Insights entry.',
     file: "src/content/seo.json",
     mode: "object",
     fields: [
