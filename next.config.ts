@@ -10,6 +10,17 @@ const nextConfig: NextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        // The old Vercel address permanently forwards to the custom domain.
+        source: "/:path*",
+        has: [{ type: "host", value: "alpha-ecom-two.vercel.app" }],
+        destination: "https://www.alphadigitalsol.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
