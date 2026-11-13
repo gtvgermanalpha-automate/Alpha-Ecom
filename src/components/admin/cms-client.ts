@@ -11,6 +11,7 @@ export type FieldSpec = {
   enum?: string[];
   fields?: FieldSpec[];
   itemLabel?: string;
+  guide?: { diagram: string; title: string; steps: string[] }; // picture + directions shown above the field
 };
 
 export type CollectionMeta = {

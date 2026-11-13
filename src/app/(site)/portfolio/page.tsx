@@ -6,6 +6,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { PortfolioGrid } from "@/components/sections/portfolio-grid";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.caseStudies.title;
 const description = seo.caseStudies.description;
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <>
+    <Sized page="caseStudies">
       <PageHero
         eyebrow={pageCopy.caseStudies.eyebrow}
         title={pageCopy.caseStudies.title}
@@ -33,6 +34,6 @@ export default function PortfolioPage() {
         title={pageCopy.caseStudies.ctaTitle || undefined}
         description={pageCopy.caseStudies.ctaDescription || undefined}
       />
-    </>
+    </Sized>
   );
 }

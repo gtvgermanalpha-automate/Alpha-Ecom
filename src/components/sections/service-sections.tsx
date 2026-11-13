@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-import type { ServiceSection } from "@/lib/content";
+import type { ServiceItem, ServiceSection } from "@/lib/content";
+import { Icon } from "@/lib/icons";
+import { serviceIconFor } from "@/lib/service-icons";
 import { cn } from "@/lib/utils";
 import {
   Accordion,
@@ -25,6 +27,11 @@ function SectionButton({ label, href }: { label?: string; href?: string }) {
       </Link>
     </Button>
   );
+}
+
+/** Small icon for a point: chosen in the CMS, or guessed from its title. */
+function ItemIcon({ item }: { item: ServiceItem }) {
+  return <Icon name={serviceIconFor(item.title, item.icon)} className="size-5" strokeWidth={2.25} />;
 }
 
 /** Closing line + optional button shown under a centred section. */
@@ -60,7 +67,7 @@ function CardsSection({ section, tone }: { section: ServiceSection; tone: Tone }
           <Reveal key={item.title} direction="up" delay={i % 3}>
             <div className="h-full rounded-2xl border border-border bg-white p-6 shadow-soft">
               <span className="grid size-10 place-items-center rounded-xl bg-aster-100 text-aster-700">
-                <Check className="size-5" strokeWidth={3} />
+                <ItemIcon item={item} />
               </span>
               <h3 className="mt-4 text-lg font-bold leading-snug text-navy">{item.title}</h3>
               {item.text?.trim() ? (
@@ -101,7 +108,7 @@ function ListSection({ section, tone }: { section: ServiceSection; tone: Tone })
             <Reveal key={item.title} as="li" direction="up" delay={i % 3}>
               <div className="flex items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-soft">
                 <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
-                  <Check className="size-5" strokeWidth={3} />
+                  <ItemIcon item={item} />
                 </span>
                 <div>
                   <h3 className="text-lg font-bold leading-snug text-navy">{item.title}</h3>
@@ -192,7 +199,7 @@ export function ServiceFaq({
           {faqs.map((faq) => (
             <AccordionItem key={faq.question} value={faq.question}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent className="service-answer">{faq.answer}</AccordionContent>
+              <AccordionContent className="sized-text">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

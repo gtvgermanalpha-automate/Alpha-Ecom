@@ -7,6 +7,7 @@ import { ServicesGrid } from "@/components/sections/services";
 import { MarketplaceShowcase } from "@/components/sections/marketplace-showcase";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.services.title;
 const description = seo.services.description;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <>
+    <Sized page="services">
       <PageHero
         eyebrow={pageCopy.services.eyebrow}
         title={pageCopy.services.title}
@@ -35,6 +36,6 @@ export default function ServicesPage() {
         title={pageCopy.services.ctaTitle || undefined}
         description={pageCopy.services.ctaDescription || undefined}
       />
-    </>
+    </Sized>
   );
 }

@@ -25,6 +25,7 @@ import sectionsData from "@/content/sections.json";
 import seoData from "@/content/seo.json";
 import pagesData from "@/content/pages.json";
 import footerData from "@/content/footer.json";
+import sizesData from "@/content/sizes.json";
 import legalData from "@/content/legal.json";
 
 export type IconKey = string;
@@ -60,7 +61,7 @@ export type Marketplace = {
   ctaDescription?: string;
 };
 
-export type ServiceItem = { title: string; text?: string };
+export type ServiceItem = { title: string; text?: string; icon?: string };
 export type ServiceSection = {
   /** "Cards" = grid of cards, "List" = heading beside a list, "Steps" = numbered process. */
   style?: string;
@@ -277,6 +278,9 @@ export type FooterColumn = { heading: string; links: { label: string; href: stri
 
 /** Footer copy + link columns, edited under "Footer" in the CMS. */
 export const footerContent = footerData;
+
+/** Heading / paragraph size per page ("Small" | "Medium" | "Large"), from the CMS. */
+export const textSizes = sizesData;
 
 export const footerColumns: FooterColumn[] = footerData.columns;
 

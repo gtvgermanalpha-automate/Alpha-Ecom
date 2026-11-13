@@ -6,6 +6,7 @@ import { Plus, Trash2, ArrowUp, ArrowDown, ImageUp, Loader2 } from "lucide-react
 import { cn } from "@/lib/utils";
 import { limitFor } from "@/lib/cms/limits";
 import { uploadImage, type FieldSpec } from "@/components/admin/cms-client";
+import { GuidePanel } from "@/components/admin/guide";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-navy outline-none transition-colors focus:border-aster focus:ring-2 focus:ring-aster/30";
@@ -69,6 +70,8 @@ export function FieldInput({
         return (
           <FieldShell field={field} value={value}>
             <select className={inputCls} value={(value as string) ?? ""} onChange={(e) => onChange(e.target.value)}>
+              {/* Optional dropdowns get an explicit empty choice, so an unset value is never shown as the first option. */}
+              {field.required ? null : <option value="">Default</option>}
               {field.enum.map((o) => (
                 <option key={o} value={o}>
                   {o}
@@ -317,12 +320,10 @@ export function ObjectForm({
       {fields
         .filter((f) => !hiddenKeys.includes(f.key))
         .map((f) => (
-          <FieldInput
-            key={f.key}
-            field={f}
-            value={value[f.key]}
-            onChange={(v) => onChange({ ...value, [f.key]: v })}
-          />
+          <React.Fragment key={f.key}>
+            {f.guide ? <GuidePanel guide={f.guide} /> : null}
+            <FieldInput field={f} value={value[f.key]} onChange={(v) => onChange({ ...value, [f.key]: v })} />
+          </React.Fragment>
         ))}
     </div>
   );

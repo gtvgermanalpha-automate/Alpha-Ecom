@@ -7,6 +7,7 @@ import { Capabilities } from "@/components/sections/capabilities";
 import { PlatformTabs } from "@/components/sections/platform-tabs";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.whatWeDo.title;
 const description = seo.whatWeDo.description;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function WhatWeDoPage() {
   return (
-    <>
+    <Sized page="whatWeDo">
       <PageHero
         eyebrow={pageCopy.whatWeDo.eyebrow}
         title={pageCopy.whatWeDo.title}
@@ -36,6 +37,6 @@ export default function WhatWeDoPage() {
         title={pageCopy.whatWeDo.ctaTitle || undefined}
         description={pageCopy.whatWeDo.ctaDescription || undefined}
       />
-    </>
+    </Sized>
   );
 }

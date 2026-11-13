@@ -305,21 +305,27 @@
   @media (width >= 1024px) { padding-inline: 2rem; }
 }
 
-/* Service pages: heading / paragraph size chosen in the CMS ("Medium" = the defaults above).
-   Unlayered on purpose so these win over the Tailwind size utilities on the elements. */
-.service-body[data-heading-size="Small"] h2 { font-size: 1.5rem; }
-.service-body[data-heading-size="Small"] h3 { font-size: 1rem; }
-.service-body[data-heading-size="Large"] h2 { font-size: 2.125rem; }
-.service-body[data-heading-size="Large"] h3 { font-size: 1.3125rem; }
-@media (width >= 640px) {
-  .service-body[data-heading-size="Small"] h2 { font-size: 1.75rem; }
-  .service-body[data-heading-size="Large"] h2 { font-size: 2.625rem; }
+/* Heading / paragraph size chosen in the CMS (see components/shared/sized.tsx).
+   Tailwind's text-* utilities read these variables, so re-declaring them on the
+   elements scales the text while keeping each element's place in the hierarchy.
+   "Medium" changes nothing. Unlayered on purpose, so it wins over @layer rules. */
+.sized :is(h1, h2, h3, h4) { --text-base: 1rem; --text-lg: 1.125rem; --text-xl: 1.25rem; }
+.sized[data-heading-size="Small"] :is(h1, h2, h3, h4) {
+  --text-base: 0.9375rem; --text-lg: 1rem; --text-xl: 1.125rem; --text-2xl: 1.3125rem;
+  --text-3xl: 1.625rem; --text-4xl: 1.9375rem; --text-5xl: 2.5rem; --heading-xl: 2.25rem;
 }
-@media (width >= 1024px) {
-  .service-body[data-heading-size="Small"] h2 { font-size: 2rem; }
-  .service-body[data-heading-size="Large"] h2 { font-size: 3.125rem; }
+.sized[data-heading-size="Large"] :is(h1, h2, h3, h4) {
+  --text-base: 1.125rem; --text-lg: 1.3125rem; --text-xl: 1.4375rem; --text-2xl: 1.75rem;
+  --text-3xl: 2.1875rem; --text-4xl: 2.625rem; --text-5xl: 3.5rem; --heading-xl: 3.25rem;
 }
-.service-body[data-text-size="Small"] :is(p:not(.font-display, .text-sm), .service-answer) { font-size: 0.9375rem; }
-.service-body[data-text-size="Small"] p.text-lg { font-size: 1rem; }
-.service-body[data-text-size="Large"] :is(p:not(.font-display, .text-sm), .service-answer) { font-size: 1.125rem; }
-.service-body[data-text-size="Large"] p.text-lg { font-size: 1.25rem; }
+.sized[data-text-size="Small"] :is(p, li, dd, blockquote, .sized-text) {
+  --text-base: 0.9375rem; --text-lg: 1rem; --text-xl: 1.125rem;
+}
+.sized[data-text-size="Large"] :is(p, li, dd, blockquote, .sized-text) {
+  --text-base: 1.125rem; --text-lg: 1.25rem; --text-xl: 1.375rem;
+}
+/* Paragraphs with no size class of their own inherit 16px, so give them the scaled base. */
+.sized:is([data-text-size="Small"], [data-text-size="Large"])
+  :is(p, .sized-text):not(.text-xs, .text-sm, .text-lg, .text-xl, .text-2xl, .text-3xl, .text-4xl, .text-5xl, [class*="text-["], :is(.text-xs, .text-sm) *) {
+  font-size: var(--text-base);
+}

@@ -7,6 +7,7 @@ import { RevealGroup, RevealItem } from "@/components/shared/reveal";
 import { BlogCard } from "@/components/shared/blog-card";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.blog.title;
 const description = seo.blog.description;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   return (
-    <>
+    <Sized page="blog">
       <PageHero
         eyebrow={pageCopy.blog.eyebrow}
         title={pageCopy.blog.title}
@@ -43,6 +44,6 @@ export default function BlogIndexPage() {
         title={pageCopy.blog.ctaTitle || undefined}
         description={pageCopy.blog.ctaDescription || undefined}
       />
-    </>
+    </Sized>
   );
 }

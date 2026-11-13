@@ -12,6 +12,7 @@ import { PartnerMarquee } from "@/components/sections/partner-marquee";
 import { Insights } from "@/components/sections/insights";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 export const metadata: Metadata = {
   description: seo.home.description,
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <>
+    <Sized page="home">
       <Hero />
       <PartnerMarquee />
       <AboutSection />
@@ -31,6 +32,6 @@ export default function HomePage() {
       <Insights />
       <FAQ />
       <CTA />
-    </>
+    </Sized>
   );
 }

@@ -5,6 +5,7 @@ import { slugify } from "@/lib/cms/limits";
 import { PageHero } from "@/components/sections/page-hero";
 import { Container } from "@/components/shared/container";
 import { Reveal } from "@/components/shared/reveal";
+import { Sized } from "@/components/shared/sized";
 
 export type LegalSection = {
   title: string;
@@ -48,7 +49,7 @@ export function LegalPage({ banner, doc }: { banner: LegalBanner; doc: LegalDoc 
   const sections = doc.sections.map((s, i) => ({ ...s, id: slugify(s.title) || `section-${i + 1}` }));
 
   return (
-    <>
+    <Sized page="legal">
       <PageHero
         eyebrow={banner.eyebrow}
         title={banner.title}
@@ -124,6 +125,6 @@ export function LegalPage({ banner, doc }: { banner: LegalBanner; doc: LegalDoc 
           </article>
         </Container>
       </section>
-    </>
+    </Sized>
   );
 }

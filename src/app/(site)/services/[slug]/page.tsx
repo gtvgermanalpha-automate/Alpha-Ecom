@@ -12,6 +12,8 @@ import { Reveal } from "@/components/shared/reveal";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
+import { GrowthChart } from "@/components/shared/growth-chart";
+import { Sized } from "@/components/shared/sized";
 import {
   ServiceContentSection,
   ServiceFaq,
@@ -71,7 +73,7 @@ export default async function ServiceDetailPage({
     (i % 2 === 0 ? "luster-strong" : "white") as "luster-strong" | "white";
 
   return (
-    <>
+    <Sized heading={m.headingSize} text={m.textSize}>
       <PageHero
         eyebrow="Service"
         title={m.heroTitle?.trim() || `${m.name} Store Creation & Management`}
@@ -83,12 +85,6 @@ export default async function ServiceDetailPage({
         image={IMAGES[m.slug] ?? "/images/case-tech.jpg"}
       />
 
-      {/* Body: heading and paragraph sizes come from the CMS (see .service-body in globals.css) */}
-      <div
-        className="service-body"
-        data-heading-size={m.headingSize || "Medium"}
-        data-text-size={m.textSize || "Medium"}
-      >
         {/* Overview */}
         <Section tone="white">
           <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -130,14 +126,7 @@ export default async function ServiceDetailPage({
                     height={104}
                     className="h-20 w-auto max-w-[12rem] object-contain"
                   />
-                  <div>
-                    <p className="font-display text-4xl font-extrabold text-navy">
-                      {m.stat.value}
-                    </p>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      {m.stat.label}
-                    </p>
-                  </div>
+                  <GrowthChart className="w-full max-w-sm" />
                 </div>
               </div>
             </Reveal>
@@ -186,7 +175,6 @@ export default async function ServiceDetailPage({
             tone={toneAt(Math.max(sections.length, 1))}
           />
         ) : null}
-      </div>
 
       <CTA
         title={m.ctaTitle?.trim() || `Ready to grow on ${m.name}?`}
@@ -195,6 +183,6 @@ export default async function ServiceDetailPage({
           `Tell us about your products and we'll map the fastest path to profitable growth on ${m.name}.`
         }
       />
-    </>
+    </Sized>
   );
 }

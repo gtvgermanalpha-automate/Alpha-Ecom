@@ -19,6 +19,7 @@ export type FieldSpec = {
   enum?: readonly string[];
   fields?: FieldSpec[]; // for object / object[]
   itemLabel?: string; // for object[] entries
+  guide?: { diagram: string; title: string; steps: string[] }; // picture + directions shown above the field
 };
 
 export type ValidationResult = { ok: true } | { ok: false; errors: string[] };

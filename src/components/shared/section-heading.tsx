@@ -39,7 +39,7 @@ export function SectionHeading({
       ) : null}
       <TitleTag
         className={cn(
-          "text-3xl font-extrabold leading-[1.12] sm:text-4xl lg:text-[2.7rem]",
+          "text-3xl font-extrabold leading-[1.12] sm:text-4xl lg:text-[length:var(--heading-xl,2.7rem)]",
           inverted ? "text-white" : "text-navy",
           titleClassName
         )}

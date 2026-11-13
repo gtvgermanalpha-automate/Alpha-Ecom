@@ -1,0 +1,34 @@
+{
+  "home": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "services": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "whatWeDo": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "caseStudies": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "about": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "contact": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "blog": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  },
+  "legal": {
+    "headingSize": "Medium",
+    "textSize": "Medium"
+  }
+}

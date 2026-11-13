@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/sections/about-section";
 import { WhyUs } from "@/components/sections/why-us";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CTA } from "@/components/sections/cta";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.about.title;
 const description = seo.about.description;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <Sized page="about">
       <PageHero
         eyebrow={pageCopy.about.eyebrow}
         title={pageCopy.about.title}
@@ -35,6 +36,6 @@ export default function AboutPage() {
         title={pageCopy.about.ctaTitle || undefined}
         description={pageCopy.about.ctaDescription || undefined}
       />
-    </>
+    </Sized>
   );
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 
 import { siteConfig } from "@/lib/site";
 import { sectionCopy } from "@/lib/content";
@@ -46,8 +46,8 @@ export function CTA({
                   </Button>
                 </Magnetic>
                 <Button asChild size="xl" variant="outline-white">
-                  <a href={`tel:${siteConfig.phoneHref}`}>
-                    <Phone className="size-4" /> {siteConfig.phone}
+                  <a href={`mailto:${siteConfig.email}`}>
+                    <Mail className="size-4" /> Email Us
                   </a>
                 </Button>
               </div>

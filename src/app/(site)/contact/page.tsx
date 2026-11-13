@@ -10,6 +10,7 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { PageHero } from "@/components/sections/page-hero";
 import { FAQ } from "@/components/sections/faq";
 import { ContactForm } from "@/components/forms/contact-form";
+import { Sized } from "@/components/shared/sized";
 
 const title = seo.contact.title;
 const description = seo.contact.description;
@@ -61,7 +62,7 @@ const contactMethods = [
 
 export default function ContactPage() {
   return (
-    <>
+    <Sized page="contact">
       <PageHero
         eyebrow={pageCopy.contact.eyebrow}
         title={pageCopy.contact.title}
@@ -189,6 +190,6 @@ export default function ContactPage() {
       </section>
 
       <FAQ />
-    </>
+    </Sized>
   );
 }

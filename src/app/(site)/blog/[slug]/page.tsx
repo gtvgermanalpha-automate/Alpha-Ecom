@@ -14,6 +14,7 @@ import { BlogCard } from "@/components/shared/blog-card";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
+import { Sized } from "@/components/shared/sized";
 
 export function generateStaticParams() {
   return insights.filter((p) => p.slug).map((p) => ({ slug: p.slug as string }));
@@ -91,7 +92,7 @@ export default async function BlogPostPage({
   const related = insights.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
-    <>
+    <Sized page="blog">
       <PageHero
         eyebrow={post.category}
         title={post.title}
@@ -158,6 +159,6 @@ export default async function BlogPostPage({
       ) : null}
 
       <CTA />
-    </>
+    </Sized>
   );
 }

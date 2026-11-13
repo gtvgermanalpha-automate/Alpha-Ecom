@@ -1,4 +1,9 @@
-import { type FieldSpec, validateCollection, type ValidationResult } from "@/lib/cms/validate";
+import {
+  type FieldSpec,
+  validateCollection,
+  type ValidationResult,
+} from "@/lib/cms/validate";
+import { SERVICE_ICONS } from "@/lib/service-icons";
 
 export type CollectionMode = "object" | "list";
 
@@ -20,32 +25,81 @@ const ctaFields: FieldSpec[] = [
 ];
 
 const headingFields: FieldSpec[] = [
-  { key: "eyebrow", label: "Small label", type: "string", required: true, max: 60 },
+  {
+    key: "eyebrow",
+    label: "Small label",
+    type: "string",
+    required: true,
+    max: 60,
+  },
   { key: "title", type: "string", required: true },
   { key: "description", label: "Intro line", type: "text", max: 300 },
 ];
 
 const seoFields: FieldSpec[] = [
-  { key: "title", label: "SEO title (aim for 50-60 characters)", type: "string", required: true, max: 90 },
-  { key: "description", label: "Meta description (aim for 140-160 characters)", type: "text", required: true, max: 220 },
+  {
+    key: "title",
+    label: "SEO title (aim for 50-60 characters)",
+    type: "string",
+    required: true,
+    max: 90,
+  },
+  {
+    key: "description",
+    label: "Meta description (aim for 140-160 characters)",
+    type: "text",
+    required: true,
+    max: 220,
+  },
 ];
 
 const seoOverrideFields: FieldSpec[] = [
-  { key: "seoTitle", label: "SEO title (optional - leave empty to use the default)", type: "string", max: 90 },
-  { key: "seoDescription", label: "Meta description (optional - leave empty to use the default)", type: "text", max: 220 },
+  {
+    key: "seoTitle",
+    label: "SEO title (optional - leave empty to use the default)",
+    type: "string",
+    max: 90,
+  },
+  {
+    key: "seoDescription",
+    label: "Meta description (optional - leave empty to use the default)",
+    type: "text",
+    max: 220,
+  },
 ];
 
 const bannerFields: FieldSpec[] = [
-  { key: "eyebrow", label: "Small label", type: "string", required: true, max: 60 },
+  {
+    key: "eyebrow",
+    label: "Small label",
+    type: "string",
+    required: true,
+    max: 60,
+  },
   { key: "title", label: "Banner title", type: "string", required: true },
-  { key: "description", label: "Banner intro line", type: "text", required: true, max: 300 },
+  {
+    key: "description",
+    label: "Banner intro line",
+    type: "text",
+    required: true,
+    max: 300,
+  },
   { key: "image", label: "Background image", type: "string", required: true },
 ];
 
 const bannerWithCtaFields: FieldSpec[] = [
   ...bannerFields,
-  { key: "ctaTitle", label: "Bottom banner title (optional - empty uses the default)", type: "string" },
-  { key: "ctaDescription", label: "Bottom banner text (optional - empty uses the default)", type: "text", max: 300 },
+  {
+    key: "ctaTitle",
+    label: "Bottom banner title (optional - empty uses the default)",
+    type: "string",
+  },
+  {
+    key: "ctaDescription",
+    label: "Bottom banner text (optional - empty uses the default)",
+    type: "text",
+    max: 300,
+  },
 ];
 
 const linkFields: FieldSpec[] = [
@@ -54,7 +108,13 @@ const linkFields: FieldSpec[] = [
 ];
 
 const legalDocFields: FieldSpec[] = [
-  { key: "updated", label: "Last updated date", type: "string", required: true, max: 40 },
+  {
+    key: "updated",
+    label: "Last updated date",
+    type: "string",
+    required: true,
+    max: 40,
+  },
   {
     key: "sections",
     label: "Sections",
@@ -62,7 +122,13 @@ const legalDocFields: FieldSpec[] = [
     required: true,
     fields: [
       { key: "title", label: "Section title", type: "string", required: true },
-      { key: "body", label: 'Paragraphs (start a line with "- " for a bullet point)', type: "string[]", required: true, max: 1500 },
+      {
+        key: "body",
+        label: 'Paragraphs (start a line with "- " for a bullet point)',
+        type: "string[]",
+        required: true,
+        max: 1500,
+      },
     ],
   },
 ];
@@ -77,7 +143,33 @@ const socialFields: FieldSpec[] = [
 
 const TEXT_SIZES = ["Small", "Medium", "Large"] as const;
 const SECTION_STYLES = ["Cards", "List", "Steps"] as const;
-const PORTFOLIO_CATEGORIES = ["Amazon", "eBay", "Etsy", "Shopify", "TikTok Shop"] as const;
+const sizeFields: FieldSpec[] = [
+  {
+    key: "headingSize",
+    label: "Heading size",
+    type: "string",
+    enum: TEXT_SIZES,
+  },
+  {
+    key: "textSize",
+    label: "Paragraph size",
+    type: "string",
+    enum: TEXT_SIZES,
+  },
+];
+const PORTFOLIO_CATEGORIES = [
+  "Amazon",
+  "eBay",
+  "Etsy",
+  "Shopify",
+  "TikTok Shop",
+] as const;
+
+/** Attach a guide panel to the first field of a shared field set. */
+const withGuide = (
+  fields: FieldSpec[],
+  guide: FieldSpec["guide"],
+): FieldSpec[] => fields.map((f, i) => (i === 0 ? { ...f, guide } : f));
 
 const defs: Omit<Collection, "validate">[] = [
   {
@@ -126,7 +218,12 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "titleTail", type: "string", required: true },
       { key: "subtitle", type: "text", required: true },
       { key: "primaryCta", type: "object", required: true, fields: ctaFields },
-      { key: "secondaryCta", type: "object", required: true, fields: ctaFields },
+      {
+        key: "secondaryCta",
+        type: "object",
+        required: true,
+        fields: ctaFields,
+      },
       { key: "interestOptions", type: "string[]", required: true },
       { key: "budgetOptions", type: "string[]", required: true },
       { key: "sourceOptions", type: "string[]", required: true },
@@ -139,34 +236,137 @@ const defs: Omit<Collection, "validate">[] = [
     file: "src/content/about.json",
     mode: "object",
     fields: [
-      { key: "eyebrow", label: "Small label above the title", type: "string", required: true, max: 60 },
+      {
+        key: "eyebrow",
+        label: "Small label above the title",
+        type: "string",
+        required: true,
+        max: 60,
+      },
       { key: "title", type: "string", required: true },
-      { key: "paragraphs", label: "Paragraphs", type: "string[]", required: true, max: 800 },
-      { key: "checklist", label: "Tick-list points", type: "string[]", required: true, max: 80 },
-      { key: "cta", label: "Button", type: "object", required: true, fields: ctaFields },
+      {
+        key: "paragraphs",
+        label: "Paragraphs",
+        type: "string[]",
+        required: true,
+        max: 800,
+      },
+      {
+        key: "checklist",
+        label: "Tick-list points",
+        type: "string[]",
+        required: true,
+        max: 80,
+      },
+      {
+        key: "cta",
+        label: "Button",
+        type: "object",
+        required: true,
+        fields: ctaFields,
+      },
       { key: "image", type: "string", required: true },
-      { key: "imageAlt", label: "Image description (alt text)", type: "string", required: true, max: 160 },
-      { key: "statValue", label: "Floating stat - number", type: "string", required: true, max: 24 },
-      { key: "statLabel", label: "Floating stat - caption", type: "string", required: true, max: 40 },
+      {
+        key: "imageAlt",
+        label: "Image description (alt text)",
+        type: "string",
+        required: true,
+        max: 160,
+      },
+      {
+        key: "statValue",
+        label: "Floating stat - number",
+        type: "string",
+        required: true,
+        max: 24,
+      },
+      {
+        key: "statLabel",
+        label: "Floating stat - caption",
+        type: "string",
+        required: true,
+        max: 40,
+      },
     ],
   },
   {
     id: "sections",
     label: "Section headings",
-    description: "The small label, title and intro line above each section of the site.",
+    description:
+      "The small label, title and intro line above each section of the site.",
     file: "src/content/sections.json",
     mode: "object",
     fields: [
-      { key: "marqueeLine", label: "Line above the marketplace logos", type: "string", required: true, max: 120 },
-      { key: "services", label: "Marketplaces grid (home)", type: "object", required: true, fields: headingFields },
-      { key: "whyUs", label: "Why Alpha", type: "object", required: true, fields: headingFields },
-      { key: "platformTabs", label: "What we handle (scrolling tabs)", type: "object", required: true, fields: headingFields },
-      { key: "caseStudies", label: "Case studies", type: "object", required: true, fields: headingFields },
-      { key: "testimonials", label: "Testimonials", type: "object", required: true, fields: headingFields },
-      { key: "insights", label: "Insights / blog", type: "object", required: true, fields: headingFields },
-      { key: "faq", label: "FAQ", type: "object", required: true, fields: headingFields },
-      { key: "capabilities", label: "Capabilities (What we do page)", type: "object", required: true, fields: headingFields },
-      { key: "locations", label: "Locations (Contact page)", type: "object", required: true, fields: headingFields },
+      {
+        key: "marqueeLine",
+        label: "Line above the marketplace logos",
+        type: "string",
+        required: true,
+        max: 120,
+      },
+      {
+        key: "services",
+        label: "Marketplaces grid (home)",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "whyUs",
+        label: "Why Alpha",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "platformTabs",
+        label: "What we handle (scrolling tabs)",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "caseStudies",
+        label: "Case studies",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "testimonials",
+        label: "Testimonials",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "insights",
+        label: "Insights / blog",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "faq",
+        label: "FAQ",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "capabilities",
+        label: "Capabilities (What we do page)",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
+      {
+        key: "locations",
+        label: "Locations (Contact page)",
+        type: "object",
+        required: true,
+        fields: headingFields,
+      },
       {
         key: "cta",
         label: "Bottom call-to-action banner",
@@ -187,24 +387,96 @@ const defs: Omit<Collection, "validate">[] = [
     file: "src/content/seo.json",
     mode: "object",
     fields: [
-      { key: "home", label: "Home page (full title, no suffix added)", type: "object", required: true, fields: seoFields },
-      { key: "services", label: "Services page", type: "object", required: true, fields: seoFields },
-      { key: "whatWeDo", label: "What We Do page", type: "object", required: true, fields: seoFields },
-      { key: "caseStudies", label: "Case Studies page", type: "object", required: true, fields: seoFields },
-      { key: "about", label: "About page", type: "object", required: true, fields: seoFields },
-      { key: "contact", label: "Contact page", type: "object", required: true, fields: seoFields },
-      { key: "blog", label: "Blog index page", type: "object", required: true, fields: seoFields },
-      { key: "privacy", label: "Privacy Policy page", type: "object", required: true, fields: seoFields },
-      { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: seoFields },
+      {
+        key: "home",
+        label: "Home page (full title, no suffix added)",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "services",
+        label: "Services page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "whatWeDo",
+        label: "What We Do page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "caseStudies",
+        label: "Case Studies page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "about",
+        label: "About page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "contact",
+        label: "Contact page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "blog",
+        label: "Blog index page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "privacy",
+        label: "Privacy Policy page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
+      {
+        key: "terms",
+        label: "Terms & Conditions page",
+        type: "object",
+        required: true,
+        fields: seoFields,
+      },
       {
         key: "social",
-        label: "Social sharing preview for the home page (WhatsApp, Facebook, LinkedIn, X). Other pages show their own SEO title and description; the image is used on every page",
+        label:
+          "Social sharing preview for the home page (WhatsApp, Facebook, LinkedIn, X). Other pages show their own SEO title and description; the image is used on every page",
         type: "object",
         required: true,
         fields: [
-          { key: "title", label: "Preview title", type: "string", required: true, max: 90 },
-          { key: "description", label: "Preview description", type: "text", required: true, max: 220 },
-          { key: "image", label: "Preview image (1200 x 630 px - empty uses the default card)", type: "string" },
+          {
+            key: "title",
+            label: "Preview title",
+            type: "string",
+            required: true,
+            max: 90,
+          },
+          {
+            key: "description",
+            label: "Preview description",
+            type: "text",
+            required: true,
+            max: 220,
+          },
+          {
+            key: "image",
+            label:
+              "Preview image (1200 x 630 px - empty uses the default card)",
+            type: "string",
+          },
         ],
       },
       { key: "keywords", label: "Site keywords", type: "string[]", max: 60 },
@@ -213,39 +485,124 @@ const defs: Omit<Collection, "validate">[] = [
   {
     id: "pages",
     label: "Page banners",
-    description: "The banner at the top of each inner page (label, title, intro line, background image) and the call-to-action banner at the bottom.",
+    description:
+      "The banner at the top of each inner page (label, title, intro line, background image) and the call-to-action banner at the bottom.",
     file: "src/content/pages.json",
     mode: "object",
     fields: [
-      { key: "services", label: "Services page", type: "object", required: true, fields: bannerWithCtaFields },
-      { key: "whatWeDo", label: "What We Do page", type: "object", required: true, fields: bannerWithCtaFields },
-      { key: "caseStudies", label: "Case Studies page", type: "object", required: true, fields: bannerWithCtaFields },
-      { key: "about", label: "About page", type: "object", required: true, fields: bannerWithCtaFields },
-      { key: "blog", label: "Blog page", type: "object", required: true, fields: bannerWithCtaFields },
-      { key: "contact", label: "Contact page", type: "object", required: true, fields: bannerFields },
-      { key: "privacy", label: "Privacy Policy page", type: "object", required: true, fields: bannerFields },
-      { key: "terms", label: "Terms & Conditions page", type: "object", required: true, fields: bannerFields },
+      {
+        key: "services",
+        label: "Services page",
+        type: "object",
+        required: true,
+        fields: bannerWithCtaFields,
+      },
+      {
+        key: "whatWeDo",
+        label: "What We Do page",
+        type: "object",
+        required: true,
+        fields: bannerWithCtaFields,
+      },
+      {
+        key: "caseStudies",
+        label: "Case Studies page",
+        type: "object",
+        required: true,
+        fields: bannerWithCtaFields,
+      },
+      {
+        key: "about",
+        label: "About page",
+        type: "object",
+        required: true,
+        fields: bannerWithCtaFields,
+      },
+      {
+        key: "blog",
+        label: "Blog page",
+        type: "object",
+        required: true,
+        fields: bannerWithCtaFields,
+      },
+      {
+        key: "contact",
+        label: "Contact page",
+        type: "object",
+        required: true,
+        fields: bannerFields,
+      },
+      {
+        key: "privacy",
+        label: "Privacy Policy page",
+        type: "object",
+        required: true,
+        fields: bannerFields,
+      },
+      {
+        key: "terms",
+        label: "Terms & Conditions page",
+        type: "object",
+        required: true,
+        fields: bannerFields,
+      },
     ],
   },
   {
     id: "footer",
     label: "Footer",
-    description: "The consultation strip, newsletter heading and link columns in the footer. Contact details and social links live in Site settings.",
+    description:
+      "The consultation strip, newsletter heading and link columns in the footer. Contact details and social links live in Site settings.",
     file: "src/content/footer.json",
     mode: "object",
     fields: [
-      { key: "stripTitle", label: "Consultation strip - title", type: "string", required: true },
-      { key: "stripText", label: "Consultation strip - text", type: "string", required: true, max: 200 },
-      { key: "stripButton", label: "Consultation strip - button", type: "object", required: true, fields: linkFields },
-      { key: "newsletterHeading", label: "Newsletter heading", type: "string", required: true, max: 80 },
+      {
+        key: "stripTitle",
+        label: "Consultation strip - title",
+        type: "string",
+        required: true,
+      },
+      {
+        key: "stripText",
+        label: "Consultation strip - text",
+        type: "string",
+        required: true,
+        max: 200,
+      },
+      {
+        key: "stripButton",
+        label: "Consultation strip - button",
+        type: "object",
+        required: true,
+        fields: linkFields,
+      },
+      {
+        key: "newsletterHeading",
+        label: "Newsletter heading",
+        type: "string",
+        required: true,
+        max: 80,
+      },
       {
         key: "columns",
         label: "Link columns",
         type: "object[]",
         required: true,
         fields: [
-          { key: "heading", label: "Column heading", type: "string", required: true, max: 40 },
-          { key: "links", label: "Links", type: "object[]", required: true, fields: linkFields },
+          {
+            key: "heading",
+            label: "Column heading",
+            type: "string",
+            required: true,
+            max: 40,
+          },
+          {
+            key: "links",
+            label: "Links",
+            type: "object[]",
+            required: true,
+            fields: linkFields,
+          },
         ],
       },
     ],
@@ -253,24 +610,126 @@ const defs: Omit<Collection, "validate">[] = [
   {
     id: "legal",
     label: "Legal pages",
-    description: "The full text of the Privacy Policy and Terms & Conditions pages.",
+    description:
+      "The full text of the Privacy Policy and Terms & Conditions pages.",
     file: "src/content/legal.json",
     mode: "object",
     fields: [
-      { key: "privacy", label: "Privacy Policy", type: "object", required: true, fields: legalDocFields },
-      { key: "terms", label: "Terms & Conditions", type: "object", required: true, fields: legalDocFields },
+      {
+        key: "privacy",
+        label: "Privacy Policy",
+        type: "object",
+        required: true,
+        fields: legalDocFields,
+      },
+      {
+        key: "terms",
+        label: "Terms & Conditions",
+        type: "object",
+        required: true,
+        fields: legalDocFields,
+      },
+    ],
+  },
+  {
+    id: "sizes",
+    label: "Text sizes",
+    description:
+      "Heading and paragraph size for each page: Small, Medium (the normal size) or Large. The six service pages have their own size options inside each Marketplaces entry.",
+    file: "src/content/sizes.json",
+    mode: "object",
+    fields: [
+      {
+        key: "home",
+        label: "Home page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+        guide: {
+          diagram: "sizes",
+          title: "Text sizes",
+          steps: [
+            "Heading size changes every heading on that page, including the top banner.",
+            "Paragraph size changes the body text. Small labels and buttons stay the same.",
+          ],
+        },
+      },
+      {
+        key: "services",
+        label: "Services page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "whatWeDo",
+        label: "What We Do page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "caseStudies",
+        label: "Case Studies page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "about",
+        label: "About page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "contact",
+        label: "Contact page",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "blog",
+        label: "Blog page and all articles",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
+      {
+        key: "legal",
+        label: "Privacy Policy and Terms pages",
+        type: "object",
+        required: true,
+        fields: sizeFields,
+      },
     ],
   },
   {
     id: "marketplaces",
     label: "Marketplaces",
-    description: "The six marketplace services shown across the site. Each entry also holds the content of its own service page: sections, FAQs and buttons.",
+    description:
+      "The six marketplace services shown across the site. Each entry also holds the content of its own service page: sections, FAQs and buttons.",
     file: "src/content/marketplaces.json",
     mode: "list",
     titleField: "name",
     fields: [
       { key: "slug", type: "string", format: "slug", required: true },
-      { key: "name", type: "string", required: true },
+      {
+        key: "name",
+        type: "string",
+        required: true,
+        guide: {
+          diagram: "tile",
+          title: "Service card (home page, Services page and menus)",
+          steps: [
+            "Logo.",
+            "Name.",
+            "Blurb: the short text on the card. It is also the line under the heading on the service page banner.",
+            "Features: the short points on the card.",
+          ],
+        },
+      },
       { key: "logo", type: "string", required: true },
       { key: "blurb", type: "text", required: true },
       { key: "description", type: "text", required: true },
@@ -285,39 +744,175 @@ const defs: Omit<Collection, "validate">[] = [
           { key: "label", type: "string", required: true },
         ],
       },
-      ...seoOverrideFields,
-      { key: "heroTitle", label: "Service page: main heading (empty = \"<Name> Store Creation & Management\")", type: "string", max: 120 },
-      { key: "headingSize", label: "Service page: heading size (empty = Medium)", type: "string", enum: TEXT_SIZES },
-      { key: "textSize", label: "Service page: paragraph size (empty = Medium)", type: "string", enum: TEXT_SIZES },
-      { key: "overviewTitle", label: "Service page: overview heading (empty uses the default)", type: "string", max: 140 },
-      { key: "intro", label: "Service page: opening paragraphs (empty uses the description above)", type: "string[]", max: 800 },
-      { key: "ctaLabel", label: "Service page: button text under the opening paragraphs", type: "string", max: 60 },
+      ...withGuide(seoOverrideFields, {
+        diagram: "seo",
+        title: "Google search result for this service page",
+        steps: [
+          'SEO title: the blue link. " | Alpha Digital Solutions" is added automatically.',
+          "Meta description: the grey text under it.",
+        ],
+      }),
+      {
+        key: "heroTitle",
+        guide: {
+          diagram: "hero",
+          title: "Service page: top banner",
+          steps: [
+            "Main heading of the page.",
+            "The line under it comes from the Blurb field above.",
+          ],
+        },
+        label:
+          'Service page: main heading (empty = "<Name> Store Creation & Management")',
+        type: "string",
+        max: 120,
+      },
+      {
+        key: "headingSize",
+        guide: {
+          diagram: "sizes",
+          title: "Service page: text sizes",
+          steps: [
+            "Heading size changes every heading on this service page.",
+            "Paragraph size changes the body text. Small labels and buttons stay the same.",
+          ],
+        },
+        label: "Service page: heading size (Default = Medium)",
+        type: "string",
+        enum: TEXT_SIZES,
+      },
+      {
+        key: "textSize",
+        label: "Service page: paragraph size (Default = Medium)",
+        type: "string",
+        enum: TEXT_SIZES,
+      },
+      {
+        key: "overviewTitle",
+        guide: {
+          diagram: "overview",
+          title: "Service page: overview (first block under the banner)",
+          steps: [
+            "Overview heading.",
+            "Opening paragraphs. Add one item per paragraph.",
+            "Button text. The button opens the Contact page.",
+          ],
+        },
+        label: "Service page: overview heading (empty uses the default)",
+        type: "string",
+        max: 140,
+      },
+      {
+        key: "intro",
+        label:
+          "Service page: opening paragraphs (empty uses the description above)",
+        type: "string[]",
+        max: 800,
+      },
+      {
+        key: "ctaLabel",
+        label: "Service page: button text under the opening paragraphs",
+        type: "string",
+        max: 60,
+      },
       {
         key: "sections",
+        guide: {
+          diagram: "layouts",
+          title: "Service page: content sections",
+          steps: [
+            "Add one entry per section. They appear on the page in the same order.",
+            "Pick a layout for each: Cards (grid), List (heading on the left, points on the right) or Steps (numbered).",
+            "Each point gets an icon. Leave it on Default to pick one from the point title, or choose one.",
+            "Fill in Button text to show an orange button in that section.",
+          ],
+        },
         label: "Service page: content sections (shown in this order)",
         type: "object[]",
         itemLabel: "Section",
         fields: [
-          { key: "style", label: "Layout: Cards (grid), List (heading beside a list) or Steps (numbered)", type: "string", enum: SECTION_STYLES },
-          { key: "eyebrow", label: "Small label above the heading (optional)", type: "string", max: 60 },
-          { key: "title", label: "Section heading", type: "string", required: true, max: 140 },
-          { key: "intro", label: "Intro paragraph (optional)", type: "text", max: 800 },
+          {
+            key: "style",
+            label:
+              "Layout: Cards (grid), List (heading beside a list) or Steps (numbered)",
+            type: "string",
+            enum: SECTION_STYLES,
+          },
+          {
+            key: "eyebrow",
+            label: "Small label above the heading (optional)",
+            type: "string",
+            max: 60,
+          },
+          {
+            key: "title",
+            label: "Section heading",
+            type: "string",
+            required: true,
+            max: 140,
+          },
+          {
+            key: "intro",
+            label: "Intro paragraph (optional)",
+            type: "text",
+            max: 800,
+          },
           {
             key: "items",
             label: "Points",
             type: "object[]",
             itemLabel: "Point",
             fields: [
-              { key: "title", label: "Point title", type: "string", required: true, max: 120 },
+              {
+                key: "title",
+                label: "Point title",
+                type: "string",
+                required: true,
+                max: 120,
+              },
               { key: "text", label: "Point text", type: "text", max: 600 },
+              {
+                key: "icon",
+                label: "Icon (Default picks one from the point title)",
+                type: "string",
+                enum: SERVICE_ICONS,
+              },
             ],
           },
-          { key: "outro", label: "Closing line (optional)", type: "text", max: 600 },
-          { key: "ctaLabel", label: "Button text (empty = no button)", type: "string", max: 60 },
-          { key: "ctaHref", label: "Button link (empty = /contact)", type: "string", max: 200 },
+          {
+            key: "outro",
+            label: "Closing line (optional)",
+            type: "text",
+            max: 600,
+          },
+          {
+            key: "ctaLabel",
+            label: "Button text (empty = no button)",
+            type: "string",
+            max: 60,
+          },
+          {
+            key: "ctaHref",
+            label: "Button link (empty = /contact)",
+            type: "string",
+            max: 200,
+          },
         ],
       },
-      { key: "faqTitle", label: "Service page: FAQ heading (empty uses the default)", type: "string", max: 140 },
+      {
+        key: "faqTitle",
+        guide: {
+          diagram: "faq",
+          title: "Service page: FAQ",
+          steps: [
+            "FAQ heading.",
+            "Questions and answers. The FAQ block only shows when at least one question is added.",
+          ],
+        },
+        label: "Service page: FAQ heading (empty uses the default)",
+        type: "string",
+        max: 140,
+      },
       {
         key: "faqs",
         label: "Service page: FAQs",
@@ -328,8 +923,26 @@ const defs: Omit<Collection, "validate">[] = [
           { key: "answer", type: "text", required: true },
         ],
       },
-      { key: "ctaTitle", label: "Service page: closing banner heading (empty uses the default)", type: "string", max: 120 },
-      { key: "ctaDescription", label: "Service page: closing banner text (empty uses the default)", type: "text", max: 300 },
+      {
+        key: "ctaTitle",
+        guide: {
+          diagram: "banner",
+          title: "Service page: closing banner",
+          steps: [
+            "Banner heading.",
+            "Banner text. The buttons are the same on every page.",
+          ],
+        },
+        label: "Service page: closing banner heading (empty uses the default)",
+        type: "string",
+        max: 120,
+      },
+      {
+        key: "ctaDescription",
+        label: "Service page: closing banner text (empty uses the default)",
+        type: "text",
+        max: 300,
+      },
     ],
   },
   {
@@ -359,7 +972,12 @@ const defs: Omit<Collection, "validate">[] = [
     fields: [
       { key: "slug", type: "string", format: "slug", required: true },
       { key: "title", type: "string", required: true },
-      { key: "category", type: "string", required: true, enum: PORTFOLIO_CATEGORIES },
+      {
+        key: "category",
+        type: "string",
+        required: true,
+        enum: PORTFOLIO_CATEGORIES,
+      },
       { key: "marketplaceLogo", type: "string", required: true },
       { key: "tags", type: "string[]", required: true },
       { key: "excerpt", type: "text", required: true },
@@ -427,7 +1045,8 @@ const defs: Omit<Collection, "validate">[] = [
   {
     id: "offices",
     label: "Offices",
-    description: "Countries we operate in (flag + name) shown in the footer and contact page.",
+    description:
+      "Countries we operate in (flag + name) shown in the footer and contact page.",
     file: "src/content/offices.json",
     mode: "list",
     titleField: "country",
@@ -487,7 +1106,10 @@ export const collections: Collection[] = defs.map((d) => ({
   ...d,
   idField: d.mode === "list" ? (d.idField ?? "slug") : undefined,
   validate: (data: unknown) =>
-    validateCollection({ mode: d.mode, idField: d.idField ?? "slug", fields: d.fields }, data),
+    validateCollection(
+      { mode: d.mode, idField: d.idField ?? "slug", fields: d.fields },
+      data,
+    ),
 }));
 
 const byId = Object.fromEntries(collections.map((c) => [c.id, c]));
