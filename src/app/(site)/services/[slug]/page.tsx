@@ -12,6 +12,10 @@ import { Reveal } from "@/components/shared/reveal";
 import { Button } from "@/components/ui/button";
 import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
+import {
+  ServiceContentSection,
+  ServiceFaq,
+} from "@/components/sections/service-sections";
 
 // Per-service header photo.
 const IMAGES: Record<string, string> = {
@@ -35,7 +39,10 @@ export async function generateMetadata({
   const { slug } = await params;
   const m = marketplaces.find((x) => x.slug === slug);
   if (!m) return {};
-  const title = m.seoTitle?.trim() || `${m.name} Store Creation & Management`;
+  const title =
+    m.seoTitle?.trim() ||
+    m.heroTitle?.trim() ||
+    `${m.name} Store Creation & Management`;
   const description = m.seoDescription?.trim() || m.description;
   return {
     title,
@@ -54,13 +61,25 @@ export default async function ServiceDetailPage({
   const m = marketplaces.find((x) => x.slug === slug);
   if (!m) notFound();
 
+  const intro = (m.intro ?? []).filter((p) => p.trim());
+  const sections = (m.sections ?? []).filter((s) => s.title?.trim());
+  const faqs = (m.faqs ?? []).filter(
+    (f) => f.question?.trim() && f.answer?.trim(),
+  );
+  // Sections alternate background tone, starting after the (light) overview.
+  const toneAt = (i: number) =>
+    (i % 2 === 0 ? "luster-strong" : "white") as "luster-strong" | "white";
+
   return (
     <>
       <PageHero
         eyebrow="Service"
-        title={`${m.name} Store Creation & Management`}
+        title={m.heroTitle?.trim() || `${m.name} Store Creation & Management`}
         description={m.blurb}
-        breadcrumbs={[{ label: "Services", href: "/services" }, { label: m.name }]}
+        breadcrumbs={[
+          { label: "Services", href: "/services" },
+          { label: m.name },
+        ]}
         image={IMAGES[m.slug] ?? "/images/case-tech.jpg"}
       />
 
@@ -70,13 +89,22 @@ export default async function ServiceDetailPage({
           <Reveal direction="right">
             <span className="eyebrow">Overview</span>
             <h2 className="mt-4 text-3xl font-bold text-navy sm:text-4xl">
-              Your {m.name} channel, run end to end
+              {m.overviewTitle?.trim() ||
+                `Your ${m.name} channel, run end to end`}
             </h2>
-            <p className="mt-5 text-lg leading-relaxed text-muted-foreground">{m.description}</p>
+            {(intro.length ? intro : [m.description]).map((p) => (
+              <p
+                key={p}
+                className="mt-5 text-lg leading-relaxed text-muted-foreground"
+              >
+                {p}
+              </p>
+            ))}
             <div className="mt-8">
               <Button asChild>
                 <Link href="/contact">
-                  Get started on {m.name} <ArrowRight className="size-4" />
+                  {m.ctaLabel?.trim() || `Get started on ${m.name}`}{" "}
+                  <ArrowRight className="size-4" />
                 </Link>
               </Button>
             </div>
@@ -84,7 +112,10 @@ export default async function ServiceDetailPage({
 
           <Reveal direction="left" delay={1}>
             <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-10 shadow-card">
-              <div className="pointer-events-none absolute inset-0 bg-dots opacity-60" aria-hidden />
+              <div
+                className="pointer-events-none absolute inset-0 bg-dots opacity-60"
+                aria-hidden
+              />
               <div className="relative flex flex-col items-center gap-6 text-center">
                 <Image
                   src={m.logo}
@@ -94,8 +125,12 @@ export default async function ServiceDetailPage({
                   className="h-20 w-auto max-w-[12rem] object-contain"
                 />
                 <div>
-                  <p className="font-display text-4xl font-extrabold text-navy">{m.stat.value}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{m.stat.label}</p>
+                  <p className="font-display text-4xl font-extrabold text-navy">
+                    {m.stat.value}
+                  </p>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {m.stat.label}
+                  </p>
                 </div>
               </div>
             </div>
@@ -103,31 +138,55 @@ export default async function ServiceDetailPage({
         </div>
       </Section>
 
-      {/* Detailed points */}
-      <Section tone="luster-strong">
-        <SectionHeading
-          eyebrow="What we handle"
-          title={`Everything your ${m.name} store needs`}
-          description={`The full scope of what we manage for you on ${m.name}.`}
-          className="mb-14"
+      {/* Default feature grid: shown until custom sections are added in the CMS */}
+      {sections.length === 0 ? (
+        <Section tone="luster-strong">
+          <SectionHeading
+            eyebrow="What we handle"
+            title={`Everything your ${m.name} store needs`}
+            description={`The full scope of what we manage for you on ${m.name}.`}
+            className="mb-14"
+          />
+          <div className="grid gap-6 sm:grid-cols-2">
+            {m.features.map((f, i) => (
+              <Reveal key={f} direction="up" delay={i}>
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-soft">
+                  <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
+                    <Check className="size-5" strokeWidth={3} />
+                  </span>
+                  <p className="font-semibold leading-snug text-navy">{f}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Section>
+      ) : null}
+
+      {sections.map((section, i) => (
+        <ServiceContentSection
+          key={section.title}
+          section={section}
+          tone={toneAt(i)}
         />
-        <div className="grid gap-6 sm:grid-cols-2">
-          {m.features.map((f, i) => (
-            <Reveal key={f} direction="up" delay={i}>
-              <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-soft">
-                <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
-                  <Check className="size-5" strokeWidth={3} />
-                </span>
-                <p className="font-semibold leading-snug text-navy">{f}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      ))}
+
+      {faqs.length ? (
+        <ServiceFaq
+          title={
+            m.faqTitle?.trim() ||
+            `${m.name} store management: frequently asked questions`
+          }
+          faqs={faqs}
+          tone={toneAt(Math.max(sections.length, 1))}
+        />
+      ) : null}
 
       <CTA
-        title={`Ready to grow on ${m.name}?`}
-        description={`Tell us about your products and we'll map the fastest path to profitable growth on ${m.name}.`}
+        title={m.ctaTitle?.trim() || `Ready to grow on ${m.name}?`}
+        description={
+          m.ctaDescription?.trim() ||
+          `Tell us about your products and we'll map the fastest path to profitable growth on ${m.name}.`
+        }
       />
     </>
   );

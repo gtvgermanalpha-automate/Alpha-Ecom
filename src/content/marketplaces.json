@@ -12,7 +12,10 @@
       "Brand Registry & account health"
     ],
     "accent": "#FF9900",
-    "stat": { "value": "3.2x", "label": "Avg. revenue lift" }
+    "stat": {
+      "value": "3.2x",
+      "label": "Avg. revenue lift"
+    }
   },
   {
     "slug": "ebay",
@@ -27,7 +30,172 @@
       "Best Match SEO optimization"
     ],
     "accent": "#0064D2",
-    "stat": { "value": "+58%", "label": "Search visibility" }
+    "stat": {
+      "value": "+58%",
+      "label": "Search visibility"
+    },
+    "heroTitle": "eBay Account Management Services",
+    "overviewTitle": "Your eBay store, managed day to day",
+    "intro": [
+      "Running an eBay store takes a lot of daily work, and it is hard to grow when you are stuck doing admin. Alpha Digital Solutions provides eBay management services to help manage your daily operations, from store setup and listing updates to ads and returns.",
+      "If that sounds familiar, book a free consultation and we’ll talk through what’s holding your store back."
+    ],
+    "ctaLabel": "Book a Free Consultation",
+    "sections": [
+      {
+        "style": "Cards",
+        "eyebrow": "What's included",
+        "title": "What Our eBay Account Management Services Include",
+        "intro": "Our eBay account management services cover the whole of running your store, from the first listing to the last customer message. Here’s what your dedicated account manager looks after day to day.",
+        "items": [
+          {
+            "title": "Store Setup and Branding",
+            "text": "We build clean, branded eBay storefronts that earn buyers’ trust and make your products easy to browse."
+          },
+          {
+            "title": "Product Research",
+            "text": "We find products worth listing, so your budget goes into items people actually want."
+          },
+          {
+            "title": "Product Listing Creation",
+            "text": "Your listings are written clearly and formatted properly, so buyers get the facts they need."
+          },
+          {
+            "title": "eBay SEO and Listing Optimisation",
+            "text": "We also improve your titles, item specifics and categories, based on what buyers actually search for."
+          },
+          {
+            "title": "Catalogue and Inventory Management",
+            "text": "Your feeds stay clean, your variations get fixed and your stock stays in sync, so overselling is far less likely."
+          },
+          {
+            "title": "Promoted Listings and Ad Management",
+            "text": "We set up and adjust your ad campaigns to get more eyes on your products without wasting budget."
+          },
+          {
+            "title": "Order Handling and Fulfilment",
+            "text": "You don’t have to chase orders, because we handle them and get them out the door."
+          },
+          {
+            "title": "Customer Service and Return Handling",
+            "text": "Buyers get fast replies and smooth returns, and your seller rating stays protected."
+          },
+          {
+            "title": "Account Health Monitoring",
+            "text": "We watch your seller metrics and eBay’s policies, so small issues don’t become big ones."
+          }
+        ],
+        "outro": "Our eBay account management services cover everything needed to keep your store healthy, visible, and profitable.",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "List",
+        "eyebrow": "Who we help",
+        "title": "eBay Account Management Services for New and Established Sellers",
+        "intro": "Different sellers need different levels of marketplace support. Some require help launching their first store, while others already have an established catalogue but need assistance managing daily operations. Our eBay management services can support:",
+        "items": [
+          {
+            "title": "New eBay sellers",
+            "text": "Store setup, product research support where required, initial catalogue organisation and product listing creation."
+          },
+          {
+            "title": "Established eBay businesses",
+            "text": "Existing listing optimisation, catalogue updates and ongoing store management."
+          },
+          {
+            "title": "Growing online retailers",
+            "text": "Support with adding products, managing variations and maintaining larger catalogues."
+          },
+          {
+            "title": "Multi-channel sellers",
+            "text": "Additional support with eBay listings and catalogue operations alongside other selling channels."
+          }
+        ],
+        "outro": "We discuss your current setup and requirements before deciding which services are relevant to your business.",
+        "ctaLabel": "Tell Us About Your Store",
+        "ctaHref": "/contact"
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "Why Alpha",
+        "title": "Why Choose Alpha Digital Solutions as Your eBay Management Agency",
+        "intro": "Many agencies lock you into long contracts or hand your account off to junior staff who barely know the platform. Here is how we work differently.",
+        "items": [
+          {
+            "title": "One Dedicated Account Manager",
+            "text": "You work directly with one person who learns your products, your margins, and your goals."
+          },
+          {
+            "title": "Clear Weekly Updates",
+            "text": "Every week, you get a report showing your sales, ad spend, and what we worked on."
+          },
+          {
+            "title": "Focus on Profit, Not Just Traffic",
+            "text": "Getting clicks is easy, but making money matters more. We watch your fees, ad costs, and pricing so your bottom line actually grows."
+          },
+          {
+            "title": "Proactive Account Health Checks",
+            "text": "eBay rules change often. We monitor your seller metrics daily to fix small issues before they turn into account restrictions."
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Steps",
+        "eyebrow": "How it works",
+        "title": "How Does Our eBay Store Management Process Work",
+        "intro": "Getting started with our eBay management service is simple and does not disrupt your current orders.",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "Tell us what you sell and where you are. We spot what is holding back your sales, and talk through your goals."
+          },
+          {
+            "title": "Custom Plan and Terms",
+            "text": "We build a clear roadmap showing which listings to fix first, how to set up your ads, and how we will handle daily tasks."
+          },
+          {
+            "title": "Safe Account Setup",
+            "text": "We arrange safe staff access to your eBay account, review what is already in place, and get everything ready to launch."
+          },
+          {
+            "title": "Daily Management and Weekly Reports",
+            "text": "Your account manager takes over the daily workload and sends you an update every week on your store's progress."
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "Book a Free Consultation",
+        "ctaHref": "/contact"
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About eBay Account Management",
+    "faqs": [
+      {
+        "question": "What is eBay account management?",
+        "answer": "eBay account management means having someone look after the day-to-day running of your eBay store. That includes creating and improving listings, managing ads, handling orders and customer messages, and keeping an eye on your account health. It suits sellers who want to grow without spending their whole week on admin."
+      },
+      {
+        "question": "What does our eBay account management service include?",
+        "answer": "Your dedicated account manager looks after listings, search visibility, Promoted Listings, customer messages and account health, plus orders and fulfilment. The exact services depend on the seller's requirements and the scope of management agreed upon."
+      },
+      {
+        "question": "How much do eBay account management services cost?",
+        "answer": "Pricing depends on the size of your catalogue, order ratio, and business goals. Most sellers pay either a flat monthly retainer or a smaller base fee plus a percentage of sales growth. We give you a fixed quote after looking at your store on our first call."
+      },
+      {
+        "question": "Can Alpha Digital Solutions help manage a large eBay product catalogue?",
+        "answer": "Yes. We can assist with catalogue organisation, bulk listing updates, product information maintenance and managing variations. The scope will depend on the number of products and the complexity of your catalogue."
+      },
+      {
+        "question": "Is it worth hiring someone to manage my eBay store?",
+        "answer": "It can be, especially if running the store is taking time you’d rather spend on products or growing the business, or if your listings and ads aren’t performing the way you’d like. The free consultation is the easiest way to find out. We’ll tell you honestly whether it makes sense for your store."
+      }
+    ],
+    "ctaTitle": "Ready to hand over your eBay admin?",
+    "ctaDescription": "Book a free consultation and we’ll look at your store, tell you what’s holding it back and show you how we’d manage it."
   },
   {
     "slug": "etsy",
@@ -42,7 +210,10 @@
       "Review & order growth"
     ],
     "accent": "#F1641E",
-    "stat": { "value": "+41%", "label": "Shop conversion" }
+    "stat": {
+      "value": "+41%",
+      "label": "Shop conversion"
+    }
   },
   {
     "slug": "onbuy",
@@ -57,7 +228,10 @@
       "OnBuy Boost campaigns"
     ],
     "accent": "#3E7BFA",
-    "stat": { "value": "5 days", "label": "Avg. time to live" }
+    "stat": {
+      "value": "5 days",
+      "label": "Avg. time to live"
+    }
   },
   {
     "slug": "tiktok-shop",
@@ -72,7 +246,10 @@
       "Spark Ads management"
     ],
     "accent": "#111111",
-    "stat": { "value": "7.5%", "label": "Live-stream CVR" }
+    "stat": {
+      "value": "7.5%",
+      "label": "Live-stream CVR"
+    }
   },
   {
     "slug": "shopify",
@@ -87,6 +264,9 @@
       "Multichannel integration"
     ],
     "accent": "#95BF47",
-    "stat": { "value": "+47%", "label": "Store conversion" }
+    "stat": {
+      "value": "+47%",
+      "label": "Store conversion"
+    }
   }
 ]

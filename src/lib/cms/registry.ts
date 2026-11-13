@@ -75,6 +75,7 @@ const socialFields: FieldSpec[] = [
   { key: "youtube", type: "string", format: "url" },
 ];
 
+const SECTION_STYLES = ["Cards", "List", "Steps"] as const;
 const PORTFOLIO_CATEGORIES = ["Amazon", "eBay", "Etsy", "Shopify", "TikTok Shop"] as const;
 
 const defs: Omit<Collection, "validate">[] = [
@@ -262,7 +263,7 @@ const defs: Omit<Collection, "validate">[] = [
   {
     id: "marketplaces",
     label: "Marketplaces",
-    description: "The six marketplace services shown across the site.",
+    description: "The six marketplace services shown across the site. Each entry also holds the content of its own service page: sections, FAQs and buttons.",
     file: "src/content/marketplaces.json",
     mode: "list",
     titleField: "name",
@@ -284,6 +285,48 @@ const defs: Omit<Collection, "validate">[] = [
         ],
       },
       ...seoOverrideFields,
+      { key: "heroTitle", label: "Service page: main heading (empty = \"<Name> Store Creation & Management\")", type: "string", max: 120 },
+      { key: "overviewTitle", label: "Service page: overview heading (empty uses the default)", type: "string", max: 140 },
+      { key: "intro", label: "Service page: opening paragraphs (empty uses the description above)", type: "string[]", max: 800 },
+      { key: "ctaLabel", label: "Service page: button text under the opening paragraphs", type: "string", max: 60 },
+      {
+        key: "sections",
+        label: "Service page: content sections (shown in this order)",
+        type: "object[]",
+        itemLabel: "Section",
+        fields: [
+          { key: "style", label: "Layout: Cards (grid), List (heading beside a list) or Steps (numbered)", type: "string", enum: SECTION_STYLES },
+          { key: "eyebrow", label: "Small label above the heading (optional)", type: "string", max: 60 },
+          { key: "title", label: "Section heading", type: "string", required: true, max: 140 },
+          { key: "intro", label: "Intro paragraph (optional)", type: "text", max: 800 },
+          {
+            key: "items",
+            label: "Points",
+            type: "object[]",
+            itemLabel: "Point",
+            fields: [
+              { key: "title", label: "Point title", type: "string", required: true, max: 120 },
+              { key: "text", label: "Point text", type: "text", max: 600 },
+            ],
+          },
+          { key: "outro", label: "Closing line (optional)", type: "text", max: 600 },
+          { key: "ctaLabel", label: "Button text (empty = no button)", type: "string", max: 60 },
+          { key: "ctaHref", label: "Button link (empty = /contact)", type: "string", max: 200 },
+        ],
+      },
+      { key: "faqTitle", label: "Service page: FAQ heading (empty uses the default)", type: "string", max: 140 },
+      {
+        key: "faqs",
+        label: "Service page: FAQs",
+        type: "object[]",
+        itemLabel: "Question",
+        fields: [
+          { key: "question", type: "string", required: true },
+          { key: "answer", type: "text", required: true },
+        ],
+      },
+      { key: "ctaTitle", label: "Service page: closing banner heading (empty uses the default)", type: "string", max: 120 },
+      { key: "ctaDescription", label: "Service page: closing banner text (empty uses the default)", type: "text", max: 300 },
     ],
   },
   {

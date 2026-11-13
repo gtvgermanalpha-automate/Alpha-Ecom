@@ -45,6 +45,29 @@ export type Marketplace = {
   /** Optional SEO overrides for the /services/[slug] page. */
   seoTitle?: string;
   seoDescription?: string;
+  /* Optional long-form content for the /services/[slug] page (all editable in the CMS). */
+  heroTitle?: string;
+  overviewTitle?: string;
+  intro?: string[];
+  ctaLabel?: string;
+  sections?: ServiceSection[];
+  faqTitle?: string;
+  faqs?: { question: string; answer: string }[];
+  ctaTitle?: string;
+  ctaDescription?: string;
+};
+
+export type ServiceItem = { title: string; text?: string };
+export type ServiceSection = {
+  /** "Cards" = grid of cards, "List" = heading beside a list, "Steps" = numbered process. */
+  style?: string;
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+  items?: ServiceItem[];
+  outro?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
 };
 
 export const marketplaces = marketplacesData as Marketplace[];
