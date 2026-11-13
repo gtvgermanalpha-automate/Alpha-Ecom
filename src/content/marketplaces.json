@@ -215,7 +215,95 @@
       "Competitive pricing strategy",
       "OnBuy Boost campaigns"
     ],
-    "accent": "#3E7BFA"
+    "accent": "#3E7BFA",
+    "heroTitle": "OnBuy Account Management Services",
+    "overviewTitle": "Your OnBuy store, managed day to day",
+    "intro": [
+      "Selling on OnBuy sounds simple until you’re in it. Listings get rejected. Products don’t match the catalogue. Someone else wins the Buy Box. Meanwhile, orders and messages pile up, and there’s no time left to grow.",
+      "Alpha Digital Solutions runs your OnBuy account for you. We handle the daily work, from listings and ads to orders and returns, so you can focus on your products.",
+      "If that sounds like your week, book a free consultation. We’ll look at your account and tell you what’s holding it back."
+    ],
+    "sections": [
+      {
+        "style": "",
+        "eyebrow": "",
+        "title": "What Our OnBuy Account Management Services Include",
+        "intro": "Our OnBuy account management services cover the daily running of your store, from the first listing to the last customer message. Here’s what your dedicated account manager looks after.\n",
+        "items": [
+          {
+            "title": "Seller Account Setup",
+            "text": "We set up your OnBuy seller account properly, so you can start listing and selling without delays.",
+            "icon": ""
+          },
+          {
+            "title": "Product Research",
+            "text": "We find products worth selling on OnBuy, so your budget goes into items buyers actually want.",
+            "icon": ""
+          },
+          {
+            "title": "Listing Optimisation",
+            "text": "We improve product titles, descriptions, categories and product data to help ensure your listings are accurate, clear and easy for shoppers to find. ",
+            "icon": ""
+          },
+          {
+            "title": "Catalogue and Product Matching",
+            "text": "We match your products to OnBuy’s catalogue, or create new listings where needed. We keep your barcodes, product data and variations accurate, so listings go live and stay live. ",
+            "icon": ""
+          },
+          {
+            "title": "Pricing and Listing Performance",
+            "text": "We monitor pricing, fees and market conditions to help keep your offers competitive while protecting your margins. ",
+            "icon": ""
+          },
+          {
+            "title": "OnBuy Ads Management",
+            "text": "We help manage eligible ad campaigns, monitor performance and adjust bids and budgets based on your goals. ",
+            "icon": ""
+          },
+          {
+            "title": "Order Handling and Fulfilment",
+            "text": "You don’t have to chase orders. We handle them and make sure they go out on time.",
+            "icon": ""
+          },
+          {
+            "title": "Customer Service and Returns",
+            "text": "Buyers get quick replies and easy returns. Your seller performance stays strong.",
+            "icon": ""
+          },
+          {
+            "title": "Account Health Monitoring",
+            "text": "We keep an eye on your seller metrics and OnBuy’s rules, so small problems don’t turn into big ones.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About OnBuy Account Management",
+    "faqs": [
+      {
+        "question": "What is OnBuy account management?",
+        "answer": "It means having someone look after the daily running of your OnBuy store. That covers listings, product data, ads, orders, customer messages and account health. It suits sellers who want to grow without spending their whole week on admin."
+      },
+      {
+        "question": "What do your OnBuy account management services include?",
+        "answer": "Your account manager looks after listings, catalogue matching, pricing, ads, orders, customer service and account health. The exact services depend on what you need. We agree that with you first.\n"
+      },
+      {
+        "question": "How much do OnBuy account management services cost?",
+        "answer": "The cost depends on the size of your catalogue, the level of support you need and the scope of work involved. After discussing your requirements, we'll provide a clear quote based on the services you need. \n"
+      },
+      {
+        "question": "Can you manage a large OnBuy product catalogue?",
+        "answer": "Yes. We can handle bulk listing updates, barcode and catalogue matching, product data and variations. The scope depends on how many products you have and how complex they are.\n"
+      },
+      {
+        "question": "Is it worth hiring someone to manage my OnBuy store?",
+        "answer": "Often, yes. It makes sense if running the store takes time you’d rather spend elsewhere, or if your listings and ads aren’t doing what you want. The free consultation is the easiest way to find out. We’ll tell you honestly if it makes sense for your store."
+      }
+    ]
   },
   {
     "slug": "tiktok-shop",
