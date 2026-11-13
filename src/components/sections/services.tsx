@@ -63,12 +63,6 @@ function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
           className="h-14 w-auto max-w-[10rem] object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
         />
       }
-      badge={
-        <div className="text-right">
-          <p className="font-display text-2xl font-extrabold text-white">{marketplace.stat.value}</p>
-          <p className="text-xs font-medium text-white/70">{marketplace.stat.label}</p>
-        </div>
-      }
       points={marketplace.features.slice(0, 3)}
       cta={`Manage my ${marketplace.name} store`}
     />

@@ -80,12 +80,6 @@ export function MarketplaceShowcase() {
                       height={120}
                       className="relative max-h-28 w-auto object-contain"
                     />
-
-                    {/* floating stat chip */}
-                    <div className="absolute bottom-6 right-6 rounded-2xl bg-white px-4 py-3 shadow-card ring-1 ring-border">
-                      <p className="font-display text-2xl font-extrabold text-navy">{m.stat.value}</p>
-                      <p className="text-xs text-muted-foreground">{m.stat.label}</p>
-                    </div>
                   </div>
                 </Reveal>
               </div>

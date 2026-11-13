@@ -4,6 +4,7 @@ import {
   type ValidationResult,
 } from "@/lib/cms/validate";
 import { SERVICE_ICONS } from "@/lib/service-icons";
+import { COLLECTION_GUIDES, SHARE_GUIDE } from "@/lib/cms/guides";
 
 export type CollectionMode = "object" | "list";
 
@@ -16,6 +17,7 @@ export type Collection = {
   idField?: string; // list entries are addressed by this field (default "slug")
   titleField?: string; // which field to show as an entry's title in lists
   fields: FieldSpec[];
+  guide?: FieldSpec["guide"]; // picture + directions shown at the top of the section
   validate: (data: unknown) => ValidationResult;
 };
 
@@ -452,6 +454,7 @@ const defs: Omit<Collection, "validate">[] = [
       },
       {
         key: "social",
+        guide: SHARE_GUIDE,
         label:
           "Social sharing preview for the home page (WhatsApp, Facebook, LinkedIn, X). Other pages show their own SEO title and description; the image is used on every page",
         type: "object",
@@ -564,9 +567,8 @@ const defs: Omit<Collection, "validate">[] = [
       },
       {
         key: "stripText",
-        label: "Consultation strip - text",
+        label: "Consultation strip - text (optional)",
         type: "string",
-        required: true,
         max: 200,
       },
       {
@@ -1104,6 +1106,7 @@ const defs: Omit<Collection, "validate">[] = [
 
 export const collections: Collection[] = defs.map((d) => ({
   ...d,
+  guide: COLLECTION_GUIDES[d.id],
   idField: d.mode === "list" ? (d.idField ?? "slug") : undefined,
   validate: (data: unknown) =>
     validateCollection(

@@ -45,7 +45,7 @@ export async function GET(_req: Request, { params }: Params) {
   if (!col) return json({ error: "unknown_collection" }, 404);
   try {
     const { data, sha } = await readCollection(col.file);
-    return json({ data, sha, mode: col.mode, idField: col.idField, fields: col.fields, label: col.label });
+    return json({ data, sha, mode: col.mode, idField: col.idField, fields: col.fields, label: col.label, guide: col.guide });
   } catch (e) {
     return handle(e);
   }

@@ -30,9 +30,9 @@ export function Footer() {
             <h2 className="text-2xl font-bold text-white sm:text-3xl">
               {footerContent.stripTitle}
             </h2>
-            <p className="mt-2 text-white/70">
-              {footerContent.stripText}
-            </p>
+            {footerContent.stripText ? (
+              <p className="mt-2 text-white/70">{footerContent.stripText}</p>
+            ) : null}
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {offices.map((o) => (

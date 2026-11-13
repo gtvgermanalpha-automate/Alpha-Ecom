@@ -21,6 +21,7 @@ export type CollectionMeta = {
   idField?: string;
   fields: FieldSpec[];
   label: string;
+  guide?: FieldSpec["guide"];
 };
 
 async function parse(res: Response) {

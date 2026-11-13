@@ -14,10 +14,6 @@ export function GrowthChart({ className }: { className?: string }) {
 
   return (
     <svg viewBox="0 0 300 170" className={className} role="presentation" aria-hidden>
-      {/* grid */}
-      {[30, 70, 110, 150].map((y) => (
-        <line key={y} x1="16" x2="284" y1={y} y2={y} className="stroke-aster-100" strokeWidth="1" />
-      ))}
       {/* bars */}
       {bars.map((h, i) => (
         <rect

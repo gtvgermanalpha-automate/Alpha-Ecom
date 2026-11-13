@@ -113,21 +113,15 @@ export default async function ServiceDetailPage({
             </Reveal>
 
             <Reveal direction="left" delay={1}>
-              <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-10 shadow-card">
-                <div
-                  className="pointer-events-none absolute inset-0 bg-dots opacity-60"
-                  aria-hidden
+              <div className="flex flex-col items-center gap-5 text-center">
+                <Image
+                  src={m.logo}
+                  alt={`${m.name} logo`}
+                  width={240}
+                  height={104}
+                  className="h-16 w-auto max-w-[11rem] object-contain"
                 />
-                <div className="relative flex flex-col items-center gap-6 text-center">
-                  <Image
-                    src={m.logo}
-                    alt={`${m.name} logo`}
-                    width={240}
-                    height={104}
-                    className="h-20 w-auto max-w-[12rem] object-contain"
-                  />
-                  <GrowthChart className="w-full max-w-sm" />
-                </div>
+                <GrowthChart className="w-44" />
               </div>
             </Reveal>
           </div>

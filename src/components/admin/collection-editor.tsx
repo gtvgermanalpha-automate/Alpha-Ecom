@@ -14,6 +14,7 @@ import {
   type CollectionMeta,
 } from "@/components/admin/cms-client";
 import { ObjectForm } from "@/components/admin/fields";
+import { GuidePanel } from "@/components/admin/guide";
 import { useCmsStatus } from "@/components/admin/admin-shell";
 
 type Save = "idle" | "saving" | "saved" | "error";
@@ -88,6 +89,12 @@ export function CollectionEditor({ id, slug }: { id: string; slug?: string }) {
       </div>
 
       {error ? <Notice kind="error" className="mb-4">{error}</Notice> : null}
+
+      {meta.guide ? (
+        <div className="mb-4">
+          <GuidePanel guide={meta.guide} />
+        </div>
+      ) : null}
 
       <div className="rounded-2xl border border-border bg-white p-6 shadow-soft">
         <ObjectForm
@@ -170,6 +177,12 @@ export function CollectionIndex({ id }: { id: string }) {
           {busy ? <Loader2 className="size-4 animate-spin" /> : <Plus className="size-4" />} New
         </button>
       </div>
+
+      {meta.guide ? (
+        <div className="mb-4">
+          <GuidePanel guide={meta.guide} />
+        </div>
+      ) : null}
 
       {error ? <Notice kind="error" className="mb-4">{error}</Notice> : null}
 
