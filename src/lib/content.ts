@@ -42,7 +42,6 @@ export type Marketplace = {
   description: string; // longer, for detail
   features: string[];
   accent: string; // brand-ish accent for subtle theming (kept within neutral usage)
-  stat: { value: string; label: string };
   /** Optional SEO overrides for the /services/[slug] page. */
   seoTitle?: string;
   seoDescription?: string;

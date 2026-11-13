@@ -737,15 +737,6 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "description", type: "text", required: true },
       { key: "features", type: "string[]", required: true },
       { key: "accent", type: "string", format: "hex", required: true },
-      {
-        key: "stat",
-        type: "object",
-        required: true,
-        fields: [
-          { key: "value", type: "string", required: true },
-          { key: "label", type: "string", required: true },
-        ],
-      },
       ...withGuide(seoOverrideFields, {
         diagram: "seo",
         title: "Google search result for this service page",

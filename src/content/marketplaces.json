@@ -11,11 +11,7 @@
       "Sponsored Products & DSP ads",
       "Brand Registry & account health"
     ],
-    "accent": "#FF9900",
-    "stat": {
-      "value": "3.2x",
-      "label": "Avg. revenue lift"
-    }
+    "accent": "#FF9900"
   },
   {
     "slug": "ebay",
@@ -30,10 +26,6 @@
       "Best Match SEO optimization"
     ],
     "accent": "#0064D2",
-    "stat": {
-      "value": "+58%",
-      "label": "Search visibility"
-    },
     "heroTitle": "eBay Account Management Services",
     "overviewTitle": "Your eBay store, managed day to day",
     "intro": [
@@ -209,11 +201,7 @@
       "Etsy Ads management",
       "Review & order growth"
     ],
-    "accent": "#F1641E",
-    "stat": {
-      "value": "+41%",
-      "label": "Shop conversion"
-    }
+    "accent": "#F1641E"
   },
   {
     "slug": "onbuy",
@@ -227,11 +215,7 @@
       "Competitive pricing strategy",
       "OnBuy Boost campaigns"
     ],
-    "accent": "#3E7BFA",
-    "stat": {
-      "value": "5 days",
-      "label": "Avg. time to live"
-    }
+    "accent": "#3E7BFA"
   },
   {
     "slug": "tiktok-shop",
@@ -245,11 +229,7 @@
       "LIVE & video shopping",
       "Spark Ads management"
     ],
-    "accent": "#111111",
-    "stat": {
-      "value": "7.5%",
-      "label": "Live-stream CVR"
-    }
+    "accent": "#111111"
   },
   {
     "slug": "shopify",
@@ -263,10 +243,6 @@
       "CRO & speed optimization",
       "Multichannel integration"
     ],
-    "accent": "#95BF47",
-    "stat": {
-      "value": "+47%",
-      "label": "Store conversion"
-    }
+    "accent": "#95BF47"
   }
 ]
