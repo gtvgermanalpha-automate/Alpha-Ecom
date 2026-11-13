@@ -47,6 +47,9 @@ export type Marketplace = {
   seoDescription?: string;
   /* Optional long-form content for the /services/[slug] page (all editable in the CMS). */
   heroTitle?: string;
+  /** "Small" | "Medium" | "Large" — text sizes for the service page body (empty = Medium). */
+  headingSize?: string;
+  textSize?: string;
   overviewTitle?: string;
   intro?: string[];
   ctaLabel?: string;

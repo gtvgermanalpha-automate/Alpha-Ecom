@@ -192,7 +192,7 @@ export function ServiceFaq({
           {faqs.map((faq) => (
             <AccordionItem key={faq.question} value={faq.question}>
               <AccordionTrigger>{faq.question}</AccordionTrigger>
-              <AccordionContent>{faq.answer}</AccordionContent>
+              <AccordionContent className="service-answer">{faq.answer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

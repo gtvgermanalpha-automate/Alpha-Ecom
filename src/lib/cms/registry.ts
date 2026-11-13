@@ -75,6 +75,7 @@ const socialFields: FieldSpec[] = [
   { key: "youtube", type: "string", format: "url" },
 ];
 
+const TEXT_SIZES = ["Small", "Medium", "Large"] as const;
 const SECTION_STYLES = ["Cards", "List", "Steps"] as const;
 const PORTFOLIO_CATEGORIES = ["Amazon", "eBay", "Etsy", "Shopify", "TikTok Shop"] as const;
 
@@ -286,6 +287,8 @@ const defs: Omit<Collection, "validate">[] = [
       },
       ...seoOverrideFields,
       { key: "heroTitle", label: "Service page: main heading (empty = \"<Name> Store Creation & Management\")", type: "string", max: 120 },
+      { key: "headingSize", label: "Service page: heading size (empty = Medium)", type: "string", enum: TEXT_SIZES },
+      { key: "textSize", label: "Service page: paragraph size (empty = Medium)", type: "string", enum: TEXT_SIZES },
       { key: "overviewTitle", label: "Service page: overview heading (empty uses the default)", type: "string", max: 140 },
       { key: "intro", label: "Service page: opening paragraphs (empty uses the description above)", type: "string[]", max: 800 },
       { key: "ctaLabel", label: "Service page: button text under the opening paragraphs", type: "string", max: 60 },

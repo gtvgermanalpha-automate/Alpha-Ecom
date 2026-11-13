@@ -83,103 +83,110 @@ export default async function ServiceDetailPage({
         image={IMAGES[m.slug] ?? "/images/case-tech.jpg"}
       />
 
-      {/* Overview */}
-      <Section tone="white">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <Reveal direction="right">
-            <span className="eyebrow">Overview</span>
-            <h2 className="mt-4 text-3xl font-bold text-navy sm:text-4xl">
-              {m.overviewTitle?.trim() ||
-                `Your ${m.name} channel, run end to end`}
-            </h2>
-            {(intro.length ? intro : [m.description]).map((p) => (
-              <p
-                key={p}
-                className="mt-5 text-lg leading-relaxed text-muted-foreground"
-              >
-                {p}
-              </p>
-            ))}
-            <div className="mt-8">
-              <Button asChild>
-                <Link href="/contact">
-                  {m.ctaLabel?.trim() || `Get started on ${m.name}`}{" "}
-                  <ArrowRight className="size-4" />
-                </Link>
-              </Button>
-            </div>
-          </Reveal>
+      {/* Body: heading and paragraph sizes come from the CMS (see .service-body in globals.css) */}
+      <div
+        className="service-body"
+        data-heading-size={m.headingSize || "Medium"}
+        data-text-size={m.textSize || "Medium"}
+      >
+        {/* Overview */}
+        <Section tone="white">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
+            <Reveal direction="right">
+              <span className="eyebrow">Overview</span>
+              <h2 className="mt-4 text-3xl font-bold text-navy sm:text-4xl">
+                {m.overviewTitle?.trim() ||
+                  `Your ${m.name} channel, run end to end`}
+              </h2>
+              {(intro.length ? intro : [m.description]).map((p) => (
+                <p
+                  key={p}
+                  className="mt-5 text-lg leading-relaxed text-muted-foreground"
+                >
+                  {p}
+                </p>
+              ))}
+              <div className="mt-8">
+                <Button asChild>
+                  <Link href="/contact">
+                    {m.ctaLabel?.trim() || `Get started on ${m.name}`}{" "}
+                    <ArrowRight className="size-4" />
+                  </Link>
+                </Button>
+              </div>
+            </Reveal>
 
-          <Reveal direction="left" delay={1}>
-            <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-10 shadow-card">
-              <div
-                className="pointer-events-none absolute inset-0 bg-dots opacity-60"
-                aria-hidden
-              />
-              <div className="relative flex flex-col items-center gap-6 text-center">
-                <Image
-                  src={m.logo}
-                  alt={`${m.name} logo`}
-                  width={240}
-                  height={104}
-                  className="h-20 w-auto max-w-[12rem] object-contain"
+            <Reveal direction="left" delay={1}>
+              <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-10 shadow-card">
+                <div
+                  className="pointer-events-none absolute inset-0 bg-dots opacity-60"
+                  aria-hidden
                 />
-                <div>
-                  <p className="font-display text-4xl font-extrabold text-navy">
-                    {m.stat.value}
-                  </p>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {m.stat.label}
-                  </p>
+                <div className="relative flex flex-col items-center gap-6 text-center">
+                  <Image
+                    src={m.logo}
+                    alt={`${m.name} logo`}
+                    width={240}
+                    height={104}
+                    className="h-20 w-auto max-w-[12rem] object-contain"
+                  />
+                  <div>
+                    <p className="font-display text-4xl font-extrabold text-navy">
+                      {m.stat.value}
+                    </p>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {m.stat.label}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        </div>
-      </Section>
-
-      {/* Default feature grid: shown until custom sections are added in the CMS */}
-      {sections.length === 0 ? (
-        <Section tone="luster-strong">
-          <SectionHeading
-            eyebrow="What we handle"
-            title={`Everything your ${m.name} store needs`}
-            description={`The full scope of what we manage for you on ${m.name}.`}
-            className="mb-14"
-          />
-          <div className="grid gap-6 sm:grid-cols-2">
-            {m.features.map((f, i) => (
-              <Reveal key={f} direction="up" delay={i}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-soft">
-                  <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
-                    <Check className="size-5" strokeWidth={3} />
-                  </span>
-                  <p className="font-semibold leading-snug text-navy">{f}</p>
-                </div>
-              </Reveal>
-            ))}
+            </Reveal>
           </div>
         </Section>
-      ) : null}
 
-      {sections.map((section, i) => (
-        <ServiceContentSection
-          key={section.title}
-          section={section}
-          tone={toneAt(i)}
-        />
-      ))}
+        {/* Default feature grid: shown until custom sections are added in the CMS */}
+        {sections.length === 0 ? (
+          <Section tone="luster-strong">
+            <SectionHeading
+              eyebrow="What we handle"
+              title={`Everything your ${m.name} store needs`}
+              description={`The full scope of what we manage for you on ${m.name}.`}
+              className="mb-14"
+            />
+            <div className="grid gap-6 sm:grid-cols-2">
+              {m.features.map((f, i) => (
+                <Reveal key={f} direction="up" delay={i}>
+                  <div className="flex h-full items-start gap-4 rounded-2xl border border-border bg-white p-6 shadow-soft">
+                    <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-xl bg-aster-100 text-aster-700">
+                      <Check className="size-5" strokeWidth={3} />
+                    </span>
+                    <p className="font-semibold leading-snug text-navy">{f}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </Section>
+        ) : null}
 
-      {faqs.length ? (
-        <ServiceFaq
-          title={
-            m.faqTitle?.trim() ||
-            `${m.name} store management: frequently asked questions`
-          }
-          faqs={faqs}
-          tone={toneAt(Math.max(sections.length, 1))}
-        />
-      ) : null}
+        {sections.map((section, i) => (
+          <ServiceContentSection
+            key={section.title}
+            section={section}
+            tone={toneAt(i)}
+          />
+        ))}
+
+        {faqs.length ? (
+          <ServiceFaq
+            title={
+              m.faqTitle?.trim() ||
+              `${m.name} store management: frequently asked questions`
+            }
+            faqs={faqs}
+            tone={toneAt(Math.max(sections.length, 1))}
+          />
+        ) : null}
+      </div>
 
       <CTA
         title={m.ctaTitle?.trim() || `Ready to grow on ${m.name}?`}
