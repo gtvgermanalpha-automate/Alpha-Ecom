@@ -24,7 +24,7 @@ function LegalBody({ blocks }: { blocks: string[] }) {
       const items: string[] = [];
       while (i < blocks.length && blocks[i].startsWith("- ")) items.push(blocks[i++].slice(2));
       out.push(
-        <ul key={i} className="mt-4 space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
+        <ul key={out.length} className="mt-4 space-y-2 pl-5 text-base leading-relaxed text-muted-foreground">
           {items.map((item, j) => (
             <li key={j} className="list-disc">
               {item}
@@ -34,7 +34,7 @@ function LegalBody({ blocks }: { blocks: string[] }) {
       );
     } else {
       out.push(
-        <p key={i} className="mt-4 text-base leading-relaxed text-muted-foreground">
+        <p key={out.length} className="mt-4 text-base leading-relaxed text-muted-foreground">
           {blocks[i]}
         </p>
       );

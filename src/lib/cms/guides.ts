@@ -122,7 +122,7 @@ export const COLLECTION_GUIDES: Record<string, Guide> = {
       "Category, date and reading time.",
       "Title.",
       "Excerpt: the short text on the card.",
-      "Body: one text box for the whole article. Paste it from Google Docs; headings and bullet points are kept.",
+      "Body: one text box for the whole article. Paste it from Google Docs; headings, bullets, bold and links are kept. Use Insert image for pictures.",
     ],
   },
   faqs: {

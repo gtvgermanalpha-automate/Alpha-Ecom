@@ -15,6 +15,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CTA } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
 import { Sized } from "@/components/shared/sized";
+import { RichInline, parseImageLine } from "@/components/shared/rich-text";
 
 export function generateStaticParams() {
   return insights.filter((p) => p.slug).map((p) => ({ slug: p.slug as string }));
@@ -43,9 +44,24 @@ function ArticleBody({ blocks }: { blocks: string[] }) {
   const out: React.ReactNode[] = [];
   for (let i = 0; i < blocks.length; ) {
     const block = blocks[i];
-    if (block.startsWith("## ")) {
+    const image = parseImageLine(block);
+    if (image) {
       out.push(
-        <h2 key={i} className="mt-12 text-2xl font-bold text-navy">
+        <figure key={out.length} className="mt-8">
+          {/* Uploaded through the CMS: size is unknown at build time, so a plain <img> is used. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={image.src}
+            alt={image.alt}
+            loading="lazy"
+            className="w-full rounded-2xl border border-border"
+          />
+        </figure>
+      );
+      i++;
+    } else if (block.startsWith("## ")) {
+      out.push(
+        <h2 key={out.length} className="mt-12 text-2xl font-bold text-navy">
           {block.slice(3)}
         </h2>
       );
@@ -57,21 +73,23 @@ function ArticleBody({ blocks }: { blocks: string[] }) {
         i++;
       }
       out.push(
-        <ul key={i} className="mt-5 space-y-3">
+        <ul key={out.length} className="mt-5 space-y-3">
           {items.map((it, j) => (
             <li key={j} className="flex items-start gap-3 text-navy/80">
               <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-aster-100 text-aster-700">
                 <Check className="size-3.5" strokeWidth={3} />
               </span>
-              {it}
+              <span>
+                <RichInline text={it} />
+              </span>
             </li>
           ))}
         </ul>
       );
     } else {
       out.push(
-        <p key={i} className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-          {block}
+        <p key={out.length} className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <RichInline text={block} />
         </p>
       );
       i++;

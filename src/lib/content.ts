@@ -241,7 +241,13 @@ export type Insight = {
   seoDescription?: string;
 };
 
-export const insights = insightsData as Insight[];
+/** Article images must be site paths ("/uploads/x.jpg"); anything else would break the image component. */
+const INSIGHT_IMAGE_FALLBACK = "/images/insight-amazon.jpg";
+
+export const insights = (insightsData as Insight[]).map((post) => ({
+  ...post,
+  image: post.image?.startsWith("/") ? post.image : INSIGHT_IMAGE_FALLBACK,
+}));
 
 /* ------------------------------------------------------------------ */
 /* Offices                                                             */
