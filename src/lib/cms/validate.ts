@@ -19,6 +19,7 @@ export type FieldSpec = {
   enum?: readonly string[];
   fields?: FieldSpec[]; // for object / object[]
   itemLabel?: string; // for object[] entries
+  longText?: boolean; // string[] edited as one big text box (one block per line)
   guide?: { diagram: string; title: string; steps: string[] }; // picture + directions shown above the field
 };
 

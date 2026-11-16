@@ -1018,7 +1018,7 @@ const defs: Omit<Collection, "validate">[] = [
       { key: "date", type: "string" },
       { key: "excerpt", type: "text", required: true },
       { key: "image", type: "string", required: true },
-      { key: "body", type: "string[]" },
+      { key: "body", label: "Article body", type: "string[]", longText: true },
       ...seoOverrideFields,
     ],
   },

@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { limitFor } from "@/lib/cms/limits";
 import { uploadImage, type FieldSpec } from "@/components/admin/cms-client";
 import { GuidePanel } from "@/components/admin/guide";
+import { LongTextField } from "@/components/admin/long-text";
 
 const inputCls =
   "w-full rounded-lg border border-border bg-white px-3 py-2 text-sm text-navy outline-none transition-colors focus:border-aster focus:ring-2 focus:ring-aster/30";
@@ -120,6 +121,17 @@ export function FieldInput({
         </label>
       );
     case "string[]":
+      if (field.longText) {
+        return (
+          <FieldShell field={field}>
+            <LongTextField
+              values={(value as string[]) ?? []}
+              onChange={onChange}
+              max={field.max ?? limitFor(field.key)}
+            />
+          </FieldShell>
+        );
+      }
       return (
         <FieldShell field={field}>
           <StringList values={(value as string[]) ?? []} onChange={onChange} max={field.max ?? limitFor(field.key)} />
