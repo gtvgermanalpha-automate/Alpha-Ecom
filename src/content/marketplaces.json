@@ -23,6 +23,62 @@
     ],
     "sections": [
       {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "What Our Amazon Account Management Service Covers",
+        "intro": "Our Amazon seller account management service covers the daily running of your Seller Central account. Your account manager looks after the following.",
+        "items": [
+          {
+            "title": "Listing Setup and Optimisation",
+            "text": "Titles, bullet points, descriptions and backend search terms are rewritten around what shoppers type into Amazon, and kept within each category’s rules",
+            "icon": ""
+          },
+          {
+            "title": "A+ Content and Brand Stores",
+            "text": "For brands enrolled in Brand Registry, we plan and build enhanced content and storefront pages that give buyers more to go on before they add to cart.",
+            "icon": ""
+          },
+          {
+            "title": "Amazon PPC Management",
+            "text": "We run Sponsored Products, Sponsored Brands and Sponsored Display campaigns, clean up wasted search terms and move budget to the keywords that actually sell.",
+            "icon": ""
+          },
+          {
+            "title": "Inventory and FBA Planning",
+            "text": "We track sell-through and restock dates so you avoid stock-outs and excess storage. This works for FBA, FBM or a mix of both.",
+            "icon": ""
+          },
+          {
+            "title": "Pricing and Promotions",
+            "text": "Coupons, deals and Subscribe & Save are used only where your margin allows it.",
+            "icon": ""
+          },
+          {
+            "title": "Account Health Monitoring",
+            "text": "We check your Account Health dashboard, deal with listing violations and prepare plans of action if Amazon suspends a listing or account.",
+            "icon": ""
+          },
+          {
+            "title": "Brand Protection",
+            "text": "We help register your trademark in Brand Registry and report hijackers and copycat listings.",
+            "icon": ""
+          },
+          {
+            "title": "Reviews and Feedback",
+            "text": "We use only Amazon-approved methods, such as the Request a Review button and Vine where your product qualifies. We also fix the product or listing problems behind poor ratings.",
+            "icon": ""
+          },
+          {
+            "title": "Reporting",
+            "text": "You get regular sales, ad and margin reports with notes on what we plan to do next.",
+            "icon": ""
+          }
+        ],
+        "outro": "Everything above is part of Amazon seller account management, and the scope for your store is agreed with you before work starts. ",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
         "style": "List",
         "eyebrow": "",
         "title": "Amazon Account Management Services for New and Established Sellers",
@@ -57,11 +113,16 @@
         "style": "Cards",
         "eyebrow": "",
         "title": "Why Choose Alpha Digital for Amazon Store Management?",
-        "intro": "With Alpha Digital, you have one team to support your marketplace activities.\n",
+        "intro": "With Alpha Digital, you have one team to support your marketplace activities.",
         "items": [
           {
+            "title": "Listing Work Based on Research",
+            "text": "Product content is developed around relevant search terms, product details and Amazon's listing requirements.",
+            "icon": ""
+          },
+          {
             "title": "Profit Over Clicks",
-            "text": "We look at ACoS and TACoS alongside Amazon fees, returns and landed cost, because sales that lose money don’t help you. ",
+            "text": "We look at ACoS and TACoS alongside Amazon fees, returns and landed cost, because sales that lose money don’t help you.",
             "icon": ""
           },
           {
