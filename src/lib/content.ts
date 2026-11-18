@@ -242,7 +242,7 @@ export type Insight = {
 };
 
 /** Article images must be site paths ("/uploads/x.jpg"); anything else would break the image component. */
-const INSIGHT_IMAGE_FALLBACK = "/images/insight-amazon.jpg";
+const INSIGHT_IMAGE_FALLBACK = "/images/placeholder.svg";
 
 export const insights = (insightsData as Insight[]).map((post) => ({
   ...post,

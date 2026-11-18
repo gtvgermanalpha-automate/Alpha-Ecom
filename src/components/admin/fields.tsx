@@ -251,13 +251,17 @@ function ObjectArray({
 function ImageField({ value, onChange }: { value: string; onChange: (v: string) => void }) {
   const [busy, setBusy] = React.useState(false);
   const [err, setErr] = React.useState<string | null>(null);
+  // A just-uploaded file is not on the live site until Publish, so preview it from the browser.
+  const [preview, setPreview] = React.useState<{ url: string; local: string } | null>(null);
   async function onFile(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
+    e.target.value = "";
     if (!file) return;
     setBusy(true);
     setErr(null);
     try {
       const { url } = await uploadImage(file);
+      setPreview({ url, local: URL.createObjectURL(file) });
       onChange(url);
     } catch (e) {
       setErr(e instanceof Error ? e.message : "Upload failed");
@@ -270,7 +274,11 @@ function ImageField({ value, onChange }: { value: string; onChange: (v: string) 
       <div className="flex items-center gap-3">
         {value ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={value} alt="" className="size-14 shrink-0 rounded-lg border border-border object-contain p-1" />
+          <img
+            src={preview?.url === value ? preview.local : value}
+            alt=""
+            className="size-14 shrink-0 rounded-lg border border-border object-contain p-1"
+          />
         ) : (
           <span className="grid size-14 shrink-0 place-items-center rounded-lg border border-dashed border-border text-muted-foreground">
             <ImageUp className="size-5" />
@@ -284,6 +292,11 @@ function ImageField({ value, onChange }: { value: string; onChange: (v: string) 
         <input type="file" accept="image/*" className="sr-only" onChange={onFile} disabled={busy} />
       </label>
       {err ? <p className="text-xs text-destructive">{err}</p> : null}
+      {preview?.url === value ? (
+        <p className="text-xs text-muted-foreground">
+          Uploaded. Press Save, then Publish, and the image will appear on the live site.
+        </p>
+      ) : null}
     </div>
   );
 }

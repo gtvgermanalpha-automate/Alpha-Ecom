@@ -6,7 +6,7 @@ import { GitHubConfigError } from "@/lib/github";
 
 export const runtime = "nodejs";
 
-const MAX_BYTES = 6 * 1024 * 1024; // 6 MB
+const MAX_BYTES = 4 * 1024 * 1024; // 4 MB (the host rejects request bodies over 4.5 MB)
 const ALLOWED: Record<string, string> = {
   "image/jpeg": "jpg",
   "image/png": "png",
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const form = await req.formData();
     const file = form.get("file");
     if (!(file instanceof File)) return NextResponse.json({ error: "No file provided." }, { status: 400 });
-    if (file.size > MAX_BYTES) return NextResponse.json({ error: "File must be under 6 MB." }, { status: 422 });
+    if (file.size > MAX_BYTES) return NextResponse.json({ error: "File must be under 4 MB." }, { status: 422 });
 
     const ext = ALLOWED[file.type];
     if (!ext) return NextResponse.json({ error: "Unsupported image type." }, { status: 422 });

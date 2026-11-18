@@ -19,11 +19,16 @@ function handle(err: unknown) {
   return json({ error: err instanceof Error ? err.message : "Unexpected error" }, 500);
 }
 
+/** Fields that hold an image path: a new entry starts with the placeholder picture, not text. */
+const IMAGE_KEYS = new Set(["image", "logo", "marketplaceLogo"]);
+const PLACEHOLDER_IMAGE = "/images/placeholder.svg";
+
 /** Build a minimal entry that satisfies the collection's required fields. */
 function defaultValue(f: FieldSpec): unknown {
   switch (f.type) {
     case "string":
     case "text":
+      if (IMAGE_KEYS.has(f.key)) return f.required ? PLACEHOLDER_IMAGE : "";
       return f.enum ? f.enum[0] : f.required ? "Untitled" : "";
     case "number":
       return 0;
