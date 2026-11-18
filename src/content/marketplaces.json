@@ -3,7 +3,7 @@
     "slug": "amazon",
     "name": "Amazon",
     "logo": "/amazon-logo-amazon-icon-transparent-free-png.webp",
-    "blurb": "Launch, optimize and scale your Amazon Seller Central or Vendor account.",
+    "blurb": "One dedicated team for your listings, ads, stock and account health.",
     "description": "From a brand-new Seller Central account to a fully optimized catalog, we run your Amazon channel end to end — listings, A+ content, Brand Registry, PPC and account health.",
     "features": [
       "Seller Central & FBA setup",
@@ -11,7 +11,133 @@
       "Sponsored Products & DSP ads",
       "Brand Registry & account health"
     ],
-    "accent": "#FF9900"
+    "accent": "#FF9900",
+    "seoTitle": "Amazon Account Management Services | Alpha Digital Solutions",
+    "seoDescription": "Alpha Digital Solutions manages Amazon seller accounts, from listings and PPC to inventory and account health. Book a free consultation today.",
+    "heroTitle": "Amazon Account Management Services",
+    "overviewTitle": "Amazon Account Management Services That Keep Your Store Running",
+    "intro": [
+      "Amazon sellers rarely get stuck because of the product. It’s usually the daily work around it: listings that need fixing, ad budgets that need watching, stock that needs ordering, and policy emails that need a reply the same day. Alpha Digital Solutions provides Amazon account management services that take over that workload, so you can concentrate on sourcing and your brand.",
+      "Whether you want a single area covered or Amazon full account management from listings to reporting, we customise  our support to fit your daily operations.",
+      "Not sure where your account is losing sales? Book a free consultation and we’ll look at it together."
+    ],
+    "sections": [
+      {
+        "style": "List",
+        "eyebrow": "",
+        "title": "Amazon Account Management Services for New and Established Sellers",
+        "intro": "Sellers come to us at very different stages, so the support changes with them.",
+        "items": [
+          {
+            "title": "New Amazon Sellers",
+            "text": "Account and listing setup, category approvals where needed, launch advertising and an early inventory plan.",
+            "icon": ""
+          },
+          {
+            "title": "Established Brands",
+            "text": "Listing audits, ad restructuring and ongoing optimisation of what is already live.",
+            "icon": ""
+          },
+          {
+            "title": "Private Label and Wholesale Sellers",
+            "text": "Buy Box monitoring, pricing control, restock planning and protection against other sellers on your listings.",
+            "icon": ""
+          },
+          {
+            "title": "Sellers on Several Marketplaces",
+            "text": "Support across the Amazon stores you sell in, depending on your setup.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "Why Choose Alpha Digital for Amazon Store Management?",
+        "intro": "With Alpha Digital, you have one team to support your marketplace activities.\n",
+        "items": [
+          {
+            "title": "Profit Over Clicks",
+            "text": "We look at ACoS and TACoS alongside Amazon fees, returns and landed cost, because sales that lose money don’t help you. ",
+            "icon": ""
+          },
+          {
+            "title": "Operational Support",
+            "text": "Listings, inventory, orders and account notifications receive attention as part of the wider store management process.",
+            "icon": ""
+          },
+          {
+            "title": "Weekly Updates",
+            "text": "You see what changed, what it cost and what happened to sales.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Steps",
+        "eyebrow": "",
+        "title": "How Does Our Amazon Account Management Process Work?",
+        "intro": "Getting started is simple, and it won’t disrupt your current orders. ",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "We talk through your Amazon business and challenges, and you leave knowing what we’d fix first.",
+            "icon": ""
+          },
+          {
+            "title": "Store Assessment",
+            "text": "We review your Seller Central account, listings and ads, and show you where sales or margin are being lost.",
+            "icon": ""
+          },
+          {
+            "title": "Strategy and Planning",
+            "text": "You get a clear written plan with priorities, scope and price agreed up front.",
+            "icon": ""
+          },
+          {
+            "title": "Management and Ongoing Support",
+            "text": "We run the daily work from your own account and send regular updates on performance.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About Amazon Account Management Services",
+    "faqs": [
+      {
+        "question": "What is Amazon account management?",
+        "answer": "It means handing the daily running of your Amazon seller account to a specialist or team. That covers listings, advertising, inventory, account health and reporting. It suits sellers who want growth without spending every day inside Seller Central.\n"
+      },
+      {
+        "question": "What does your Amazon full account management include?",
+        "answer": "Full account management covers every area above in one engagement: listing work, PPC, inventory planning, brand tools, health monitoring and reporting, with a single point of contact. If you only need one or two parts, such as ads or listings, we can scope it that way.\n"
+      },
+      {
+        "question": "How much do Amazon account management services cost?",
+        "answer": "It depends on your catalogue size, ad spend and the services you choose. Agencies generally charge a monthly retainer, a percentage of sales, or a mix of the two. After a look at your account on the first call, we give you a fixed quote.\n"
+      },
+      {
+        "question": "Can you help if my Amazon account is suspended?",
+        "answer": "Yes. Send us the notice and we’ll review what triggered it. We’ll tell you plainly whether an appeal looks winnable before you commit to anything."
+      },
+      {
+        "question": "Do I lose control of my account if I hire an agency?",
+        "answer": "No. You remain the account owner, and we only get the user access you grant."
+      },
+      {
+        "question": "Is it worth hiring someone to manage my Amazon account?",
+        "answer": "It can be, particularly if the account takes more time than you have or your ads and listings aren’t performing. The free consultation with us is the quickest way to find out, and we’ll tell you honestly if it isn’t worth it for your store yet."
+      }
+    ]
   },
   {
     "slug": "ebay",
