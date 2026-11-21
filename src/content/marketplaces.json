@@ -388,7 +388,194 @@
       "Etsy Ads management",
       "Review & order growth"
     ],
-    "accent": "#F1641E"
+    "accent": "#F1641E",
+    "seoTitle": "Etsy Account Management Services",
+    "seoDescription": "Alpha Digital Solutions sets up and manages Etsy shops, from listings and SEO to ads, messages and account health. Book a free consultation. ",
+    "heroTitle": "",
+    "overviewTitle": "Etsy Store Creation and Management Services for Your Business",
+    "intro": [
+      "Etsy looks easy until the shop is live. Titles and tags need testing, messages need a reply within a day, shipping settings drift out of date, and one policy mistake can pull a listing down.",
+      "Alpha Digital Solutions provides Etsy account management services for new and existing shops. Our Etsy seller account management covers listings, ads, orders and account health, and our Etsy account creation services get a new shop open the right way. ",
+      "Not sure what is holding your shop back? Book a free consultation and we’ll take a look together."
+    ],
+    "sections": [
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "What Do Our Etsy Account Management Services Include?",
+        "intro": "An Etsy shop needs regular attention, from the way products are presented to how listings are maintained. Our Etsy account management services cover different parts of the setup and management process.",
+        "items": [
+          {
+            "title": "Shop Setup and Branding",
+            "text": "Banner, shop announcement, About section and policies, set up with you so buyers can see who they are buying from.",
+            "icon": ""
+          },
+          {
+            "title": "Listing Creation",
+            "text": "Clear titles, descriptions, photos and variations, with each item labelled correctly as made, designed, sourced or handpicked, as Etsy’s Creativity Standards require.",
+            "icon": ""
+          },
+          {
+            "title": "Etsy SEO and Listing Optimisation",
+            "text": "Titles, tags, categories and attributes matched to what buyers actually search, since those are what Etsy reads to decide whether a listing fits a search.",
+            "icon": ""
+          },
+          {
+            "title": "Etsy Ads Support",
+            "text": "Etsy Ads Support: We review your ad results and tell you which listings to promote, what to budget and what to pause. ",
+            "icon": ""
+          },
+          {
+            "title": "Orders and Shipping",
+            "text": "Adding tracking, buying labels and marking orders as shipped, with shipping profiles and delivery times kept accurate.",
+            "icon": ""
+          },
+          {
+            "title": "Customer Messages and Reviews",
+            "text": "We answer buyer messages quickly and politely. Etsy counts response rate, review rating and case rate in search, so this part is worth doing well.",
+            "icon": ""
+          },
+          {
+            "title": "Account Health Monitoring",
+            "text": "We watch your listings and Etsy notices, including intellectual property flags, and tell you what needs fixing in your settings.",
+            "icon": ""
+          },
+          {
+            "title": "Star Seller Support",
+            "text": "Quick replies, on-time shipping and good reviews are what the badge rewards, so we keep an eye on those every week.",
+            "icon": ""
+          },
+          {
+            "title": "Reporting",
+            "text": "A regular update on orders, listing changes and message response times, plus ad and sales figures from the stats you share with us.",
+            "icon": ""
+          }
+        ],
+        "outro": "The exact scope is agreed with you before we start. ",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "",
+        "eyebrow": "",
+        "title": "Who Are Our Etsy Store Management Services For? ",
+        "intro": "Whether you're planning your first Etsy shop or looking for help with an existing one, the work required will depend on where your business currently stands.\n",
+        "items": [
+          {
+            "title": "New Etsy Sellers",
+            "text": "Support with shop creation, initial setup, branding, product uploads and preparing listings before your store goes live.",
+            "icon": ""
+          },
+          {
+            "title": "Small Business Owners",
+            "text": "Help organising product catalogues, and creating listings while you manage other parts of your business.",
+            "icon": ""
+          },
+          {
+            "title": "Established Etsy Sellers",
+            "text": "Assistance with updating existing listings, improving product information, managing inventory and handling routine store activities.",
+            "icon": ""
+          },
+          {
+            "title": "Growing Etsy Businesses",
+            "text": "Ongoing support with new product uploads, catalogue updates and store management as your product range expands.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "Why Choose Alpha Digital for Etsy Shop Management?",
+        "intro": "Here is what you get when you work with us:",
+        "items": [
+          {
+            "title": "Support From Setup to Management",
+            "text": "Get assistance whether you're opening a new shop or need help with an existing one.",
+            "icon": ""
+          },
+          {
+            "title": "Policy-Safe Listings",
+            "text": "We keep your shop within Etsy’s rules, so you aren’t caught out when they change. ",
+            "icon": ""
+          },
+          {
+            "title": "Flexible Service Scope",
+            "text": "We discuss your requirements first so the support you receive matches the work your shop actually needs.",
+            "icon": ""
+          },
+          {
+            "title": "Clear Weekly Updates",
+            "text": "Every week you get a simple report. It shows your sales, your ad spend and what we worked on.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Steps",
+        "eyebrow": "",
+        "title": "How Does Our Etsy Store Creation and Management Process Work?",
+        "intro": "Getting your Etsy shop ready or handing over its management can be straightforward. Here's how we approach the process.",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "We discuss your products, business goals and whether you need a new Etsy shop or support with an existing one.",
+            "icon": ""
+          },
+          {
+            "title": "Shop Assessment and Setup",
+            "text": "For new sellers, we help prepare the shop and its initial structure. For existing sellers, we review the current listings and management requirements.\n",
+            "icon": ""
+          },
+          {
+            "title": "Strategy and Planning",
+            "text": "We agree on the work involved, including product uploads, listing improvements and ongoing tasks, along with the scope and pricing.",
+            "icon": ""
+          },
+          {
+            "title": "Store Creation and Ongoing Management",
+            "text": "We begin the agreed work, manage the assigned activities and provide updates on progress.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About Etsy Store Creation and Management",
+    "faqs": [
+      {
+        "question": "Can you manage an existing Etsy shop?",
+        "answer": "Yes. We can support existing sellers with product listing updates, catalogue management, listing optimisation and other agreed store activities."
+      },
+      {
+        "question": "Do you provide Etsy SEO services?",
+        "answer": "Yes. Our Etsy SEO support includes keyword research and improving product titles, tags, descriptions, categories and attributes. These changes help make listings more relevant to shoppers' searches, although search placement and sales cannot be guaranteed."
+      },
+      {
+        "question": "How many products can you upload to my Etsy shop?",
+        "answer": "The number of products depends on your catalogue size and the scope of work agreed. We can discuss your requirements and plan product uploads accordingly."
+      },
+      {
+        "question": "Can you help improve my existing Etsy listings?",
+        "answer": "Yes. We can review existing listings and identify areas for improvement, including product titles, descriptions, tags, categories, attributes and product information."
+      },
+      {
+        "question": "Can you manage Etsy alongside other ecommerce marketplaces?",
+        "answer": "Yes. Alpha Digital also provides management services for Amazon, eBay, OnBuy, TikTok Shop and Shopify. If your business sells across multiple platforms, we can discuss the support you need for each one."
+      },
+      {
+        "question": "Is it worth hiring someone to manage my Etsy shop?",
+        "answer": "It can be, especially if the shop takes time you’d rather spend making products, or your listings and ads aren’t performing. The free consultation is the quickest way to find out. We’ll tell you honestly if it makes sense for your store. "
+      }
+    ]
   },
   {
     "slug": "onbuy",
