@@ -977,7 +977,7 @@
     "slug": "shopify",
     "name": "Shopify",
     "logo": "/Shopify.png",
-    "blurb": "Custom Shopify storefronts built to convert and easy to run.",
+    "blurb": "One team to build, manage and maintain your Shopify store.",
     "description": "Your own branded home base — we design and build fast, conversion-focused Shopify stores, integrate apps and payments, and connect every marketplace back to one dashboard.",
     "features": [
       "Custom theme design & build",
@@ -985,6 +985,190 @@
       "CRO & speed optimization",
       "Multichannel integration"
     ],
-    "accent": "#95BF47"
+    "accent": "#95BF47",
+    "seoTitle": "Shopify Store Development Services",
+    "seoDescription": "Build your online business with Shopify store development services from Alpha Digital. Book a free consultation now.",
+    "heroTitle": "Shopify Store Development Services",
+    "overviewTitle": "Shopify Store Development Services That Keep Your Store Selling",
+    "intro": [
+      "Most Shopify stores don't struggle because of the products. The trouble starts after launch. A theme update breaks the cart, an app slows the homepage, old links lead to 404 pages, and nobody has time to fix any of it.",
+      "Alpha Digital Solutions provides Shopify store development services and ongoing management, so the build is done properly and the store stays in good shape afterwards.",
+      "You might need a new store, a rebuild, or someone to take over Shopify store development services for a store that's already live. Either way, we scope the work around how your business actually runs.",
+      "Not sure what's holding your store back? Book a free consultation and we'll go through it with you."
+    ],
+    "sections": [
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "What Our Shopify Store Development and Management Service Covers ",
+        "intro": "Our Shopify management services cover both the technical build of your site and the ongoing work required to keep it fast and profitable. ",
+        "items": [
+          {
+            "title": "Custom Store Design and Theme Development",
+            "text": "We build and customise Online Store 2.0 themes with clean Liquid code, responsive layouts, and custom sections so your team can edit pages easily without breaking the design.",
+            "icon": ""
+          },
+          {
+            "title": "Platform Migrations",
+            "text": "Moving from WooCommerce, Magento, BigCommerce, or Wix? We transfer your products, customer records, order history, and URL redirects cleanly so you protect your search rankings.",
+            "icon": ""
+          },
+          {
+            "title": "App Integration and Custom Functionality",
+            "text": "We connect your ERP, 3PL, CRM, and email tools, or use Shopify Functions and custom APIs to build features without bloating your store with slow third-party apps.",
+            "icon": ""
+          },
+          {
+            "title": "Checkout and Conversion Optimisation",
+            "text": "We streamline cart drawers in your theme and use Shopify Functions and Checkout Extensibility (for Shopify Plus) to customise shipping rules, upsells, and payment options so fewer shoppers abandon checkout. ",
+            "icon": ""
+          },
+          {
+            "title": "Product Catalogue and Merchandising",
+            "text": "We handle bulk product uploads, variant setups, collection rules, metafields, and seasonal merchandising updates so your catalogue stays accurate.",
+            "icon": ""
+          },
+          {
+            "title": "Shopify Store Maintenance and Speed Updates",
+            "text": "Our ongoing Shopify store maintenance covers theme updates, app conflict fixes, Core Web Vitals speed improvements, broken link redirects, and regular backups.",
+            "icon": ""
+          },
+          {
+            "title": "Technical SEO and Analytics Setup",
+            "text": "We structure your collection URLs, schema markup, meta tags, and Google Tag Manager or GA4 tracking so search engines and ad platforms read your store properly.",
+            "icon": ""
+          },
+          {
+            "title": "Multi-Currency and International Setup",
+            "text": "Using Shopify Markets, we configure local currencies, duties, regional domains, and translated storefronts for brands selling across borders.",
+            "icon": ""
+          },
+          {
+            "title": "Regular Updates:",
+            "text": "You receive regular reports covering site speed, conversion rates, completed updates, and technical priorities for the month ahead.",
+            "icon": ""
+          }
+        ],
+        "outro": "All of this is part of our Shopify management services, and the scope for your store is agreed with you before any work starts. ",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "List",
+        "eyebrow": "",
+        "title": "Shopify Store Management Services for New and Established Businesses",
+        "intro": "Stores come to us at very different stages, so our role adapts to what you need right now.",
+        "items": [
+          {
+            "title": "Established Ecommerce Brands",
+            "text": "Conversion audits, speed cleanups, theme upgrades, and ongoing Shopify store development services for stores that have outgrown a basic template.",
+            "icon": ""
+          },
+          {
+            "title": "Established Ecommerce Brands",
+            "text": "Conversion audits, speed cleanups, theme upgrades, and ongoing Shopify store development services for stores that have outgrown a basic template.",
+            "icon": ""
+          },
+          {
+            "title": "Replatforming Businesses",
+            "text": "End-to-end data migration, SEO redirect mapping, and custom design builds for brands switching to Shopify or Shopify Plus.",
+            "icon": ""
+          },
+          {
+            "title": "Multi-Region and High-Volume Stores",
+            "text": "Ongoing technical support, Shopify Markets management, and workflow automation for brands managing large catalogues or multiple storefronts.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "Why Choose Alpha Digital as Your Shopify Store Management Agency?",
+        "intro": "As a Shopify store management agency, we give you one team for both development and day-to-day work. Here's what you can expect when working with us:",
+        "items": [
+          {
+            "title": "Practical Ecommerce Experience",
+            "text": "We understand the work involved in setting up and managing online stores across different ecommerce platforms.",
+            "icon": ""
+          },
+          {
+            "title": "Support Based on Your Requirements",
+            "text": "We focus on the services your business actually needs rather than offering the same setup to every client.",
+            "icon": ""
+          },
+          {
+            "title": "Development and Ongoing Support",
+            "text": "Get help with both the initial store setup and the work required after launch.",
+            "icon": ""
+          },
+          {
+            "title": "A Clear Working Process",
+            "text": "We discuss your requirements, agree on the scope and keep you informed as the work progresses.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Steps",
+        "eyebrow": "",
+        "title": "How Does Our Shopify Store Management Process Work?",
+        "intro": "",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "We talk through your store and your goals, and you leave knowing what we'd fix or build first.",
+            "icon": ""
+          },
+          {
+            "title": "Store Review",
+            "text": "We go through your theme, apps, speed, checkout and SEO setup, and show you where sales are being lost.",
+            "icon": ""
+          },
+          {
+            "title": "Strategy and Planning",
+            "text": "You get a written plan with priorities, timeline, scope and price agreed up front.",
+            "icon": ""
+          },
+          {
+            "title": "Build, Management and Ongoing Support",
+            "text": "We do the development and the daily work, then keep the store maintained and send regular updates.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About Shopify Store Development Services  ",
+    "faqs": [
+      {
+        "question": "What is the difference between Shopify development and Shopify store management?",
+        "answer": "Shopify development focuses on building, redesigning, or adding new technical features to your site. Shopify store management covers the ongoing daily and monthly work after launch, such as uploading products, updating banners, monitoring site speed, fixing bugs, and managing apps. Alpha Digital offers both under one roof."
+      },
+      {
+        "question": "What does Shopify store maintenance involve?",
+        "answer": "Maintenance means keeping the store healthy after launch. That includes theme and app updates, speed checks, broken link and redirect fixes, checkout testing and removing apps you no longer use. Stores that change often or run frequent sales usually benefit from monthly maintenance."
+      },
+      {
+        "question": "Do I need Shopify Plus?",
+        "answer": "Not always. Plus makes sense when you need deeper checkout customisation, B2B features, several storefronts or advanced automation. Many growing stores do well on a standard plan. We'll tell you honestly if Plus isn't worth it for your store yet."
+      },
+      {
+        "question": "Can you help with Shopify website management after launch?",
+        "answer": "Yes. We can assist with ongoing Shopify website management, including product and collection updates, content changes, storefront adjustments and other routine operational tasks. The level of support depends on your store's needs."
+      },
+      {
+        "question": "Is it worth hiring someone to manage my Shopify store?",
+        "answer": "It can be, especially if the store takes time you’d rather spend making products, or your product listings and storefront aren’t converting. The free consultation is the quickest way to find out. We’ll tell you honestly if it makes sense for your store."
+      }
+    ]
   }
 ]
