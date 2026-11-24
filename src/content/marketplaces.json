@@ -1170,5 +1170,150 @@
         "answer": "It can be, especially if the store takes time you’d rather spend making products, or your product listings and storefront aren’t converting. The free consultation is the quickest way to find out. We’ll tell you honestly if it makes sense for your store."
       }
     ]
+  },
+  {
+    "slug": "seo-services-for-ecommerce",
+    "name": "SEO services for ecommerce",
+    "logo": "/images/placeholder.svg",
+    "blurb": "Our SEO services for ecommerce help more customers find your products through search.\n",
+    "description": "Untitled",
+    "features": [],
+    "accent": "#111144",
+    "seoTitle": "SEO Services for Ecommerce ",
+    "seoDescription": "Our ecommerce SEO services help online stores rank higher, attract buyers, and get more orders. Get a free store review today. ",
+    "heroTitle": "SEO Services For Ecommerce",
+    "headingSize": "Small",
+    "textSize": "Small",
+    "overviewTitle": "SEO Services for Ecommerce That Bring Buyers to Your Store",
+    "intro": [
+      "Our SEO services for ecommerce help your store show us and give your team a clear fix list.",
+      "We work on your product pages, category pages, site speed and store structure so Google understands what you sell and shoppers can find you.",
+      "Not sure why your products aren't showing up in search? Book a free consultation and we'll go through it with you."
+    ],
+    "ctaLabel": "",
+    "sections": [
+      {
+        "style": "List",
+        "eyebrow": "",
+        "title": "Ecommerce SEO Services for New and Established Stores ",
+        "intro": "Online stores come to us at very different stages. So we adapt our SEO services for ecommerce to your catalogue size and current setup.\n",
+        "items": [
+          {
+            "title": "New Ecommerce Stores",
+            "text": "Keyword research, SEO-friendly website structure, product and category page optimisation, technical SEO setup and an initial content strategy to give your store a solid starting point.",
+            "icon": ""
+          },
+          {
+            "title": "Established Online Stores",
+            "text": "Existing website audits, keyword gap analysis, content improvements, product page optimisation and technical fixes to improve organic search performance.",
+            "icon": ""
+          },
+          {
+            "title": "Stores With Low Organic Traffic",
+            "text": "We investigate indexing issues, weak keyword targeting, missing content, technical problems and competitor gaps to identify why your website isn't attracting enough search traffic.",
+            "icon": ""
+          },
+          {
+            "title": "Businesses Expanding Into New Markets",
+            "text": "We research search demand in your target markets and help plan keyword targeting, relevant landing pages, international SEO and location-specific content where needed.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "Why Choose Alpha Digital as Your Ecommerce SEO Agency?",
+        "intro": "When you work with our ecommerce SEO experts, you get a team that manages online stores every day rather than applying generic blog SEO tactics to a retail site. \n\nHere's what you can expect when working with us:\n",
+        "items": [
+          {
+            "title": "Hands-On Ecommerce Experience",
+            "text": "Our Ecommerce SEO experts understand product catalogues, seasonal demand, and conversion rates.",
+            "icon": ""
+          },
+          {
+            "title": "SEO Based on Your Business",
+            "text": "We research your products, target audience and competitors before deciding which keywords and pages deserve attention.",
+            "icon": ""
+          },
+          {
+            "title": "Technical and Content Support",
+            "text": "We help with both the technical side of SEO and the content improvements needed to make your website more useful to searchers.",
+            "icon": ""
+          },
+          {
+            "title": "Clear Priorities and Updates",
+            "text": "We agree on the work, focus on the most important improvements first and keep you informed about progress.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "List",
+        "eyebrow": "",
+        "title": "How Does Our Ecommerce SEO Process Work?",
+        "intro": "We follow a straightforward process to fix technical blockers and grow your organic sales. \n",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "We talk through your store, products, and goals, and you leave knowing where your biggest organic opportunities sit.",
+            "icon": ""
+          },
+          {
+            "title": "Store and Competitor Audit",
+            "text": "We review your site speed, indexing health, category structure, and top organic competitors to see where sales are being missed.",
+            "icon": ""
+          },
+          {
+            "title": "Strategy and Planning",
+            "text": "You get a written roadmap with priority keywords, technical fixes, content plan, timeline, and price agreed up front.",
+            "icon": ""
+          },
+          {
+            "title": "Execution and Ongoing Growth",
+            "text": "Our team handles the technical updates, on-page optimisation, and authority building, sending regular progress reports as rankings climb.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About SEO Services for Ecommerce ",
+    "faqs": [
+      {
+        "question": "What is included in SEO services for ecommerce?",
+        "answer": "SEO services for ecommerce cover technical site health, category and product page optimisation, commercial keyword research, structured data markup, and backlink building. Unlike standard website SEO, ecommerce SEO solves retail-specific issues like duplicate product variants, filter URLs, out-of-stock pages, and schema for price and availability."
+      },
+      {
+        "question": "How long does ecommerce SEO take to work?",
+        "answer": "Most stores start to see early movement in 3 to 4 months, and clearer results in 6 to 12 months. Timing depends on your store's age, how much competition you have and what needs fixing. Technical fixes can help faster, while new content and links take longer to build.\n"
+      },
+      {
+        "question": "Do you offer SEO services for Shopify stores?",
+        "answer": "Yes. We work on Shopify stores and fix common SEO problems, such as duplicate product URLs, weak collection pages, slow themes and missing structured data. "
+      },
+      {
+        "question": "Is SEO better than paid ads for an online store?",
+        "answer": "SEO and paid ads do different jobs. Ads bring traffic fast but stop when you stop paying. SEO takes longer but keeps bringing traffic without a cost per click. Most stores do best with both: ads for quick sales and SEO to build steady traffic over time."
+      },
+      {
+        "question": "Can I do ecommerce SEO myself?",
+        "answer": "Yes. You can handle basic ecommerce SEO by researching keywords, writing useful product descriptions, optimising page titles, improving internal links and monitoring your website through Google Search Console. However, larger stores or websites with technical SEO problems may need specialist support to manage more complex work.\n"
+      },
+      {
+        "question": "Is it worth hiring someone to manage ecommerce SEO?",
+        "answer": "Yes, especially if your online store isn't getting enough organic traffic or you're unsure what needs to improve. A free consultation with Alpha Digital Solutions is the quickest way to find out. We'll look at your store and tell you honestly if SEO services for ecommerce make sense for your setup right now."
+      }
+    ],
+    "ctaTitle": "",
+    "ctaDescription": ""
   }
 ]
