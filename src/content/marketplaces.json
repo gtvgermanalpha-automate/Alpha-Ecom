@@ -1193,10 +1193,66 @@
     "ctaLabel": "",
     "sections": [
       {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "What Our SEO Services for Ecommerce Include",
+        "intro": "Our technical SEO audit services check both the backend code of your website and the on-page signals search engines use to rank your pages.\n",
+        "items": [
+          {
+            "title": "Store Audit",
+            "text": "We check your whole site for problems that hold back your rankings, like slow pages, broken links, duplicate content and messy URLs.",
+            "icon": ""
+          },
+          {
+            "title": "Keyword Research for Products and Categories",
+            "text": "We find the searches your buyers actually use, then match each one to the right page on your store.",
+            "icon": ""
+          },
+          {
+            "title": "Product Page Optimisation",
+            "text": "Titles, descriptions, images, reviews and internal links, all set up so each product page can rank and also convince people to buy.",
+            "icon": ""
+          },
+          {
+            "title": "Category Page Optimisation",
+            "text": "Category pages often bring the most traffic to a store. We rewrite and restructure them so they rank for the broader searches.",
+            "icon": ""
+          },
+          {
+            "title": "Technical SEO",
+            "text": "Site speed, mobile experience, indexing, crawl issues and clean site structure. \n",
+            "icon": ""
+          },
+          {
+            "title": "Product Schema",
+            "text": "We add structured data so Google can show your price, stock status and star ratings right in the search results.",
+            "icon": ""
+          },
+          {
+            "title": "Content and Blog Posts",
+            "text": "Buying guides and helpful articles that bring in shoppers early and link to your products.",
+            "icon": ""
+          },
+          {
+            "title": "Link Building",
+            "text": "We build links from relevant sites so Google trusts your store more.",
+            "icon": ""
+          },
+          {
+            "title": "Monthly Reporting",
+            "text": "A simple report showing rankings, traffic and orders from search. No confusing dashboards.",
+            "icon": ""
+          }
+        ],
+        "outro": "All of this is part of our best ecommerce SEO services, and the scope for your store is agreed with you before any work starts. ",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
         "style": "List",
         "eyebrow": "",
         "title": "Ecommerce SEO Services for New and Established Stores ",
-        "intro": "Online stores come to us at very different stages. So we adapt our SEO services for ecommerce to your catalogue size and current setup.\n",
+        "intro": "Online stores come to us at very different stages. So we adapt our SEO services for ecommerce to your catalogue size and current setup.",
         "items": [
           {
             "title": "New Ecommerce Stores",
@@ -1227,7 +1283,7 @@
         "style": "Cards",
         "eyebrow": "",
         "title": "Why Choose Alpha Digital as Your Ecommerce SEO Agency?",
-        "intro": "When you work with our ecommerce SEO experts, you get a team that manages online stores every day rather than applying generic blog SEO tactics to a retail site. \n\nHere's what you can expect when working with us:\n",
+        "intro": "When you work with our ecommerce SEO experts, you get a team that manages online stores every day rather than applying generic blog SEO tactics to a retail site. Here's what you can expect when working with us:",
         "items": [
           {
             "title": "Hands-On Ecommerce Experience",
@@ -1255,10 +1311,10 @@
         "ctaHref": ""
       },
       {
-        "style": "List",
+        "style": "Steps",
         "eyebrow": "",
         "title": "How Does Our Ecommerce SEO Process Work?",
-        "intro": "We follow a straightforward process to fix technical blockers and grow your organic sales. \n",
+        "intro": "For our SEO services for ecommerce, we follow a straightforward process to fix technical blockers and grow your organic sales. ",
         "items": [
           {
             "title": "Free Consultation",
