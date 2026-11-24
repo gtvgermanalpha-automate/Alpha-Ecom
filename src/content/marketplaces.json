@@ -1170,5 +1170,27 @@
         "answer": "It can be, especially if the store takes time you’d rather spend making products, or your product listings and storefront aren’t converting. The free consultation is the quickest way to find out. We’ll tell you honestly if it makes sense for your store."
       }
     ]
+  },
+  {
+    "slug": "seo-services-for-ecommerce",
+    "name": "SEO services for ecommerce",
+    "logo": "/images/placeholder.svg",
+    "blurb": "Untitled",
+    "description": "Untitled",
+    "features": [],
+    "accent": "#111144",
+    "seoTitle": "",
+    "seoDescription": "",
+    "heroTitle": "",
+    "headingSize": "Small",
+    "textSize": "Small",
+    "overviewTitle": "",
+    "intro": [],
+    "ctaLabel": "",
+    "sections": [],
+    "faqTitle": "",
+    "faqs": [],
+    "ctaTitle": "",
+    "ctaDescription": ""
   }
 ]
