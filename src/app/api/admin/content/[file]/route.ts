@@ -29,6 +29,10 @@ function defaultValue(f: FieldSpec): unknown {
     case "string":
     case "text":
       if (IMAGE_KEYS.has(f.key)) return f.required ? PLACEHOLDER_IMAGE : "";
+      // Formatted fields need a value that passes their own check.
+      if (f.format === "hex") return "#111144";
+      if (f.format === "slug") return "new-entry";
+      if (f.format === "email" || f.format === "url") return "";
       return f.enum ? f.enum[0] : f.required ? "Untitled" : "";
     case "number":
       return 0;

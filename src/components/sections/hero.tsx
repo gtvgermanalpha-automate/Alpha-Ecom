@@ -99,7 +99,8 @@ export function Hero() {
 
       {/* Floating marketplace logos (desktop) */}
       <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden>
-        {marketplaces.map((m, i) => (
+        {/* Only as many floating logos as there are positions; extra services still show everywhere else. */}
+        {marketplaces.slice(0, floats.length).map((m, i) => (
           <FloatingTile key={m.slug} logo={m.logo} cfg={floats[i]} index={i} smx={smx} smy={smy} reduce={!!reduce} />
         ))}
       </div>
