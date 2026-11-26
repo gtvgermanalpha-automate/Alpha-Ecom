@@ -1375,5 +1375,27 @@
     ],
     "ctaTitle": "",
     "ctaDescription": ""
+  },
+  {
+    "slug": "seo-services-for-shopify",
+    "name": "SEO Services for Shopify",
+    "logo": "/images/placeholder.svg",
+    "blurb": "Untitled",
+    "description": "Untitled",
+    "features": [],
+    "accent": "#111144",
+    "seoTitle": "",
+    "seoDescription": "",
+    "heroTitle": "",
+    "headingSize": "Small",
+    "textSize": "Small",
+    "overviewTitle": "",
+    "intro": [],
+    "ctaLabel": "",
+    "sections": [],
+    "faqTitle": "",
+    "faqs": [],
+    "ctaTitle": "",
+    "ctaDescription": ""
   }
 ]
