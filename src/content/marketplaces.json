@@ -1380,21 +1380,202 @@
     "slug": "seo-services-for-shopify",
     "name": "SEO Services for Shopify",
     "logo": "/images/placeholder.svg",
-    "blurb": "Untitled",
-    "description": "Untitled",
+    "blurb": "Our SEO services for Shopify help more customers find your store through Google.",
+    "description": "Our SEO services for Shopify help your store rank higher on Google and bring in ready-to-buy shoppers. We fix technical problems, improve your collection and product pages and grow your organic sales.",
     "features": [],
     "accent": "#111144",
-    "seoTitle": "",
-    "seoDescription": "",
-    "heroTitle": "",
-    "headingSize": "Small",
+    "seoTitle": "SEO Services for Shopify ",
+    "seoDescription": "Our SEO services for Shopify help your store rank higher, attract buyers and get more orders. Book a free consultation with our Shopify SEO agency.",
+    "heroTitle": "SEO Services for Shopify ",
+    "headingSize": "Large",
     "textSize": "Small",
-    "overviewTitle": "",
-    "intro": [],
+    "overviewTitle": "SEO Services for Shopify That Bring Buyers to Your Store",
+    "intro": [
+      "Your Shopify store needs more than good products and an attractive design to perform well in search results.",
+      "Alpha Digital Solutions provides SEO services for Shopify that help your store show up on Google when people search for what you sell.",
+      "We fix the technical problems Shopify stores often have and improve your collection pages, product pages and site speed, so Google understands your store and shoppers can find it.",
+      "Not sure why your products aren't showing up on Google? Book a free consultation and we'll go through your store with you."
+    ],
     "ctaLabel": "",
-    "sections": [],
-    "faqTitle": "",
-    "faqs": [],
+    "sections": [
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "What Our SEO Services for Shopify Include",
+        "intro": "Our SEO services for Shopify cover your store's technical setup and the on-page signals Google uses to rank your pages.\n",
+        "items": [
+          {
+            "title": "Shopify SEO Audit",
+            "text": "We check your store for problems that hold back your rankings, like slow themes, duplicate URLs, broken links and pages Google can't index.",
+            "icon": ""
+          },
+          {
+            "title": "Keyword Research for Collections and Products",
+            "text": "We find the searches your buyers actually use, then match each one to the right collection, product or blog page.",
+            "icon": ""
+          },
+          {
+            "title": "Collection Page Optimisation",
+            "text": "Collection pages often bring the most traffic to a Shopify store. We improve their titles, descriptions and on-page content so they can rank for the broader searches.",
+            "icon": ""
+          },
+          {
+            "title": "Product Page Optimisation",
+            "text": "Titles, descriptions, images, reviews and internal links, all set up so each product page can rank and also convince people to buy.",
+            "icon": ""
+          },
+          {
+            "title": "Duplicate URL Fixes",
+            "text": "Shopify can create more than one URL for the same product. We make sure Google knows which page to rank.",
+            "icon": ""
+          },
+          {
+            "title": "Theme and App Speed Checks",
+            "text": "We find what is slowing your store down, like heavy apps, large images and bloated theme code, and help you fix it.",
+            "icon": ""
+          },
+          {
+            "title": "Structured Data",
+            "text": "We check your product, review and breadcrumb schema so Google can show prices, stock status and star ratings in the search results.",
+            "icon": ""
+          },
+          {
+            "title": "Content and Blog Posts",
+            "text": "Buying guides and helpful articles that bring in shoppers early and link to your products.",
+            "icon": ""
+          },
+          {
+            "title": "Link Building",
+            "text": "We build links from relevant sites so Google trusts your store more.",
+            "icon": ""
+          },
+          {
+            "title": "Monthly Reporting",
+            "text": "A simple report showing rankings, traffic and orders from search. No confusing dashboards.",
+            "icon": ""
+          }
+        ],
+        "outro": "As Shopify SEO experts, we agree on the scope for your store with you before any work starts.\n",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "List",
+        "eyebrow": "",
+        "title": "SEO Services for Shopify Stores at Every Stage",
+        "intro": "We adapt our SEO services for Shopify to your catalogue size and current setup.\n",
+        "items": [
+          {
+            "title": "Launching a New Shopify Store?",
+            "text": "We help new stores organise their product and collection pages, research target keywords, and address important technical SEO requirements before focusing on growth.\n",
+            "icon": ""
+          },
+          {
+            "title": "Getting Traffic but Not Enough Sales?",
+            "text": "We review your product pages, search intent, content, and overall shopping experience. The aim is to attract more relevant visitors and make important pages more useful to potential buyers.\n",
+            "icon": ""
+          },
+          {
+            "title": "Struggling to Rank Your Products?",
+            "text": "We look at keyword targeting, product descriptions, collection structure, indexing, and competing pages to identify possible reasons and opportunities.",
+            "icon": ""
+          },
+          {
+            "title": "Running an Established or Growing Store?",
+            "text": "We help improve site structure, optimise existing pages, address technical issues, and identify new keyword opportunities as your business grows.\n",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Cards",
+        "eyebrow": "",
+        "title": "Why Choose Alpha Digital as Your Shopify SEO Agency?",
+        "intro": "When you work with a Shopify SEO agency that builds and manages stores every day, you get practical execution instead of generic blog SEO advice. Here's what you can expect when working with us: ",
+        "items": [
+          {
+            "title": "Shopify-Specific Fixes",
+            "text": "We know the usual Shopify SEO problems, from duplicate product URLs to theme and app bloat, and we know which ones are worth your time.",
+            "icon": ""
+          },
+          {
+            "title": "SEO Based on Your Business",
+            "text": "We research your products, audience and competitors before deciding which keywords and pages deserve attention.",
+            "icon": ""
+          },
+          {
+            "title": "Technical and Content Support",
+            "text": "We help with both the technical side of SEO and the content your store needs to be more useful to searchers.",
+            "icon": ""
+          },
+          {
+            "title": "Easy to Work With",
+            "text": "We work remotely with Shopify stores in the US and UK, and we keep you updated by email, chat or call.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      },
+      {
+        "style": "Steps",
+        "eyebrow": "",
+        "title": "How Does Our Shopify SEO Process Work?",
+        "intro": "For our SEO services for Shopify, we follow a simple process to fix technical blockers and grow your organic sales.\n",
+        "items": [
+          {
+            "title": "Free Consultation",
+            "text": "We talk through your store, products and goals, and you leave knowing where your biggest search opportunities are.",
+            "icon": ""
+          },
+          {
+            "title": "Store and Competitor Audit",
+            "text": "We review your theme speed, indexing, collection structure and the competitors who rank above you, to see where sales are being missed.\n",
+            "icon": ""
+          },
+          {
+            "title": "Strategy and Planning",
+            "text": "You get a written roadmap with priority keywords, technical fixes, a content plan, a timeline and a price agreed up front.",
+            "icon": ""
+          },
+          {
+            "title": "Execution and Ongoing Growth",
+            "text": "Our team handles the technical updates, on-page optimisation and link building, and sends regular progress reports as your rankings improve.",
+            "icon": ""
+          }
+        ],
+        "outro": "",
+        "ctaLabel": "",
+        "ctaHref": ""
+      }
+    ],
+    "faqTitle": "Frequently Asked Questions About SEO Services for Shopify",
+    "faqs": [
+      {
+        "question": "What is included in SEO services for Shopify?",
+        "answer": "SEO services for Shopify usually include a store audit, keyword research, collection and product page optimisation, technical fixes, structured data, content and link building. They also cover Shopify-specific issues like duplicate product URLs, slow themes, heavy apps and thin collection pages.\n"
+      },
+      {
+        "question": "Is Shopify good for SEO?",
+        "answer": "Shopify is a solid base for SEO. It has clean code, automatic sitemaps, built-in SSL and fast hosting. It also has limits, like fixed URL patterns and duplicate product URLs, and apps can slow it down. So you still need to optimise your store to rank well.\n"
+      },
+      {
+        "question": "How long does Shopify SEO take to work?",
+        "answer": "Most Shopify stores see early movement in 3 to 4 months and clearer results in 6 to 12 months. Timing depends on your store's age, how much competition you have and what needs fixing. Technical fixes can help faster, while new content and links take longer to build.\n"
+      },
+      {
+        "question": "How much do Shopify SEO services cost?",
+        "answer": "Shopify SEO services usually cost from a few hundred to a few thousand dollars per month. The price depends on how many products your store has, how competitive your market is and how much work is needed."
+      },
+      {
+        "question": "Is it worth hiring someone to manage Shopify SEO?",
+        "answer": "It can be, especially if Liquid speed fixes, collection optimisation, and content updates take time you'd rather spend running your brand, or if your products aren't showing up when shoppers search Google. A free consultation is the quickest way to find out. We'll review your store and tell you honestly if a Shopify SEO company makes sense for your setup right now."
+      }
+    ],
     "ctaTitle": "",
     "ctaDescription": ""
   }
