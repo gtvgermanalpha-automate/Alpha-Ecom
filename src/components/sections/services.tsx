@@ -64,7 +64,8 @@ function ServiceCard({ marketplace }: { marketplace: Marketplace }) {
         />
       }
       points={marketplace.features.slice(0, 3)}
-      cta={`Manage my ${marketplace.name} store`}
+      // "Manage my Amazon store" only reads well for marketplace names; longer service names get a neutral label.
+      cta={marketplace.name.trim().split(/\s+/).length > 2 ? "Explore this service" : `Manage my ${marketplace.name} store`}
     />
   );
 }

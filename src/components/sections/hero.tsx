@@ -38,7 +38,8 @@ const floats = [
 export function Hero() {
   const [idx, setIdx] = React.useState(0);
   // Rotate the marketplace name in the headline, each in its own brand colour.
-  const rotators = marketplaces.map((m) => ({ label: m.name, color: m.accent, slug: m.slug }));
+  // Only the first six (the marketplaces): the headline reads "...Your <name> Store".
+  const rotators = marketplaces.slice(0, floats.length).map((m) => ({ label: m.name, color: m.accent, slug: m.slug }));
   const reduce = useReducedMotion();
 
   const sectionRef = React.useRef<HTMLElement>(null);

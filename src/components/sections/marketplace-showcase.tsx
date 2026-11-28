@@ -31,7 +31,7 @@ export function MarketplaceShowcase() {
                   <MarketplaceTile src={m.logo} name={m.name} size="lg" />
 
                   <h2 className="mt-6 text-3xl font-bold text-navy sm:text-4xl">
-                    {m.name} Store Creation &amp; Management
+                    {m.heroTitle?.trim() || `${m.name} Store Creation & Management`}
                   </h2>
 
                   <p className="mt-4 text-lg text-muted-foreground">{m.description}</p>
@@ -48,7 +48,7 @@ export function MarketplaceShowcase() {
                   <div className="mt-8 flex flex-wrap gap-3">
                     <Button asChild>
                       <Link href="/contact">
-                        Get started on {m.name}
+                        {m.ctaLabel?.trim() || `Get started on ${m.name}`}
                         <ArrowRight className="size-4" />
                       </Link>
                     </Button>
